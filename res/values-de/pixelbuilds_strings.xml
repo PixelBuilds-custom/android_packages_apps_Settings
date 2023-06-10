@@ -20,4 +20,20 @@
     <string name="idle_manager_summary">Stoppe alle nicht notwendigen Hintergrundprozesse, wenn das Gerät inaktiv ist</string>
     <string name="system_black_theme_title">Schwarzes Design verwenden</string>
     <string name="system_black_theme_summary">Schwarze Hintergrundfarben erzwingen</string>
+    <string name="charging_control_title">Ladesteuerung</string>
+    <string name="charging_control_summary">Passen Sie den Ladeplan und die Grenzwerte für den Akku an</string>
+    <string name="charging_control_enable_title">Ladesteuerung aktivieren</string>
+    <string name="charging_control_mode_title">Lademodus</string>
+    <string name="charging_control_mode_auto_title">Automatischer Zeitplan</string>
+    <string name="charging_control_mode_auto_summary">Automatisches Bestimmen des Ladebeginns basierend auf eingestellten Alarmen</string>
+    <string name="charging_control_mode_custom_title">Benutzerdefinierter Zeitplan</string>
+    <string name="charging_control_mode_custom_summary">Legen Sie eine Zielzeit bis zur vollständigen Aufladung fest</string>
+    <string name="charging_control_mode_limit_title">Begrenzen Sie das Aufladen</string>
+    <string name="charging_control_mode_limit_summary">Begrenzen Sie das Aufladen auf einen bestimmten Prozentsatz</string>
+    <string name="charging_control_start_time_title">Startzeit</string>
+    <string name="charging_control_start_time_summary">Die Ladesteuerung wird aktiviert, wenn Sie nach %s mit dem Laden beginnen</string>
+    <string name="charging_control_target_time_title">Zielzeit bis zur vollständigen Aufladung</string>
+    <string name="charging_control_target_time_summary">Der Akku wird um %s vollständig aufgeladen</string>
+    <string name="charging_control_limit_title">Grenze</string>
+    <string name="reset">Zurücksetzen</string>
 </resources>

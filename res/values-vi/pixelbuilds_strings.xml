@@ -20,4 +20,20 @@
     <string name="idle_manager_summary">Dừng tất cả các quá trình nền không cần thiết khi thiết bị không hoạt động</string>
     <string name="system_black_theme_title">Sử dụng chủ đề tối</string>
     <string name="system_black_theme_summary">Buộc màu nền đen</string>
+    <string name="charging_control_title">Kiểm soát sạc</string>
+    <string name="charging_control_summary">Tùy chỉnh lịch trình và giới hạn sạc cho pin</string>
+    <string name="charging_control_enable_title">Bật kiểm soát sạc</string>
+    <string name="charging_control_mode_title">Chế độ sạc</string>
+    <string name="charging_control_mode_auto_title">Lịch trình tự động</string>
+    <string name="charging_control_mode_auto_summary">Tự động xác định thời điểm bắt đầu sạc dựa trên cảnh báo đã đặt</string>
+    <string name="charging_control_mode_custom_title">Lịch trình tùy chỉnh</string>
+    <string name="charging_control_mode_custom_summary">Đặt thời gian mục tiêu để sạc đầy</string>
+    <string name="charging_control_mode_limit_title">Giới hạn sạc</string>
+    <string name="charging_control_mode_limit_summary">Giới hạn tính phí ở một tỷ lệ phần trăm nhất định</string>
+    <string name="charging_control_start_time_title">Thời gian bắt đầu</string>
+    <string name="charging_control_start_time_summary">Kiểm soát sạc sẽ kích hoạt khi bạn bắt đầu sạc sau %s</string>
+    <string name="charging_control_target_time_title">Thời gian mục tiêu để sạc đầy</string>
+    <string name="charging_control_target_time_summary">Pin sẽ được sạc đầy vào %s</string>
+    <string name="charging_control_limit_title">Giới hạn</string>
+    <string name="reset">Cài lại</string>
 </resources>
