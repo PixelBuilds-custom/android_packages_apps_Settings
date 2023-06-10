@@ -20,4 +20,20 @@
     <string name="idle_manager_summary">Zatrzymaj wszystkie inne niż istotne procesy tła, gdy urządzenie jest bezczynne</string>
     <string name="system_black_theme_title">Używaj czarnego motywu</string>
     <string name="system_black_theme_summary">Wymuś czarny kolor tła</string>
+    <string name="charging_control_title">Kontrola ładowania</string>
+    <string name="charging_control_summary">Dostosuj harmonogram ładowania i limity dla akumulatora</string>
+    <string name="charging_control_enable_title">Włącz kontrolę ładowania</string>
+    <string name="charging_control_mode_title">Tryb ładowania</string>
+    <string name="charging_control_mode_auto_title">Automatyczny harmonogram</string>
+    <string name="charging_control_mode_auto_summary">Automatyczne określanie momentu rozpoczęcia ładowania na podstawie ustawionych alarmów</string>
+    <string name="charging_control_mode_custom_title">Niestandardowy harmonogram</string>
+    <string name="charging_control_mode_custom_summary">Ustaw docelowy czas pełnego naładowania</string>
+    <string name="charging_control_mode_limit_title">Ogranicz ładowanie</string>
+    <string name="charging_control_mode_limit_summary">Ograniczenie opłat do określonego procentu</string>
+    <string name="charging_control_start_time_title">Czas rozpoczęcia</string>
+    <string name="charging_control_start_time_summary">Kontrola ładowania aktywuje się po rozpoczęciu ładowania po %s</string>
+    <string name="charging_control_target_time_title">Czas docelowy pełnego naładowania</string>
+    <string name="charging_control_target_time_summary">Bateria zostanie w pełni naładowana za %s</string>
+    <string name="charging_control_limit_title">Limit</string>
+    <string name="reset">Resetowanie</string>
 </resources>
