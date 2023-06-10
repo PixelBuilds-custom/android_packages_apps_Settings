@@ -20,4 +20,20 @@
     <string name="idle_manager_summary">Остановка всех второстепенных фоновых процессов, когда устройство простаивает</string>
     <string name="system_black_theme_title">Использовать черную тему</string>
     <string name="system_black_theme_summary">Принудительно использовать черные цвета в фоне</string>
+    <string name="charging_control_title">Контроль зарядки</string>
+    <string name="charging_control_summary">Настройте график зарядки и лимиты для аккумулятора</string>
+    <string name="charging_control_enable_title">Включить управление зарядкой</string>
+    <string name="charging_control_mode_title">Режим зарядки</string>
+    <string name="charging_control_mode_auto_title">Автоматическое расписание</string>
+    <string name="charging_control_mode_auto_summary">Автоматически определять время начала зарядки на основе установленных будильников</string>
+    <string name="charging_control_mode_custom_title">Индивидуальный график</string>
+    <string name="charging_control_mode_custom_summary">Установите целевое время полной зарядки</string>
+    <string name="charging_control_mode_limit_title">Предельная зарядка</string>
+    <string name="charging_control_mode_limit_summary">Ограничить зарядку определенным процентом</string>
+    <string name="charging_control_start_time_title">Время начала</string>
+    <string name="charging_control_start_time_summary">Управление зарядкой активируется, когда вы начинаете зарядку после %s</string>
+    <string name="charging_control_target_time_title">Целевое время полной зарядки</string>
+    <string name="charging_control_target_time_summary">Аккумулятор будет полностью заряжен к %s</string>
+    <string name="charging_control_limit_title">Предел</string>
+    <string name="reset">Сброс</string>
 </resources>

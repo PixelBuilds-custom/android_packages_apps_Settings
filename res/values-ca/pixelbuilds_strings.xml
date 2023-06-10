@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="volume_button_music_control_title">Playback control</string>
+    <string name="charging_control_title">Control de càrrega</string>
+    <string name="charging_control_summary">Personalitza el calendari de càrrega i els límits de la bateria</string>
+    <string name="charging_control_enable_title">Activa el control de càrrega</string>
+    <string name="charging_control_mode_title">Mode de càrrega</string>
+    <string name="charging_control_mode_auto_title">Horari automàtic</string>
+    <string name="charging_control_mode_auto_summary">Determina automàticament quan s\'ha de començar a carregar en funció de les alarmes establertes</string>
+    <string name="charging_control_mode_custom_title">Horari personalitzat</string>
+    <string name="charging_control_mode_custom_summary">Estableix un temps objectiu per a la càrrega completa</string>
+    <string name="charging_control_mode_limit_title">Limiteu la càrrega</string>
+    <string name="charging_control_mode_limit_summary">Limiteu la càrrega a un percentatge determinat</string>
+    <string name="charging_control_start_time_title">L\'hora d\'inici</string>
+    <string name="charging_control_start_time_summary">El control de càrrega s\'activa quan comenceu a carregar després de %s</string>
+    <string name="charging_control_target_time_title">Temps objectiu per a la càrrega completa</string>
+    <string name="charging_control_target_time_summary">La bateria es carregarà completament en %s</string>
+    <string name="charging_control_limit_title">Límit</string>
+    <string name="reset">Restableix</string>
 </resources>

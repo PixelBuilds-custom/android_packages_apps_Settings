@@ -17,4 +17,20 @@
     <string name="volume_button_music_control_summary">Cuando la pantalla está apagada, las teclas de volumen de pulsación prolongada omitirán las pistas de música</string>
     <string name="idle_manager_title">Cerrar procesos en segundo plano</string>
     <string name="idle_manager_summary">Detener todos los procesos en segundo plano no esenciales cuando el dispositivo está inactivo</string>
+    <string name="charging_control_title">Control de carga</string>
+    <string name="charging_control_summary">Personalice el programa de carga y los límites de la batería</string>
+    <string name="charging_control_enable_title">Habilitar el control de carga</string>
+    <string name="charging_control_mode_title">Modo de carga</string>
+    <string name="charging_control_mode_auto_title">Programación automática</string>
+    <string name="charging_control_mode_auto_summary">Determinar automáticamente cuándo comenzar a cargar según las alarmas configuradas</string>
+    <string name="charging_control_mode_custom_title">Horario personalizado</string>
+    <string name="charging_control_mode_custom_summary">Establezca un tiempo objetivo para la carga completa</string>
+    <string name="charging_control_mode_limit_title">Limitar la carga</string>
+    <string name="charging_control_mode_limit_summary">Limitar la carga a un determinado porcentaje</string>
+    <string name="charging_control_start_time_title">Hora de inicio</string>
+    <string name="charging_control_start_time_summary">El control de carga se activa cuando comienza a cargar después de %s</string>
+    <string name="charging_control_target_time_title">Tiempo objetivo para carga completa</string>
+    <string name="charging_control_target_time_summary">La batería estará completamente cargada en %s</string>
+    <string name="charging_control_limit_title">Límite</string>
+    <string name="reset">Reiniciar</string>
 </resources>

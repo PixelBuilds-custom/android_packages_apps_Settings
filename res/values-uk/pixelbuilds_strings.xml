@@ -20,4 +20,20 @@
     <string name="idle_manager_summary">Зупинити всі неважливі фонові процеси коли пристрій не використовується</string>
     <string name="system_black_theme_title">Використовувати чорну тему</string>
     <string name="system_black_theme_summary">Примусово використовувати чорні фонові кольори</string>
+    <string name="charging_control_title">Контроль зарядки</string>
+    <string name="charging_control_summary">Налаштуйте графік заряджання та обмеження для акумулятора</string>
+    <string name="charging_control_enable_title">Увімкнути контроль зарядки</string>
+    <string name="charging_control_mode_title">Режим зарядки</string>
+    <string name="charging_control_mode_auto_title">Автоматичний розклад</string>
+    <string name="charging_control_mode_auto_summary">Автоматично визначати час початку зарядки на основі встановлених будильників</string>
+    <string name="charging_control_mode_custom_title">Індивідуальний графік</string>
+    <string name="charging_control_mode_custom_summary">Встановити цільовий час до повної зарядки</string>
+    <string name="charging_control_mode_limit_title">Обмеження зарядки</string>
+    <string name="charging_control_mode_limit_summary">Обмежити плату до певного відсотка</string>
+    <string name="charging_control_start_time_title">Час початку</string>
+    <string name="charging_control_start_time_summary">Контроль заряджання активується, якщо ви починете заряджання після %s</string>
+    <string name="charging_control_target_time_title">Цільовий час до повної зарядки</string>
+    <string name="charging_control_target_time_summary">Акумулятор буде повністю заряджено до %s</string>
+    <string name="charging_control_limit_title">Ліміт</string>
+    <string name="reset">Скинути</string>
 </resources>
