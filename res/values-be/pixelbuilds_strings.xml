@@ -20,4 +20,20 @@
     <string name="idle_manager_summary">Спыніць усе неістотныя фонавыя працэсы, калі прылада знаходзіцца ў рэжыме чакання</string>
     <string name="system_black_theme_title">Выкарыстоўваць чорную тэму</string>
     <string name="system_black_theme_summary">Прымусовыя чорныя колеры фону</string>
+    <string name="charging_control_title">Кантроль зарадкі</string>
+    <string name="charging_control_summary">Наладзьце графік зарадкі і абмежаванні для акумулятара</string>
+    <string name="charging_control_enable_title">Уключыць кантроль зарадкі</string>
+    <string name="charging_control_mode_title">Рэжым зарадкі</string>
+    <string name="charging_control_mode_auto_title">Аўтаматычны расклад</string>
+    <string name="charging_control_mode_auto_summary">Аўтаматычна вызначаць час пачатку зарадкі на аснове ўсталяваных будзільнікаў</string>
+    <string name="charging_control_mode_custom_title">Індывідуальны графік</string>
+    <string name="charging_control_mode_custom_summary">Усталюйце мэтавы час поўнай зарадкі</string>
+    <string name="charging_control_mode_limit_title">Абмежаваць зарадку</string>
+    <string name="charging_control_mode_limit_summary">Абмяжуйце зарадку пэўным адсоткам</string>
+    <string name="charging_control_start_time_title">Час пачатку</string>
+    <string name="charging_control_start_time_summary">Кантроль зарадкі актывуецца, калі вы пачынаеце зарадку пасля %s</string>
+    <string name="charging_control_target_time_title">Зададзены час да поўнай зарадкі</string>
+    <string name="charging_control_target_time_summary">Акумулятар будзе цалкам зараджаны да %s</string>
+    <string name="charging_control_limit_title">Ліміт</string>
+    <string name="reset">Скінуць</string>
 </resources>

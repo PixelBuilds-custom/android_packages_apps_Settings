@@ -20,4 +20,20 @@
     <string name="idle_manager_summary">Ferma tutti i processi in background non essenziali quando il dispositivo è inattivo</string>
     <string name="system_black_theme_title">Usa tema nero</string>
     <string name="system_black_theme_summary">Forza colori di sfondo neri</string>
+    <string name="charging_control_title">Controllo di carica</string>
+    <string name="charging_control_summary">Personalizza il programma di ricarica e i limiti per la batteria</string>
+    <string name="charging_control_enable_title">Abilita il controllo della ricarica</string>
+    <string name="charging_control_mode_title">Modalità di ricarica</string>
+    <string name="charging_control_mode_auto_title">Programmazione automatica</string>
+    <string name="charging_control_mode_auto_summary">Determina automaticamente quando iniziare la ricarica in base agli allarmi impostati</string>
+    <string name="charging_control_mode_custom_title">Programma personalizzato</string>
+    <string name="charging_control_mode_custom_summary">Imposta un tempo target per la carica completa</string>
+    <string name="charging_control_mode_limit_title">Limita la ricarica</string>
+    <string name="charging_control_mode_limit_summary">Limitare la ricarica a una certa percentuale</string>
+    <string name="charging_control_start_time_title">Ora di inizio</string>
+    <string name="charging_control_start_time_summary">Il controllo della carica si attiva quando si avvia la carica dopo %s</string>
+    <string name="charging_control_target_time_title">Tempo di destinazione per la carica completa</string>
+    <string name="charging_control_target_time_summary">La batteria sarà completamente carica entro %s</string>
+    <string name="charging_control_limit_title">Limite</string>
+    <string name="reset">Ripristina</string>
 </resources>
