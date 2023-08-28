@@ -21,6 +21,12 @@
     android:title="@string/firmware_version"
     settings:keywords="@string/keywords_android_version">
 
+    <!-- PixelBuilds banner -->
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="pixelbuilds_banner"
+        android:layout="@layout/pixelbuilds_banner"
+        android:selectable="false" />
+
     <!-- Android version -->
     <Preference
         android:key="os_firmware_version"
