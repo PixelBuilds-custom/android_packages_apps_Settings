@@ -25,6 +25,7 @@ import com.android.settings.core.BasePreferenceController;
 public class CustomFirmwareVersionPreferenceController extends BasePreferenceController {
 
     private static final String VERSION_PROPERTY = "ro.build.version.custom";
+    private static final String DEVICE_CODENAME_PROPERTY = "ro.build.version.device";
 
     public CustomFirmwareVersionPreferenceController(Context context, String preferenceKey) {
         super(context, preferenceKey);
@@ -37,7 +38,10 @@ public class CustomFirmwareVersionPreferenceController extends BasePreferenceCon
 
     @Override
     public CharSequence getSummary() {
-        return SystemProperties.get(VERSION_PROPERTY,
+        String internalVer = SystemProperties.get(VERSION_PROPERTY,
                 mContext.getString(R.string.device_info_default));
+        String deviceCodename = SystemProperties.get(DEVICE_CODENAME_PROPERTY, 
+                mContext.getString(R.string.device_info_default));
+        return internalVer + " | " + deviceCodename;
     }
 }
