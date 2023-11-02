@@ -25,6 +25,7 @@ import com.android.settings.core.BasePreferenceController;
 public class CustomFirmwareVersionPreferenceController extends BasePreferenceController {
 
     private static final String VERSION_PROPERTY = "ro.build.version.custom";
+    private static final String BUILD_TYPE_PROPERTY = "ro.pb.buildtype";
     private static final String DEVICE_CODENAME_PROPERTY = "ro.build.version.device";
 
     public CustomFirmwareVersionPreferenceController(Context context, String preferenceKey) {
@@ -42,6 +43,13 @@ public class CustomFirmwareVersionPreferenceController extends BasePreferenceCon
                 mContext.getString(R.string.device_info_default));
         String deviceCodename = SystemProperties.get(DEVICE_CODENAME_PROPERTY, 
                 mContext.getString(R.string.device_info_default));
-        return internalVer + " | " + deviceCodename;
+        String buildType = SystemProperties.get(BUILD_TYPE_PROPERTY,
+                mContext.getString(R.string.device_info_default));
+        // Only append build type when this is a release build
+        if (buildType != null && "release".equals(buildType)) {
+            return internalVer + " | " + deviceCodename + " | " + buildType;
+        } else {
+            return internalVer + " | " + deviceCodename;
+        }
     }
 }
