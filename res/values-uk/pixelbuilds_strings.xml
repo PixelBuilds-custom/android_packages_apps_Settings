@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="refresh_rate_title">Частота оновлення екрана</string>
+    <string name="fingerprint_enroll_find_sensor_message_front">Знайдіть сканер відбитків пальців на фронтальній панелі вашого смартфона.</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear">Знайдіть датчик відбитків пальців на задній панелі телефона.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_front">Торкніться сканера на фронтальній панелі вашого телефона.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear">Торкніться сканера на задній панелі вашого телефона.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side">Торкніться сканера на бічній грані вашого телефона.</string>
+    <string name="storage_warning_internal">Увага: Ця опція може працювати неправильно або призвести до втрати даних, тому не є рекомендованою!</string>
+    <string name="icon_manager_title">Менеджер значків</string>
+    <string name="icon_manager_summary">Налаштування видимості значків рядка стану</string>
+    <string name="status_bar_double_tap_to_sleep_title">Торкніться для сну</string>
+    <string name="status_bar_double_tap_to_sleep_summary">Подвійне натискання на рядок стану чи екран блокування, щоб вимкнути екран</string>
+    <string name="swipe_to_screenshot_gesture_title">Провести для знімка екрана</string>
+    <string name="swipe_to_screenshot_gesture_summary">Проведіть трьома пальцями для знімка екрана</string>
+    <string name="volume_button_music_control_title">Керування відтворенням</string>
+    <string name="volume_button_music_control_summary">Коли екран вимкнено, утримування кнопок гучності перемикатиме композиції</string>
+    <string name="idle_manager_title">Завершення фонових процесів</string>
+    <string name="idle_manager_summary">Зупинити всі неважливі фонові процеси коли пристрій не використовується</string>
+</resources>

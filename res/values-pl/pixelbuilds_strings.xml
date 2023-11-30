@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="refresh_rate_title">Częstotliwość odświeżania ekranu</string>
+    <string name="fingerprint_enroll_find_sensor_message_front">Zlokalizuj czytnik linii papilarnych na przodzie telefonu.</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear">Zlokalizuj czytnik linii papilarnych z tyłu telefonu.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_front">Dotknij czytnika z przodu telefonu.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear">Dotknij czytnika z tyłu telefonu.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side">Dotknij czytnika z boku telefonu.</string>
+    <string name="storage_warning_internal">Ostrzeżenie: Ta opcja może nie działać poprawnie lub prowadzić do utraty danych więc nie jest zalecana!</string>
+    <string name="icon_manager_title">Menedżer ikon</string>
+    <string name="icon_manager_summary">Kontrola widoczności ikon na pasku stanu</string>
+    <string name="status_bar_double_tap_to_sleep_title">Dotknij, aby uśpić</string>
+    <string name="status_bar_double_tap_to_sleep_summary">Dotknij dwukrotnie na pasku statusu lub ekranie blokady, aby wyłączyć ekran</string>
+    <string name="swipe_to_screenshot_gesture_title">Przesuń, aby zrobić zrzut ekranu</string>
+    <string name="swipe_to_screenshot_gesture_summary">Przesuń trzema palcami, aby zrobić zrzut ekranu</string>
+    <string name="volume_button_music_control_title">Kontrola odtwarzania</string>
+    <string name="volume_button_music_control_summary">Gdy ekran jest wyłączony, długie naciśnięcie klawiszy głośności pominie muzykę</string>
+    <string name="idle_manager_title">Zabij procesy w tle</string>
+    <string name="idle_manager_summary">Zatrzymaj wszystkie inne niż istotne procesy tła, gdy urządzenie jest bezczynne</string>
+</resources>
