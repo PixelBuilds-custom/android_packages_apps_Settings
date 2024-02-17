@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="refresh_rate_title">Taxa de atualização de tela</string>
+    <string name="fingerprint_enroll_find_sensor_message_front">Localize o sensor de impressão digital na parte frontal do seu telefone.</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear">Localize o sensor de impressão digital na parte de trás do seu telefone.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_front">Toque no sensor na parte frontal do seu telefone.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear">Toque no sensor na parte traseira do seu telefone.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side">Toque no sensor na parte lateral do seu telefone.</string>
+    <string name="storage_warning_internal">Aviso: Esta opção pode não funcionar corretamente ou levar à perda de dados e, portanto, não é recomendado!</string>
+    <string name="icon_manager_title">Gerenciador de ícones</string>
+    <string name="icon_manager_summary">Controle de visibilidade dos ícones da barra de status</string>
+    <string name="status_bar_double_tap_to_sleep_title">Toque para dormir</string>
+    <string name="status_bar_double_tap_to_sleep_summary">Toque duas vezes na barra de status ou na tela de bloqueio para desligar a tela</string>
+    <string name="swipe_to_screenshot_gesture_title">Deslizar para captura de tela</string>
+    <string name="swipe_to_screenshot_gesture_summary">Deslize três dedos para tirar uma captura de tela</string>
+    <string name="volume_button_music_control_title">Controle de reprodução</string>
+    <string name="volume_button_music_control_summary">Quando a tela estiver desligada, pressione os botões de volume para pular faixas de música</string>
+    <string name="idle_manager_title">Encerrar processos em segundo plano</string>
+    <string name="idle_manager_summary">Parar todos os processos em segundo plano não essenciais quando o dispositivo está ocioso</string>
+</resources>
