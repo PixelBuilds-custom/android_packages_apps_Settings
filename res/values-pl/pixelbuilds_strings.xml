@@ -7,6 +7,7 @@
     <string name="fingerprint_enroll_touch_dialog_message_rear">Dotknij czytnika z tyłu telefonu.</string>
     <string name="fingerprint_enroll_touch_dialog_message_side">Dotknij czytnika z boku telefonu.</string>
     <string name="storage_warning_internal">Ostrzeżenie: Ta opcja może nie działać poprawnie lub prowadzić do utraty danych więc nie jest zalecana!</string>
+    <string name="build_date">Data kompilacji</string>
     <string name="icon_manager_title">Menedżer ikon</string>
     <string name="icon_manager_summary">Kontrola widoczności ikon na pasku stanu</string>
     <string name="status_bar_double_tap_to_sleep_title">Dotknij, aby uśpić</string>
@@ -17,4 +18,6 @@
     <string name="volume_button_music_control_summary">Gdy ekran jest wyłączony, długie naciśnięcie klawiszy głośności pominie muzykę</string>
     <string name="idle_manager_title">Zabij procesy w tle</string>
     <string name="idle_manager_summary">Zatrzymaj wszystkie inne niż istotne procesy tła, gdy urządzenie jest bezczynne</string>
+    <string name="system_black_theme_title">Używaj czarnego motywu</string>
+    <string name="system_black_theme_summary">Wymuś czarny kolor tła</string>
 </resources>

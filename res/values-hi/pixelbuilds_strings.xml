@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="refresh_rate_title">स्क्रीन refresh rate</string>
+    <string name="fingerprint_enroll_find_sensor_message_front">अपने फोन के सामने फिंगरप्रिंट सेंसर को ढूंढें</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear">अपने फोन की पीठ पर फिंगरप्रिंट सेंसर को ढूंढें</string>
+    <string name="fingerprint_enroll_touch_dialog_message_front">अपने फ़ोन के सामने वाले सेंसर को स्पर्श करें</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear">अपने फ़ोन के पीछे सेंसर को स्पर्श करें</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side">अपने फ़ोन के किनारे पर स्थित सेंसर को स्पर्श करें</string>
+    <string name="storage_warning_internal">चेतावनी: यह विकल्प ठीक से काम नहीं कर सकता है या डेटा हानि का कारण बन सकता है और इसलिए इसकी अनुशंसा नहीं की जाती है!</string>
+    <string name="build_date">निर्माण दिनांक</string>
+    <string name="icon_manager_title">आइकन मैनेजर</string>
+    <string name="icon_manager_summary">स्टेटस बार आइकन की दृश्यता को नियंत्रित करें</string>
+    <string name="status_bar_double_tap_to_sleep_title">सोने के लिए टैप करें</string>
+    <string name="status_bar_double_tap_to_sleep_summary">डिस्प्ले बंद करने के लिए स्टेटस बार या लॉकस्क्रीन पर डबल-टैप करें</string>
+    <string name="swipe_to_screenshot_gesture_title">स्वाइप से स्क्रीनशॉट</string>
+    <string name="swipe_to_screenshot_gesture_summary">तीन उंगली से स्क्रीनशॉट</string>
+    <string name="volume_button_music_control_title">प्लेबैक कन्ट्रोल</string>
+    <string name="volume_button_music_control_summary">जब स्क्रीन बंद हो, तो वॉल्यूम बटन लंबे समय तक दबाने से संगीत ट्रैक छूट जाएंगे</string>
+    <string name="idle_manager_title">किल बैकग्राउंड प्रोसेसिस</string>
+    <string name="idle_manager_summary">फ़ोन निष्क्रिय होने पर सभी गैर-आवश्यक इलेक्ट्रॉनिक्स बंद कर दें</string>
+    <string name="system_black_theme_title">काले थीम का उपयोग करें</string>
+    <string name="system_black_theme_summary">पार्श्वभूमि पे काला रंग मजबूर करे</string>
+</resources>

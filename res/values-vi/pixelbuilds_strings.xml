@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="refresh_rate_title">Tốc độ làm mới màn hình</string>
+    <string name="fingerprint_enroll_find_sensor_message_front">Tìm cảm biến vân tay ở phía trước điện thoại của bạn.</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear">Tìm cảm biến vân tay ở phía sau điện thoại của bạn.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_front">Chạm vào cảm biến ở mặt trước của điện thoại bạn.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear">Chạm vào cảm biến ở mặt sau của điện thoại bạn.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side">Chạm vào cảm biến bên cạnh điện thoại của bạn.</string>
+    <string name="storage_warning_internal">Cảnh báo: Lựa chọn này có thể không hoạt động đúng hoặc dẫn đến mất dữ liệu và do đó không được khuyến nghị!</string>
+    <string name="build_date">Ngày dựng</string>
+    <string name="icon_manager_title">Bộ quản lý biểu tượng</string>
+    <string name="icon_manager_summary">Kiểm soát hiển thị biểu tượng thanh trạng thái</string>
+    <string name="status_bar_double_tap_to_sleep_title">Chạm để ngủ</string>
+    <string name="status_bar_double_tap_to_sleep_summary">Nhấn đúp vào thanh trạng thái hoặc màn hình khóa để tắt màn hình</string>
+    <string name="swipe_to_screenshot_gesture_title">Vuốt để chụp màn hình</string>
+    <string name="swipe_to_screenshot_gesture_summary">Vuốt ba ngón tay để chụp màn hình</string>
+    <string name="volume_button_music_control_title">Điều khiển phát lại</string>
+    <string name="volume_button_music_control_summary">Khi màn hình tắt, nhấn giữ phím âm lượng sẽ bỏ qua các bản nhạc</string>
+    <string name="idle_manager_title">Kết thúc tiến trình chạy nền</string>
+    <string name="idle_manager_summary">Dừng tất cả các quá trình nền không cần thiết khi thiết bị không hoạt động</string>
+    <string name="system_black_theme_title">Sử dụng chủ đề tối</string>
+    <string name="system_black_theme_summary">Buộc màu nền đen</string>
+</resources>

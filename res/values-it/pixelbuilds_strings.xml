@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="refresh_rate_title">Frequenza di aggiornamento dello schermo</string>
+    <string name="fingerprint_enroll_find_sensor_message_front">Individua il sensore d\'impronte sul lato frontale del telefono.</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear">Individua il sensore d\'impronte sul retro del telefono.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_front">Tocca il sensore sul lato frontale del telefono.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear">Tocca il sensore sul retro del telefono.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side">Tocca il sensore sul lato del telefono.</string>
+    <string name="storage_warning_internal">Attenzione: Questa opzione potrebbe non funzionare correttamente o portare alla perdita di dati e di conseguenza è sconsigliata!</string>
+    <string name="build_date">Data di costruzione</string>
+    <string name="icon_manager_title">Gestore icone</string>
+    <string name="icon_manager_summary">Controlla la visibilità delle icone della barra di stato</string>
+    <string name="status_bar_double_tap_to_sleep_title">Tocca per sospendere</string>
+    <string name="status_bar_double_tap_to_sleep_summary">Doppio tocco sulla barra di stato o sulla schermata di blocco per spegnere lo schermo</string>
+    <string name="swipe_to_screenshot_gesture_title">Scorri per effettuare uno screenshot</string>
+    <string name="swipe_to_screenshot_gesture_summary">Scorri con tre dita per catturare uno screenshot</string>
+    <string name="volume_button_music_control_title">Controllo riproduzione</string>
+    <string name="volume_button_music_control_summary">Quando lo schermo è spento, una pressione prolungata dei tasti del volume salterà le tracce musicali</string>
+    <string name="idle_manager_title">Termina i processi in background</string>
+    <string name="idle_manager_summary">Ferma tutti i processi in background non essenziali quando il dispositivo è inattivo</string>
+    <string name="system_black_theme_title">Usa tema nero</string>
+    <string name="system_black_theme_summary">Forza colori di sfondo neri</string>
+</resources>

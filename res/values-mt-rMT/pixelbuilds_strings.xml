@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Refresh rate -->
+    <string name="refresh_rate_title">Ir-refresh rate tal-iskrin</string>
+    <!-- Message shown in fingerprint enrollment dialog to locate the sensor -->
+    <string name="fingerprint_enroll_find_sensor_message_front">Sib is-sensor tal-fingerprint fuq quddiem tal-mowbajl.</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear">Sib is-sensor tal-fingerprint fuq wara tal-mowbajl.</string>
+    <!-- Message shown when user touches the icon on the screen, instead of the real fingerprint sensor -->
+    <string name="fingerprint_enroll_touch_dialog_message_front">Agħfas is-sensor fuq quddiem tal-mowbajl tiegħek.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear">Agħfas is-sensor fuq wara tal-mowbajl tiegħek.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side">Agħfas is-sensor fuq il-ġenb tal-mowbajl tiegħek.</string>
+    <!-- Warning message for the sd card setup -->
+    <string name="storage_warning_internal">Twissija: Dan l-option jista jkun li ma jaħdimx kif suppost jew li jista jsegwi għat titlif ta\' tilfa tal-informazzjoni għalhekk mhijiex irrakkomandata!</string>
+    <!-- About phone screen,  setting option name  [CHAR LIMIT=40] -->
+    <string name="build_date">Data tal-build</string>
+    <!-- Status bar Icon Manager -->
+    <string name="icon_manager_title">Manager tal-icon</string>
+    <string name="icon_manager_summary">Ikkontrolla il-visibiltà tal-icons fl-istatus bar</string>
+    <!-- Double tap to sleep on status bar or lockscreen -->
+    <string name="status_bar_double_tap_to_sleep_title">Agħfas biex torqod</string>
+    <string name="status_bar_double_tap_to_sleep_summary">Agħfas darbtejn fuq l-istatus bar jew lockscreen sabiex titfi l-iskirn</string>
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="swipe_to_screenshot_gesture_title">Swipja għal screenshot</string>
+    <string name="swipe_to_screenshot_gesture_summary">Isswipja tletti swaba biex tieħu screenshot</string>
+    <!-- Volume button music control -->
+    <string name="volume_button_music_control_title">Kontroll tal-playback</string>
+    <string name="volume_button_music_control_summary">Meta l-iskrin huwa mitfi, żomm il-buttuni tal-volum sabiex taqbeż id-diski</string>
+    <!-- Idle Manager -->
+    <string name="idle_manager_title">Oqtol proċessi fil-background</string>
+    <string name="idle_manager_summary">Waqqaf il-proċessi fil-background kollha li mhumiex essenzjali waqt li l-apparat huwa idle</string>
+    <!-- Black theme -->
+    <string name="system_black_theme_title">Uża Black theme</string>
+    <string name="system_black_theme_summary">Sforza l-kuluri tal-background suwed</string>
+</resources>

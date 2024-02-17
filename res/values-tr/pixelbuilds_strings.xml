@@ -7,6 +7,7 @@
     <string name="fingerprint_enroll_touch_dialog_message_rear">Telefonunuzun arkasında yer alan sensöre dokunun.</string>
     <string name="fingerprint_enroll_touch_dialog_message_side">Telefonunuzun yan tarafında yer alan sensöre dokunun.</string>
     <string name="storage_warning_internal">Uyarı: Bu özellik düzgün çalışmayabilir veya veri kaybına neden olabilir ve bu nedenle önerilmez!</string>
+    <string name="build_date">Yapı Tarihi</string>
     <string name="icon_manager_title">Simge yöneticisi</string>
     <string name="icon_manager_summary">Durum çubuğu simgelerinin görünürlüğünü kontrol edin</string>
     <string name="status_bar_double_tap_to_sleep_title">Dokunarak uyut</string>
@@ -17,4 +18,6 @@
     <string name="volume_button_music_control_summary">Ekran kapalıyken, ses tuşlarına uzun basmak şarkıyı değiştirir</string>
     <string name="idle_manager_title">Arka plan işlemlerini sonlandır</string>
     <string name="idle_manager_summary">Cihaz bekleme modundayken önemli olmayan tüm arka plan işlemlerini durdur</string>
+    <string name="system_black_theme_title">Siyah temayı kullan</string>
+    <string name="system_black_theme_summary">Siyah arka plan renklerine zorla</string>
 </resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="refresh_rate_title">Refresh Rate Layar</string>
+    <string name="fingerprint_enroll_find_sensor_message_front">Tempelkan sensor sidik jari di bagian depan ponsel Anda.</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear">Temukan sensor sidik jari di belakang ponsel anda.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_front">Sentuh sensor sidik jari pada bagian depan ponsel anda.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear">Sentuh sensor sidik jari pada bagian belakang ponsel anda.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side">Sentuh sensor sidik jari pada bagian samping ponsel anda.</string>
+    <string name="storage_warning_internal">Peringatan: Opsi ini mungkin tidak berfungsi dengan baik atau menyebabkan hilangnya data dan oleh karena itu tidak disarankan!</string>
+    <string name="icon_manager_title">Manager ikon</string>
+    <string name="icon_manager_summary">Kontrol visibilitas dari ikon status bar</string>
+    <string name="status_bar_double_tap_to_sleep_title">Tekan untuk mematikan</string>
+    <string name="status_bar_double_tap_to_sleep_summary">Tekan dua kali pada status bar atau layar kunci untuk mematikan layar</string>
+    <string name="swipe_to_screenshot_gesture_title">Geser untuk tangkap layar</string>
+    <string name="swipe_to_screenshot_gesture_summary">Geser tiga jari untuk mengambil tangkapan layar</string>
+    <string name="volume_button_music_control_title">Kontrol playback</string>
+    <string name="volume_button_music_control_summary">Saat layar mati, menekan lama tombol volume akan melewati trek musik</string>
+    <string name="idle_manager_title">Mematikan proses di belakang</string>
+    <string name="idle_manager_summary">Hentikan semua proses latar belakang yang tidak penting saat perangkat dalam keadaan idle</string>
+</resources>

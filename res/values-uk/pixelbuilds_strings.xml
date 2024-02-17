@@ -7,6 +7,7 @@
     <string name="fingerprint_enroll_touch_dialog_message_rear">Торкніться сканера на задній панелі вашого телефона.</string>
     <string name="fingerprint_enroll_touch_dialog_message_side">Торкніться сканера на бічній грані вашого телефона.</string>
     <string name="storage_warning_internal">Увага: Ця опція може працювати неправильно або призвести до втрати даних, тому не є рекомендованою!</string>
+    <string name="build_date">Дата збірки</string>
     <string name="icon_manager_title">Менеджер значків</string>
     <string name="icon_manager_summary">Налаштування видимості значків рядка стану</string>
     <string name="status_bar_double_tap_to_sleep_title">Торкніться для сну</string>
@@ -17,4 +18,6 @@
     <string name="volume_button_music_control_summary">Коли екран вимкнено, утримування кнопок гучності перемикатиме композиції</string>
     <string name="idle_manager_title">Завершення фонових процесів</string>
     <string name="idle_manager_summary">Зупинити всі неважливі фонові процеси коли пристрій не використовується</string>
+    <string name="system_black_theme_title">Використовувати чорну тему</string>
+    <string name="system_black_theme_summary">Примусово використовувати чорні фонові кольори</string>
 </resources>

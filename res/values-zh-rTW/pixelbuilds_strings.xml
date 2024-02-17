@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="refresh_rate_title">螢幕更新率</string>
+    <string name="fingerprint_enroll_find_sensor_message_front">尋找位於裝置正面的指紋感測器</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear">尋找位於裝置背面的指紋感測器</string>
+    <string name="fingerprint_enroll_touch_dialog_message_front">輕觸位於裝置正面的指紋感測器</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear">輕觸位於裝置背面的指紋感測器</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side">輕觸位於裝置側面的指紋感測器</string>
+    <string name="storage_warning_internal">警告：此選項可能導致裝置無法正常運作或資料遺失，因此並不建議使用！</string>
+    <string name="build_date">編譯日期</string>
+    <string name="icon_manager_title">狀態列圖示管理</string>
+    <string name="icon_manager_summary">顯示或隱藏狀態列上的圖示</string>
+    <string name="status_bar_double_tap_to_sleep_title">點擊兩下即可進入休眠</string>
+    <string name="status_bar_double_tap_to_sleep_summary">點擊兩下狀態列或鎖定螢幕畫面即可關閉螢幕</string>
+    <string name="swipe_to_screenshot_gesture_title">滑動截圖</string>
+    <string name="swipe_to_screenshot_gesture_summary">同時滑動三支指頭以擷取螢幕截圖</string>
+    <string name="volume_button_music_control_title">播放控制</string>
+    <string name="volume_button_music_control_summary">螢幕關閉時，長按音量鍵即可切換曲目</string>
+    <string name="idle_manager_title">關閉背景應用程式</string>
+    <string name="idle_manager_summary">當裝置閒置時，停止所有非必要的背景程式</string>
+    <string name="system_black_theme_title">使用黑色主題</string>
+    <string name="system_black_theme_summary">強制使用黑色背景</string>
+</resources>

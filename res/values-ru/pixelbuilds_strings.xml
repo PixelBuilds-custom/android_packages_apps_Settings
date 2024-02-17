@@ -7,6 +7,7 @@
     <string name="fingerprint_enroll_touch_dialog_message_rear">Коснитесь сенсора на задней панели телефона.</string>
     <string name="fingerprint_enroll_touch_dialog_message_side">Коснитесь сенсора на боковой стороне телефона.</string>
     <string name="storage_warning_internal">Внимание: эта опция может работать неправильно или может привести к потере данных, поэтому не рекомендуется ее использовать!</string>
+    <string name="build_date">Дата сборки</string>
     <string name="icon_manager_title">Менеджер значков</string>
     <string name="icon_manager_summary">Управление видимостью значков в строке состояния</string>
     <string name="status_bar_double_tap_to_sleep_title">Коснитесь для сна</string>
@@ -17,4 +18,6 @@
     <string name="volume_button_music_control_summary">При выключенном экране долгое нажатие кнопок регулировки громкости воспроизведёт следующий трек</string>
     <string name="idle_manager_title">Закрытие фоновых процессов</string>
     <string name="idle_manager_summary">Остановка всех второстепенных фоновых процессов, когда устройство простаивает</string>
+    <string name="system_black_theme_title">Использовать черную тему</string>
+    <string name="system_black_theme_summary">Принудительно использовать черные цвета в фоне</string>
 </resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="refresh_rate_title">Частата абнаўлення экрана</string>
+    <string name="fingerprint_enroll_find_sensor_message_front">Знайдзіце датчык адбіткаў пальцаў на пярэдняй панэлі тэлефона.</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear">Знайдзіце датчык адбіткаў пальцаў на задняй панэлі тэлефона.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_front">Дакраніцеся да датчыка адбітка пальцаў на пярэдняй панэлі тэлефона.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear">Дакраніцеся да датчыка адбітка пальцаў на задняй панэлі тэлефона.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side">Дакраніцеся да датчыка адбітка пальцаў на бакавой панэлі тэлефона.</string>
+    <string name="storage_warning_internal">Увага: гэта опцыя можа рабіць няправільна або прывесці к уцечкі дадзеных, таму вона не рэкамендована!</string>
+    <string name="build_date">Дата зборкі</string>
+    <string name="icon_manager_title">Дыспетчар значкоў</string>
+    <string name="icon_manager_summary">Наладзьце бачнасць значкоў радка стану</string>
+    <string name="status_bar_double_tap_to_sleep_title">Націсніце для сну</string>
+    <string name="status_bar_double_tap_to_sleep_summary">Двойчы дакраніцеся радка стану або заблакаванага экрану, каб перавесці прыладу ў спячы рэжым</string>
+    <string name="swipe_to_screenshot_gesture_title">Правесці для скрыншота</string>
+    <string name="swipe_to_screenshot_gesture_summary">Правядзіце трыма пальцамі для стварэння скрыншота</string>
+    <string name="volume_button_music_control_title">Кіраванне прайграваннем</string>
+    <string name="volume_button_music_control_summary">Калі экран выключаны, доўгі націск кнопак гучнасці пераключае музычныя трэкі</string>
+    <string name="idle_manager_title">Спыніць фонавыя працэсы</string>
+    <string name="idle_manager_summary">Спыніць усе неістотныя фонавыя працэсы, калі прылада знаходзіцца ў рэжыме чакання</string>
+    <string name="system_black_theme_title">Выкарыстоўваць чорную тэму</string>
+    <string name="system_black_theme_summary">Прымусовыя чорныя колеры фону</string>
+</resources>

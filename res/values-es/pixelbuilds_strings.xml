@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="refresh_rate_title">Tasa de refresco</string>
+    <string name="fingerprint_enroll_find_sensor_message_front">Localiza el sensor de huellas dactilares en la parte frontal de tu teléfono.</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear">Localiza el sensor de huellas al reverso de tu teléfono.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_front">Toque el sensor en la parte frontal de su teléfono.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear">Toque el sensor en la parte trasera de su teléfono.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side">Toque el sensor en el lado de su teléfono.</string>
+    <string name="storage_warning_internal">Advertencia: Esta opción puede no funcionar correctamente o causar pérdida de datos y por lo tanto no es recomendable!</string>
+    <string name="icon_manager_title">Gestor de iconos</string>
+    <string name="icon_manager_summary">Control de visibilidad de los iconos de la barra de estado</string>
+    <string name="status_bar_double_tap_to_sleep_title">Pulsar para bloquear</string>
+    <string name="status_bar_double_tap_to_sleep_summary">Doble toque en la barra de estado para bloquear el dispositivo</string>
+    <string name="swipe_to_screenshot_gesture_title">Deslizar para capturar pantalla</string>
+    <string name="swipe_to_screenshot_gesture_summary">Desliza tres dedos para hacer una captura de pantalla</string>
+    <string name="volume_button_music_control_title">Control de reproducción</string>
+    <string name="volume_button_music_control_summary">Cuando la pantalla está apagada, las teclas de volumen de pulsación prolongada omitirán las pistas de música</string>
+    <string name="idle_manager_title">Cerrar procesos en segundo plano</string>
+    <string name="idle_manager_summary">Detener todos los procesos en segundo plano no esenciales cuando el dispositivo está inactivo</string>
+</resources>
