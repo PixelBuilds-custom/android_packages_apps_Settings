@@ -23,7 +23,7 @@ import android.util.FeatureFlagUtils;
 import android.util.Log;
 
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.development.DeveloperOptionsPreferenceController;
@@ -66,7 +66,7 @@ public class PhantomProcessPreferenceController extends
         try {
             final boolean isEnabled = !FeatureFlagUtils.isEnabled(mContext,
                     SETTINGS_ENABLE_MONITOR_PHANTOM_PROCS);
-            ((SwitchPreference) mPreference).setChecked(isEnabled);
+            (((SwitchPreferenceCompat) mPreference)).setChecked(isEnabled);
         } catch (RuntimeException e) {
             Log.e(TAG, "Fail to get feature flag: " + e.getMessage());
         }
@@ -79,7 +79,7 @@ public class PhantomProcessPreferenceController extends
             FeatureFlagUtils.setEnabled(mContext,
                     SETTINGS_ENABLE_MONITOR_PHANTOM_PROCS,
                     true /* Enable the monitoring */);
-            ((SwitchPreference) mPreference).setChecked(false);
+            (((SwitchPreferenceCompat) mPreference)).setChecked(false);
         } catch (RuntimeException e) {
             Log.e(TAG, "Fail to set feature flag: " + e.getMessage());
         }

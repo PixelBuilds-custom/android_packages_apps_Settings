@@ -23,7 +23,7 @@ import android.provider.Settings;
 
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.internal.R;
 import com.android.settings.Utils;
@@ -69,7 +69,7 @@ public class BatteryPercentagePreferenceController extends BasePreferenceControl
         int setting = Settings.System.getInt(mContext.getContentResolver(),
                 SHOW_BATTERY_PERCENT, 0);
 
-        ((SwitchPreference) preference).setChecked(setting == 1);
+        ((SwitchPreferenceCompat) preference).setChecked(setting == 1);
     }
 
     @Override

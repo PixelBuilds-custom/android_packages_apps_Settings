@@ -29,7 +29,7 @@ import android.telephony.TelephonyManager;
 import android.telephony.ims.ProvisioningManager;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.network.CarrierConfigCache;
 import com.android.settings.network.ims.MockVolteQueryImsState;
@@ -61,7 +61,7 @@ public class VideoCallingPreferenceControllerTest {
 
     private VideoCallingPreferenceController mController;
     private PersistableBundle mCarrierConfig;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     private Context mContext;
 
     @Before
@@ -84,7 +84,7 @@ public class VideoCallingPreferenceControllerTest {
         mQueryVoLteState = new MockVolteQueryImsState(mContext, SUB_ID);
         mQueryVoLteState.setIsEnabledByUser(true);
 
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mController = spy(new VideoCallingPreferenceController(mContext, "wifi_calling"));
         mController.init(SUB_ID);
         doReturn(mQueryImsState).when(mController).queryImsState(anyInt());

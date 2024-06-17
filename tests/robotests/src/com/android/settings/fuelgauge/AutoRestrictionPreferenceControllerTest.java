@@ -23,7 +23,7 @@ import static org.mockito.Mockito.doReturn;
 import android.content.Context;
 import android.provider.Settings;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.core.BasePreferenceController;
 import com.android.settings.testutils.FakeFeatureFactory;
@@ -41,7 +41,7 @@ public class AutoRestrictionPreferenceControllerTest {
     private static final int OFF = 0;
 
     private AutoRestrictionPreferenceController mController;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     private Context mContext;
     private FakeFeatureFactory mFeatureFactory;
 
@@ -52,7 +52,7 @@ public class AutoRestrictionPreferenceControllerTest {
         mFeatureFactory = FakeFeatureFactory.setupForTest();
         mContext = RuntimeEnvironment.application;
         mController = new AutoRestrictionPreferenceController(mContext);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
     }
 
     @Test

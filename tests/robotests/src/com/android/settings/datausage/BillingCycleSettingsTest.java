@@ -43,7 +43,7 @@ import android.os.Bundle;
 import androidx.fragment.app.FragmentActivity;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceManager;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.testutils.shadow.ShadowFragment;
 import com.android.settingslib.NetworkPolicyEditor;
@@ -83,9 +83,9 @@ public class BillingCycleSettingsTest {
     @Mock
     private Preference mDataLimit;
     @Mock
-    private SwitchPreference mEnableDataWarning;
+    private SwitchPreferenceCompat mEnableDataWarning;
     @Mock
-    private SwitchPreference mEnableDataLimit;
+    private SwitchPreferenceCompat mEnableDataLimit;
 
     private SharedPreferences mSharedPreferences;
 
@@ -158,7 +158,7 @@ public class BillingCycleSettingsTest {
             .thenReturn(mNetworkPolicyManager);
         when(mContext.getPackageManager()).thenReturn(mMockPackageManager);
         when(mMockPackageManager.hasSystemFeature(any())).thenReturn(true);
-        final SwitchPreference preference = mock(SwitchPreference.class);
+        final SwitchPreferenceCompat preference = mock(SwitchPreferenceCompat.class);
         when(billingCycleSettings.findPreference(anyString())).thenReturn(preference);
 
         billingCycleSettings.onCreate(Bundle.EMPTY);

@@ -33,7 +33,7 @@ import android.os.UserManager;
 import android.provider.Settings;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -53,7 +53,7 @@ public class BugReportInPowerPreferenceControllerTest {
     @Mock
     private Context mContext;
     @Mock
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
 
     private ContentResolver mContentResolver;
     private BugReportInPowerPreferenceController mController;

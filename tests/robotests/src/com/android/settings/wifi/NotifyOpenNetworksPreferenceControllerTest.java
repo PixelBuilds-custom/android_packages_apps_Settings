@@ -26,7 +26,7 @@ import static org.mockito.Mockito.verify;
 import android.content.Context;
 import android.provider.Settings;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -79,7 +79,7 @@ public class NotifyOpenNetworksPreferenceControllerTest {
 
     @Test
     public void updateState_preferenceSetCheckedWhenSettingsAreEnabled() {
-        final SwitchPreference preference = mock(SwitchPreference.class);
+        final SwitchPreferenceCompat preference = mock(SwitchPreferenceCompat.class);
         Settings.Global.putInt(mContext.getContentResolver(),
                 WIFI_NETWORKS_AVAILABLE_NOTIFICATION_ON, 1);
 
@@ -90,7 +90,7 @@ public class NotifyOpenNetworksPreferenceControllerTest {
 
     @Test
     public void updateState_preferenceSetCheckedWhenSettingsAreDisabled() {
-        final SwitchPreference preference = mock(SwitchPreference.class);
+        final SwitchPreferenceCompat preference = mock(SwitchPreferenceCompat.class);
         Settings.Global.putInt(mContext.getContentResolver(),
                 WIFI_NETWORKS_AVAILABLE_NOTIFICATION_ON, 0);
 

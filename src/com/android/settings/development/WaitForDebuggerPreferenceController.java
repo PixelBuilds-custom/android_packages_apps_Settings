@@ -29,7 +29,7 @@ import android.text.TextUtils;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.development.DeveloperOptionsPreferenceController;
@@ -79,12 +79,12 @@ public class WaitForDebuggerPreferenceController extends DeveloperOptionsPrefere
     }
 
     private void updateState(Preference preference, String debugApp) {
-        final SwitchPreference switchPreference = (SwitchPreference) preference;
+        final SwitchPreferenceCompat switchPreferenceCompat = (SwitchPreferenceCompat) preference;
         final boolean debuggerEnabled = Settings.Global.getInt(mContext.getContentResolver(),
             Settings.Global.WAIT_FOR_DEBUGGER, SETTING_VALUE_OFF) != SETTING_VALUE_OFF;
         writeDebuggerAppOptions(debugApp, debuggerEnabled, true /* persistent */);
-        switchPreference.setChecked(debuggerEnabled);
-        switchPreference.setEnabled(!TextUtils.isEmpty(debugApp));
+        switchPreferenceCompat.setChecked(debuggerEnabled);
+        switchPreferenceCompat.setEnabled(!TextUtils.isEmpty(debugApp));
     }
 
     @Override
@@ -92,7 +92,7 @@ public class WaitForDebuggerPreferenceController extends DeveloperOptionsPrefere
         super.onDeveloperOptionsSwitchDisabled();
         writeDebuggerAppOptions(null /* package name */,
                 false /* waitForDebugger */, false /* persistent */);
-        ((SwitchPreference) mPreference).setChecked(false);
+        (((SwitchPreferenceCompat) mPreference)).setChecked(false);
     }
 
     @VisibleForTesting

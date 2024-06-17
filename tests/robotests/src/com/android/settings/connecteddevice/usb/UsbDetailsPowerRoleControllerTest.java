@@ -39,7 +39,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.R;
 import com.android.settingslib.core.lifecycle.Lifecycle;
@@ -104,7 +104,7 @@ public class UsbDetailsPowerRoleControllerTest {
         mDetailsPowerRoleController.refresh(true, UsbManager.FUNCTION_NONE, POWER_ROLE_SINK,
                 DATA_ROLE_DEVICE);
 
-        SwitchPreference pref = getPreference();
+        SwitchPreferenceCompat pref = getPreference();
         assertThat(pref.isChecked()).isFalse();
     }
 
@@ -116,7 +116,7 @@ public class UsbDetailsPowerRoleControllerTest {
         mDetailsPowerRoleController.refresh(true, UsbManager.FUNCTION_NONE,
                 POWER_ROLE_SOURCE, DATA_ROLE_HOST);
 
-        SwitchPreference pref = getPreference();
+        SwitchPreferenceCompat pref = getPreference();
         assertThat(pref.isChecked()).isTrue();
     }
 
@@ -150,7 +150,7 @@ public class UsbDetailsPowerRoleControllerTest {
         mDetailsPowerRoleController.displayPreference(mScreen);
         when(mUsbBackend.getPowerRole()).thenReturn(POWER_ROLE_SINK);
 
-        SwitchPreference pref = getPreference();
+        SwitchPreferenceCompat pref = getPreference();
         pref.performClick();
 
         verify(mUsbBackend).setPowerRole(POWER_ROLE_SOURCE);
@@ -163,7 +163,7 @@ public class UsbDetailsPowerRoleControllerTest {
         mDetailsPowerRoleController.displayPreference(mScreen);
         when(mUsbBackend.getPowerRole()).thenReturn(POWER_ROLE_SINK);
 
-        SwitchPreference pref = getPreference();
+        SwitchPreferenceCompat pref = getPreference();
         pref.performClick();
 
         assertThat(pref.getSummary())
@@ -177,7 +177,7 @@ public class UsbDetailsPowerRoleControllerTest {
         mDetailsPowerRoleController.displayPreference(mScreen);
         when(mUsbBackend.getPowerRole()).thenReturn(POWER_ROLE_SINK);
 
-        SwitchPreference pref = getPreference();
+        SwitchPreferenceCompat pref = getPreference();
         pref.performClick();
 
         verify(mUsbBackend).setPowerRole(POWER_ROLE_SOURCE);
@@ -195,7 +195,7 @@ public class UsbDetailsPowerRoleControllerTest {
         mDetailsPowerRoleController.displayPreference(mScreen);
         when(mUsbBackend.getPowerRole()).thenReturn(POWER_ROLE_SINK);
 
-        SwitchPreference pref = getPreference();
+        SwitchPreferenceCompat pref = getPreference();
         pref.performClick();
 
         verify(mUsbBackend).setPowerRole(POWER_ROLE_SOURCE);
@@ -214,7 +214,7 @@ public class UsbDetailsPowerRoleControllerTest {
         mDetailsPowerRoleController.displayPreference(mScreen);
         when(mUsbBackend.getPowerRole()).thenReturn(POWER_ROLE_SINK);
 
-        SwitchPreference pref = getPreference();
+        SwitchPreferenceCompat pref = getPreference();
         pref.performClick();
 
         verify(mUsbBackend).setPowerRole(POWER_ROLE_SOURCE);
@@ -229,7 +229,7 @@ public class UsbDetailsPowerRoleControllerTest {
                 .isEqualTo(mContext.getString(R.string.usb_switching_failed));
     }
 
-    private SwitchPreference getPreference() {
-        return (SwitchPreference) mPreference.getPreference(0);
+    private SwitchPreferenceCompat getPreference() {
+        return ((SwitchPreferenceCompat) mPreference).getPreference(0);
     }
 }

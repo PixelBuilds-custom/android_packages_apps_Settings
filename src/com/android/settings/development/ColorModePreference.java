@@ -24,14 +24,14 @@ import android.os.Looper;
 import android.util.AttributeSet;
 import android.view.Display;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ColorModePreference extends SwitchPreference implements DisplayListener {
+public class ColorModePreference extends SwitchPreferenceCompat implements DisplayListener {
 
     private DisplayManager mDisplayManager;
     private Display mDisplay;

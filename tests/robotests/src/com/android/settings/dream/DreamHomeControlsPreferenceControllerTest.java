@@ -27,7 +27,7 @@ import android.provider.Settings;
 import android.util.ArraySet;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 
 import com.android.settingslib.dream.DreamBackend;
@@ -53,7 +53,7 @@ public class DreamHomeControlsPreferenceControllerTest {
     @Mock(answer = Answers.RETURNS_DEEP_STUBS)
     private PreferenceScreen mScreen;
     private DreamHomeControlsPreferenceController mController;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     private DreamBackend mBackend;
     private ShadowContentResolver mShadowContentResolver;
 
@@ -64,7 +64,7 @@ public class DreamHomeControlsPreferenceControllerTest {
         mShadowContentResolver = Shadow.extract(mContext.getContentResolver());
         mBackend = new DreamBackend(mContext);
         mController = new DreamHomeControlsPreferenceController(mContext, "key", mBackend);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mPreference.setKey(mController.getPreferenceKey());
         when(mScreen.findPreference(mPreference.getKey())).thenReturn(mPreference);
         mController.displayPreference(mScreen);

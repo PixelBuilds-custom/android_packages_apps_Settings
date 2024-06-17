@@ -21,7 +21,7 @@ import static com.google.common.truth.Truth.assertThat;
 import android.content.Context;
 import android.provider.Settings;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.core.BasePreferenceController;
 import com.android.settings.testutils.shadow.ShadowKeyCharacterMap;
@@ -42,13 +42,13 @@ public class PowerButtonEndsCallPreferenceControllerTest {
     private static final int UNKNOWN = -1;
 
     private Context mContext;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     private PowerButtonEndsCallPreferenceController mController;
 
     @Before
     public void setUp() {
         mContext = RuntimeEnvironment.application;
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mController = new PowerButtonEndsCallPreferenceController(mContext, "power_button");
     }
 

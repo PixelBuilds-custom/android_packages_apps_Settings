@@ -20,7 +20,7 @@ import android.content.Context;
 import android.provider.Settings;
 
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.development.DeveloperOptionsPreferenceController;
@@ -67,13 +67,13 @@ public abstract class GlobalSettingSwitchPreferenceController extends
     public void updateState(Preference preference) {
         final int mode =
             Settings.Global.getInt(mContext.getContentResolver(), mSettingsKey, mDefault);
-        ((SwitchPreference) mPreference).setChecked(mode != mOff);
+        (((SwitchPreferenceCompat) mPreference)).setChecked(mode != mOff);
     }
 
     @Override
     protected void onDeveloperOptionsSwitchDisabled() {
         super.onDeveloperOptionsSwitchDisabled();
         Settings.Global.putInt(mContext.getContentResolver(), mSettingsKey, mOff);
-        ((SwitchPreference) mPreference).setChecked(false);
+        (((SwitchPreferenceCompat) mPreference)).setChecked(false);
     }
 }

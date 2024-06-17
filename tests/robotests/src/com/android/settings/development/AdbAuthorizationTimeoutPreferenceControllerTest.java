@@ -27,7 +27,7 @@ import android.content.Context;
 import android.provider.Settings;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.After;
 import org.junit.Before;
@@ -47,7 +47,7 @@ public class AdbAuthorizationTimeoutPreferenceControllerTest {
 
     private Context mContext;
     private ContentResolver mContentResolver;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     private AdbAuthorizationTimeoutPreferenceController mPreferenceController;
     private long mInitialAuthTimeout;
 
@@ -58,7 +58,7 @@ public class AdbAuthorizationTimeoutPreferenceControllerTest {
         mContentResolver = mContext.getContentResolver();
 
         mPreferenceController = new AdbAuthorizationTimeoutPreferenceController(mContext);
-        mPreference = spy(new SwitchPreference(mContext));
+        mPreference = spy(new SwitchPreferenceCompat(mContext));
         when(mPreferenceScreen.findPreference(mPreferenceController.getPreferenceKey())).thenReturn(
                 mPreference);
         mPreferenceController.displayPreference(mPreferenceScreen);

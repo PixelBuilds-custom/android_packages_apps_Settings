@@ -22,7 +22,7 @@ import android.util.Log;
 import android.util.Pair;
 
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.core.lifecycle.Lifecycle;
@@ -47,7 +47,7 @@ public class ZenRuleCustomSwitchPreferenceController extends
             return;
         }
 
-        SwitchPreference pref = (SwitchPreference) preference;
+        SwitchPreferenceCompat pref = (SwitchPreferenceCompat) preference;
         pref.setChecked(mRule.getZenPolicy().isCategoryAllowed(mCategory, false));
     }
 

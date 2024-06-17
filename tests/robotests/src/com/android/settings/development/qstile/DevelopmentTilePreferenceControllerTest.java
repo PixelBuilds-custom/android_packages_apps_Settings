@@ -38,7 +38,7 @@ import android.service.quicksettings.TileService;
 
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.internal.statusbar.IStatusBarService;
 import com.android.settings.R;
@@ -132,7 +132,7 @@ public class DevelopmentTilePreferenceControllerTest {
 
     @Test
     public void preferenceChecked_shouldAddTile() throws RemoteException {
-        SwitchPreference preference = createPreference(/* defaultCheckedState = */ false);
+        SwitchPreferenceCompat preference = createPreference(/* defaultCheckedState = */ false);
         preference.performClick();
 
         ArgumentCaptor<ComponentName> argument = ArgumentCaptor.forClass(ComponentName.class);
@@ -143,7 +143,7 @@ public class DevelopmentTilePreferenceControllerTest {
 
     @Test
     public void preferenceUnchecked_shouldRemoveTile() throws RemoteException {
-        SwitchPreference preference = createPreference(/* defaultCheckedState = */ true);
+        SwitchPreferenceCompat preference = createPreference(/* defaultCheckedState = */ true);
         preference.performClick();
 
         ArgumentCaptor<ComponentName> argument = ArgumentCaptor.forClass(ComponentName.class);
@@ -152,8 +152,8 @@ public class DevelopmentTilePreferenceControllerTest {
         assertThat(argument.getValue().getPackageName()).isEqualTo(mContext.getPackageName());
     }
 
-    private SwitchPreference createPreference(boolean defaultCheckedState) {
-        SwitchPreference preference = new SwitchPreference(mContext);
+    private SwitchPreferenceCompat createPreference(boolean defaultCheckedState) {
+        SwitchPreferenceCompat preference = new SwitchPreferenceCompat(mContext);
         preference.setTitle("Test Pref");
         preference.setIcon(R.drawable.ic_settings_24dp);
         preference.setKey(SERVICE_INFO_NAME);

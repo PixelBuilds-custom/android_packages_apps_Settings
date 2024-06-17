@@ -28,7 +28,7 @@ import android.app.time.TimeManager;
 import android.content.Context;
 
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.internal.annotations.VisibleForTesting;
 import com.android.settings.core.PreferenceControllerMixin;
@@ -77,11 +77,11 @@ public class AutoTimePreferenceController extends AbstractPreferenceController
 
     @Override
     public void updateState(Preference preference) {
-        if (!(preference instanceof SwitchPreference)) {
+        if (!(preference instanceof SwitchPreferenceCompat)) {
             return;
         }
 
-        ((SwitchPreference) preference).setChecked(isEnabled());
+        ((SwitchPreferenceCompat) preference).setChecked(isEnabled());
     }
 
     @Override

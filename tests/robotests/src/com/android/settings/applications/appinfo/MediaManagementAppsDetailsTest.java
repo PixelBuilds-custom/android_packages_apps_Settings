@@ -26,7 +26,7 @@ import static org.mockito.Mockito.when;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.applications.AppStateAppOpsBridge;
 import com.android.settings.applications.AppStateMediaManagementAppsBridge;
@@ -43,7 +43,7 @@ import org.robolectric.util.ReflectionHelpers;
 public class MediaManagementAppsDetailsTest {
 
     @Mock
-    private SwitchPreference mSwitchPref;
+    private SwitchPreferenceCompat mSwitchPref;
     @Mock
     private PackageInfo mPackageInfo;
     @Mock

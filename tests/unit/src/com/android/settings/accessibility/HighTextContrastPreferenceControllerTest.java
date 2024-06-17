@@ -24,7 +24,7 @@ import android.provider.Settings;
 
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
@@ -46,7 +46,7 @@ public class HighTextContrastPreferenceControllerTest {
     private static final int UNKNOWN = -1;
 
     private Context mContext;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     private HighTextContrastPreferenceController mController;
     private PreferenceScreen mScreen;
 
@@ -58,7 +58,7 @@ public class HighTextContrastPreferenceControllerTest {
         }
         final PreferenceManager preferenceManager = new PreferenceManager(mContext);
         mScreen = preferenceManager.createPreferenceScreen(mContext);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mPreference.setKey(PREF_KEY);
         mScreen.addPreference(mPreference);
         mController = new HighTextContrastPreferenceController(mContext, PREF_KEY);

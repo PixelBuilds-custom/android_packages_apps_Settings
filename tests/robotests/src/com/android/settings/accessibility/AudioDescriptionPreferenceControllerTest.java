@@ -29,7 +29,7 @@ import android.provider.Settings;
 
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 
 import com.android.settings.core.BasePreferenceController;
@@ -48,7 +48,7 @@ public class AudioDescriptionPreferenceControllerTest {
     private static final int UNKNOWN = -1;
 
     private final Context mContext = ApplicationProvider.getApplicationContext();
-    private final SwitchPreference mSwitchPreference = spy(new SwitchPreference(mContext));
+    private final SwitchPreferenceCompat mSwitchPreference = spy(new SwitchPreferenceCompat(mContext));
     private final AudioDescriptionPreferenceController mController =
             new AudioDescriptionPreferenceController(mContext,
                     AudioDescriptionPreferenceController.PREF_KEY);

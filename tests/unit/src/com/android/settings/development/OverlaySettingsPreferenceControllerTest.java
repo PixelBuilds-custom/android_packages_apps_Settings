@@ -23,7 +23,7 @@ import static com.google.common.truth.Truth.assertThat;
 import android.content.Context;
 import android.provider.Settings;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
@@ -35,14 +35,14 @@ import org.junit.runner.RunWith;
 public class OverlaySettingsPreferenceControllerTest {
 
     private Context mContext;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     private OverlaySettingsPreferenceController mController;
 
     @Before
     public void setUp() {
         mContext = ApplicationProvider.getApplicationContext();
         mController = new OverlaySettingsPreferenceController(mContext);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
     }
 
     @Test

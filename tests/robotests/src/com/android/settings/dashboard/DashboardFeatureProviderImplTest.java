@@ -61,7 +61,7 @@ import android.util.Pair;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.R;
@@ -182,7 +182,7 @@ public class DashboardFeatureProviderImplTest {
 
     @Test
     public void bindPreference_shouldBindAllSwitchData() {
-        final Preference preference = new SwitchPreference(RuntimeEnvironment.application);
+        final Preference preference = new SwitchPreferenceCompat(RuntimeEnvironment.application);
         final Tile tile = spy(new ProviderTile(mProviderInfo, CategoryKey.CATEGORY_HOMEPAGE,
                 mSwitchMetaData));
         mSwitchMetaData.putInt(META_DATA_KEY_ORDER, 10);
@@ -203,7 +203,7 @@ public class DashboardFeatureProviderImplTest {
 
     @Test
     public void bindPreference_providerTileWithPendingIntent_shouldBindIntent() {
-        final Preference preference = new SwitchPreference(RuntimeEnvironment.application);
+        final Preference preference = new SwitchPreferenceCompat(RuntimeEnvironment.application);
         Bundle metaData = new Bundle();
         metaData.putInt(META_DATA_PREFERENCE_TITLE, R.string.settings_label);
         metaData.putInt(META_DATA_PREFERENCE_SUMMARY, R.string.about_settings_summary);
@@ -367,7 +367,7 @@ public class DashboardFeatureProviderImplTest {
     @Test
     @Config(shadows = {ShadowTileUtils.class})
     public void bindPreference_onCheckedChanged_shouldPutStateToContentProvider() {
-        final SwitchPreference preference = new SwitchPreference(RuntimeEnvironment.application);
+        final SwitchPreferenceCompat preference = new SwitchPreferenceCompat(RuntimeEnvironment.application);
         final Tile tile = new ProviderTile(mProviderInfo, CategoryKey.CATEGORY_HOMEPAGE,
                 mSwitchMetaData);
         final Bundle bundle = new Bundle();
@@ -388,7 +388,7 @@ public class DashboardFeatureProviderImplTest {
     @Test
     @Config(shadows = {ShadowTileUtils.class})
     public void bindPreference_onCheckedChangedError_shouldRevertCheckedState() {
-        final SwitchPreference preference = new SwitchPreference(RuntimeEnvironment.application);
+        final SwitchPreferenceCompat preference = new SwitchPreferenceCompat(RuntimeEnvironment.application);
         final Tile tile = new ProviderTile(mProviderInfo, CategoryKey.CATEGORY_HOMEPAGE,
                 mSwitchMetaData);
         final Bundle bundle = new Bundle();
@@ -409,7 +409,7 @@ public class DashboardFeatureProviderImplTest {
     @Test
     @Config(shadows = {ShadowTileUtils.class})
     public void bindPreference_callbackOnChanged_shouldLoadFromContentProvider() {
-        final SwitchPreference preference = new SwitchPreference(RuntimeEnvironment.application);
+        final SwitchPreferenceCompat preference = new SwitchPreferenceCompat(RuntimeEnvironment.application);
         final Tile tile = new ProviderTile(mProviderInfo, CategoryKey.CATEGORY_HOMEPAGE,
                 mSwitchMetaData);
         final List<DynamicDataObserver> observers = mImpl.bindPreferenceToTileAndGetObservers(
@@ -655,7 +655,7 @@ public class DashboardFeatureProviderImplTest {
 
     @Test
     public void clickPreference_providerTileWithPendingIntent_singleUser_executesPendingIntent() {
-        final Preference preference = new SwitchPreference(RuntimeEnvironment.application);
+        final Preference preference = new SwitchPreferenceCompat(RuntimeEnvironment.application);
         Bundle metaData = new Bundle();
         metaData.putInt(META_DATA_PREFERENCE_TITLE, R.string.settings_label);
         metaData.putInt(META_DATA_PREFERENCE_SUMMARY, R.string.about_settings_summary);
@@ -678,7 +678,7 @@ public class DashboardFeatureProviderImplTest {
 
     @Test
     public void clickPreference_providerTileWithPendingIntent_multiUser_showsProfileDialog() {
-        final Preference preference = new SwitchPreference(RuntimeEnvironment.application);
+        final Preference preference = new SwitchPreferenceCompat(RuntimeEnvironment.application);
         Bundle metaData = new Bundle();
         metaData.putInt(META_DATA_PREFERENCE_TITLE, R.string.settings_label);
         metaData.putInt(META_DATA_PREFERENCE_SUMMARY, R.string.about_settings_summary);

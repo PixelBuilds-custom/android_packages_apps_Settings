@@ -20,7 +20,7 @@ import static com.google.common.truth.Truth.assertThat;
 
 import android.content.Context;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.core.BasePreferenceController;
 
@@ -39,7 +39,7 @@ public class AutoRestorePreferenceControllerTest {
     private Context mContext;
     private AutoRestorePreferenceController mController;
     private PrivacySettingsConfigData mPSCD;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
 
     @Before
     public void setUp() {
@@ -48,7 +48,7 @@ public class AutoRestorePreferenceControllerTest {
         mPSCD = PrivacySettingsConfigData.getInstance();
         mController = new AutoRestorePreferenceController(mContext,
                 PrivacySettingsUtils.AUTO_RESTORE);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
     }
 
     @After

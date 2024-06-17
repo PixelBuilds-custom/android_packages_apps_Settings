@@ -22,7 +22,7 @@ import android.content.Context;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AlertDialog;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.R;
 import com.android.settings.applications.AppInfoWithHeader;
@@ -66,7 +66,7 @@ public class ZenAccessDetails extends AppInfoWithHeader implements
         return null;
     }
 
-    public void updatePreference(Context context, SwitchPreference preference) {
+    public void updatePreference(Context context, SwitchPreferenceCompat preference) {
         final CharSequence label = mPackageInfo.applicationInfo.loadLabel(mPm);
         final Set<String> autoApproved = ZenAccessController.getAutoApprovedPackages(context);
         if (autoApproved.contains(mPackageName)) {

@@ -35,7 +35,7 @@ import android.os.SystemProperties;
 
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
@@ -54,7 +54,7 @@ import java.util.concurrent.TimeUnit;
 @RunWith(AndroidJUnit4.class)
 public class GraphicsDriverEnableAngleAsSystemDriverControllerJUnitTest {
     private Context mContext;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
 
     private GraphicsDriverEnableAngleAsSystemDriverController mController;
 
@@ -132,7 +132,7 @@ public class GraphicsDriverEnableAngleAsSystemDriverControllerJUnitTest {
 
         final PreferenceManager preferenceManager = new PreferenceManager(mContext);
         final PreferenceScreen screen = preferenceManager.createPreferenceScreen(mContext);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mPreference.setKey(mController.getPreferenceKey());
         screen.addPreference(mPreference);
         mController.displayPreference(screen);

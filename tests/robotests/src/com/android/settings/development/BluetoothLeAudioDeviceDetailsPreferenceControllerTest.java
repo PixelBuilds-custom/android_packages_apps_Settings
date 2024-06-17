@@ -31,7 +31,7 @@ import android.content.Context;
 import android.os.SystemProperties;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.testutils.shadow.ShadowDeviceConfig;
 
@@ -54,7 +54,7 @@ public class BluetoothLeAudioDeviceDetailsPreferenceControllerTest {
     @Mock
     private BluetoothAdapter mBluetoothAdapter;
     @Mock
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
 
     private Context mContext;
     private BluetoothLeAudioDeviceDetailsPreferenceController mController;

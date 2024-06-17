@@ -31,7 +31,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.R;
 import com.android.settings.core.PreferenceControllerMixin;
@@ -59,17 +59,17 @@ public class AutoSyncDataPreferenceController extends AbstractPreferenceControll
 
     @Override
     public void updateState(Preference preference) {
-        SwitchPreference switchPreference = (SwitchPreference) preference;
-        switchPreference.setChecked(ContentResolver.getMasterSyncAutomaticallyAsUser(
+        SwitchPreferenceCompat switchPreferenceCompat = (SwitchPreferenceCompat) preference;
+        switchPreferenceCompat.setChecked(ContentResolver.getMasterSyncAutomaticallyAsUser(
                 mUserHandle.getIdentifier()));
     }
 
     @Override
     public boolean handlePreferenceTreeClick(Preference preference) {
         if (getPreferenceKey().equals(preference.getKey())) {
-            SwitchPreference switchPreference = (SwitchPreference) preference;
-            boolean checked = switchPreference.isChecked();
-            switchPreference.setChecked(!checked);
+            SwitchPreferenceCompat switchPreferenceCompat = (SwitchPreferenceCompat) preference;
+            boolean checked = switchPreferenceCompat.isChecked();
+            switchPreferenceCompat.setChecked(!checked);
             if (ActivityManager.isUserAMonkey()) {
                 Log.d(TAG, "ignoring monkey's attempt to flip sync state");
             } else {
@@ -156,8 +156,8 @@ public class AutoSyncDataPreferenceController extends AbstractPreferenceControll
                     Preference preference =
                             ((PreferenceFragmentCompat) targetFragment).findPreference(
                                     arguments.getString(ARG_KEY));
-                    if (preference instanceof SwitchPreference) {
-                        ((SwitchPreference) preference).setChecked(enabling);
+                    if (preference instanceof SwitchPreferenceCompat) {
+                        ((SwitchPreferenceCompat) preference).setChecked(enabling);
                     }
                 }
             }

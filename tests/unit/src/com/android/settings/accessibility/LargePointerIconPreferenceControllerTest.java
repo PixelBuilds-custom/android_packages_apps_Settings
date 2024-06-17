@@ -24,7 +24,7 @@ import static com.google.common.truth.Truth.assertThat;
 import android.content.Context;
 import android.provider.Settings;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
@@ -40,13 +40,13 @@ public class LargePointerIconPreferenceControllerTest {
     private static final int UNKNOWN = -1;
 
     private Context mContext;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     private LargePointerIconPreferenceController mController;
 
     @Before
     public void setUp() {
         mContext = ApplicationProvider.getApplicationContext();
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mController = new LargePointerIconPreferenceController(mContext, "large_pointer");
     }
 

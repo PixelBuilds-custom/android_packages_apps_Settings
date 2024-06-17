@@ -49,7 +49,7 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.R;
@@ -392,7 +392,7 @@ public class DashboardFragmentTest {
     public void createPreference_isProviderTile_returnSwitchPreference() {
         final Preference pref = mTestFragment.createPreference(mProviderTile);
 
-        assertThat(pref).isInstanceOf(SwitchPreference.class);
+        assertThat(pref).isInstanceOf(SwitchPreferenceCompat.class);
     }
 
     @Test
@@ -401,7 +401,7 @@ public class DashboardFragmentTest {
 
         assertThat(pref).isInstanceOf(Preference.class);
         assertThat(pref).isNotInstanceOf(PrimarySwitchPreference.class);
-        assertThat(pref).isNotInstanceOf(SwitchPreference.class);
+        assertThat(pref).isNotInstanceOf(SwitchPreferenceCompat.class);
         assertThat(pref.getWidgetLayoutResource()).isEqualTo(0);
     }
 
@@ -431,7 +431,7 @@ public class DashboardFragmentTest {
 
         assertThat(pref).isInstanceOf(Preference.class);
         assertThat(pref).isNotInstanceOf(PrimarySwitchPreference.class);
-        assertThat(pref).isNotInstanceOf(SwitchPreference.class);
+        assertThat(pref).isNotInstanceOf(SwitchPreferenceCompat.class);
         assertThat(pref.getWidgetLayoutResource())
                 .isEqualTo(R.layout.preference_external_action_icon);
     }

@@ -40,7 +40,7 @@ import androidx.annotation.VisibleForTesting;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.R;
 import com.android.settings.core.instrumentation.InstrumentedDialogFragment;
@@ -82,8 +82,8 @@ public class BillingCycleSettings extends DataUsageBaseFragment implements
     NetworkTemplate mNetworkTemplate;
     private Preference mBillingCycle;
     private Preference mDataWarning;
-    private SwitchPreference mEnableDataWarning;
-    private SwitchPreference mEnableDataLimit;
+    private SwitchPreferenceCompat mEnableDataWarning;
+    private SwitchPreferenceCompat mEnableDataLimit;
     private Preference mDataLimit;
     private DataUsageController mDataUsageController;
 
@@ -92,8 +92,8 @@ public class BillingCycleSettings extends DataUsageBaseFragment implements
             Preference billingCycle,
             Preference dataLimit,
             Preference dataWarning,
-            SwitchPreference enableLimit,
-            SwitchPreference enableWarning) {
+            SwitchPreferenceCompat enableLimit,
+            SwitchPreferenceCompat enableWarning) {
         services.mPolicyEditor = policyEditor;
         mBillingCycle = billingCycle;
         mDataLimit = dataLimit;
@@ -133,10 +133,10 @@ public class BillingCycleSettings extends DataUsageBaseFragment implements
         }
 
         mBillingCycle = findPreference(KEY_BILLING_CYCLE);
-        mEnableDataWarning = (SwitchPreference) findPreference(KEY_SET_DATA_WARNING);
+        mEnableDataWarning = (SwitchPreferenceCompat) findPreference(KEY_SET_DATA_WARNING);
         mEnableDataWarning.setOnPreferenceChangeListener(this);
         mDataWarning = findPreference(KEY_DATA_WARNING);
-        mEnableDataLimit = (SwitchPreference) findPreference(KEY_SET_DATA_LIMIT);
+        mEnableDataLimit = (SwitchPreferenceCompat) findPreference(KEY_SET_DATA_LIMIT);
         mEnableDataLimit.setOnPreferenceChangeListener(this);
         mDataLimit = findPreference(KEY_DATA_LIMIT);
     }

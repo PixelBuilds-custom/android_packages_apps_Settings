@@ -34,7 +34,7 @@ import android.media.AudioManager;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 
 import org.junit.Before;
@@ -60,7 +60,7 @@ public class HearingAidCompatibilityPreferenceControllerTest {
 
     private TelephonyManager mTelephonyManager;
     private AudioManager mAudioManager;
-    private final SwitchPreference mPreference = new SwitchPreference(mContext);
+    private final SwitchPreferenceCompat mPreference = new SwitchPreferenceCompat(mContext);
     private HearingAidCompatibilityPreferenceController mController;
 
     @Before

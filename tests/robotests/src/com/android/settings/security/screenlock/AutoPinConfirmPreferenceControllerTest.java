@@ -22,7 +22,7 @@ import static org.mockito.Mockito.when;
 
 import android.content.Context;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 
 import com.android.internal.widget.LockPatternUtils;
@@ -43,7 +43,7 @@ public class AutoPinConfirmPreferenceControllerTest {
     @Mock
     private ObservablePreferenceFragment mParentFragment;
     private AutoPinConfirmPreferenceController mController;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
 
     @Before
     public void setUp() {
@@ -52,7 +52,7 @@ public class AutoPinConfirmPreferenceControllerTest {
         mController =
                 new AutoPinConfirmPreferenceController(context, TEST_USER_ID, mLockPatternUtils,
                         mParentFragment);
-        mPreference = new SwitchPreference(context);
+        mPreference = new SwitchPreferenceCompat(context);
     }
 
     @Test
@@ -92,12 +92,12 @@ public class AutoPinConfirmPreferenceControllerTest {
 
     @Test
     public void updateState_ChangingSettingState_shouldSetPreferenceToAppropriateCheckedState() {
-        // When auto_pin_confirm setting is disabled, switchPreference is unchecked
+        // When auto_pin_confirm setting is disabled, switchPreferenceCompat is unchecked
         when(mLockPatternUtils.isAutoPinConfirmEnabled(TEST_USER_ID)).thenReturn(false);
         mController.updateState(mPreference);
         assertThat(mPreference.isChecked()).isFalse();
 
-        // When auto_pin_confirm setting is enabled, switchPreference is checked
+        // When auto_pin_confirm setting is enabled, switchPreferenceCompat is checked
         when(mLockPatternUtils.isAutoPinConfirmEnabled(TEST_USER_ID)).thenReturn(true);
         mController.updateState(mPreference);
         assertThat(mPreference.isChecked()).isTrue();

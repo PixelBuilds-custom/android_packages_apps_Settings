@@ -46,7 +46,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.preference.EditTextPreference;
 import androidx.preference.ListPreference;
 import androidx.preference.MultiSelectListPreference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import com.android.settings.R;
 import com.android.settings.network.ProxySubscriptionManager;
 import com.android.settings.network.apn.ApnEditor.ApnData;
@@ -588,7 +588,7 @@ public class ApnEditorTest {
         mApnEditorUT.mApnType = new EditTextPreference(context);
         mApnEditorUT.mProtocol = new ListPreference(context);
         mApnEditorUT.mRoamingProtocol = new ListPreference(context);
-        mApnEditorUT.mCarrierEnabled = new SwitchPreference(context);
+        mApnEditorUT.mCarrierEnabled = new SwitchPreferenceCompat(context);
         mApnEditorUT.mBearerMulti = new MultiSelectListPreference(context);
         mApnEditorUT.mMvnoType = new ListPreference(context);
         mApnEditorUT.mMvnoMatchData = new EditTextPreference(context);

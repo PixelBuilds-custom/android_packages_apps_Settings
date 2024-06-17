@@ -31,7 +31,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.R;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
@@ -72,14 +72,14 @@ public class BluetoothDetailsSpatialAudioController extends BluetoothDetailsCont
 
     @Override
     public boolean onPreferenceClick(Preference preference) {
-        SwitchPreference switchPreference = (SwitchPreference) preference;
-        String key = switchPreference.getKey();
+        SwitchPreferenceCompat switchPreferenceCompat = (SwitchPreferenceCompat) preference;
+        String key = switchPreferenceCompat.getKey();
         if (TextUtils.equals(key, KEY_SPATIAL_AUDIO)) {
-            updateSpatializerEnabled(switchPreference.isChecked());
-            refreshSpatialAudioEnabled(switchPreference);
+            updateSpatializerEnabled(switchPreferenceCompat.isChecked());
+            refreshSpatialAudioEnabled(switchPreferenceCompat);
             return true;
         } else if (TextUtils.equals(key, KEY_HEAD_TRACKING)) {
-            updateSpatializerHeadTracking(switchPreference.isChecked());
+            updateSpatializerHeadTracking(switchPreferenceCompat.isChecked());
             return true;
         } else {
             Log.w(TAG, "invalid key name.");
@@ -124,7 +124,7 @@ public class BluetoothDetailsSpatialAudioController extends BluetoothDetailsCont
             getAvailableDevice();
         }
 
-        SwitchPreference spatialAudioPref = mProfilesContainer.findPreference(KEY_SPATIAL_AUDIO);
+        SwitchPreferenceCompat spatialAudioPref = mProfilesContainer.findPreference(KEY_SPATIAL_AUDIO);
         if (spatialAudioPref == null && mAudioDevice != null) {
             spatialAudioPref = createSpatialAudioPreference(mProfilesContainer.getContext());
             mProfilesContainer.addPreference(spatialAudioPref);
@@ -132,7 +132,7 @@ public class BluetoothDetailsSpatialAudioController extends BluetoothDetailsCont
             if (spatialAudioPref != null) {
                 mProfilesContainer.removePreference(spatialAudioPref);
             }
-            final SwitchPreference headTrackingPref =
+            final SwitchPreferenceCompat headTrackingPref =
                     mProfilesContainer.findPreference(KEY_HEAD_TRACKING);
             if (headTrackingPref != null) {
                 mProfilesContainer.removePreference(headTrackingPref);
@@ -144,12 +144,12 @@ public class BluetoothDetailsSpatialAudioController extends BluetoothDetailsCont
         refreshSpatialAudioEnabled(spatialAudioPref);
     }
 
-    private void refreshSpatialAudioEnabled(SwitchPreference spatialAudioPref) {
+    private void refreshSpatialAudioEnabled(SwitchPreferenceCompat spatialAudioPref) {
         boolean isSpatialAudioOn = mSpatializer.getCompatibleAudioDevices().contains(mAudioDevice);
         Log.d(TAG, "refresh() isSpatialAudioOn : " + isSpatialAudioOn);
         spatialAudioPref.setChecked(isSpatialAudioOn);
 
-        SwitchPreference headTrackingPref = mProfilesContainer.findPreference(KEY_HEAD_TRACKING);
+        SwitchPreferenceCompat headTrackingPref = mProfilesContainer.findPreference(KEY_HEAD_TRACKING);
         if (headTrackingPref == null) {
             headTrackingPref = createHeadTrackingPreference(mProfilesContainer.getContext());
             mProfilesContainer.addPreference(headTrackingPref);
@@ -157,8 +157,8 @@ public class BluetoothDetailsSpatialAudioController extends BluetoothDetailsCont
         refreshHeadTracking(spatialAudioPref, headTrackingPref);
     }
 
-    private void refreshHeadTracking(SwitchPreference spatialAudioPref,
-                                     SwitchPreference headTrackingPref) {
+    private void refreshHeadTracking(SwitchPreferenceCompat spatialAudioPref,
+                                     SwitchPreferenceCompat headTrackingPref) {
         boolean isHeadTrackingAvailable =
                 spatialAudioPref.isChecked() && mSpatializer.hasHeadTracker(mAudioDevice);
         Log.d(TAG, "refresh() has head tracker : " + mSpatializer.hasHeadTracker(mAudioDevice));
@@ -169,8 +169,8 @@ public class BluetoothDetailsSpatialAudioController extends BluetoothDetailsCont
     }
 
     @VisibleForTesting
-    SwitchPreference createSpatialAudioPreference(Context context) {
-        SwitchPreference pref = new SwitchPreference(context);
+    SwitchPreferenceCompat createSpatialAudioPreference(Context context) {
+        SwitchPreferenceCompat pref = new SwitchPreferenceCompat(context);
         pref.setKey(KEY_SPATIAL_AUDIO);
         pref.setTitle(context.getString(R.string.bluetooth_details_spatial_audio_title));
         pref.setSummary(context.getString(R.string.bluetooth_details_spatial_audio_summary));
@@ -179,8 +179,8 @@ public class BluetoothDetailsSpatialAudioController extends BluetoothDetailsCont
     }
 
     @VisibleForTesting
-    SwitchPreference createHeadTrackingPreference(Context context) {
-        SwitchPreference pref = new SwitchPreference(context);
+    SwitchPreferenceCompat createHeadTrackingPreference(Context context) {
+        SwitchPreferenceCompat pref = new SwitchPreferenceCompat(context);
         pref.setKey(KEY_HEAD_TRACKING);
         pref.setTitle(context.getString(R.string.bluetooth_details_head_tracking_title));
         pref.setSummary(context.getString(R.string.bluetooth_details_head_tracking_summary));

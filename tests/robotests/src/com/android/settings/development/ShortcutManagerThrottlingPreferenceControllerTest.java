@@ -26,7 +26,7 @@ import android.content.pm.IShortcutService;
 import android.os.RemoteException;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -41,7 +41,7 @@ import org.robolectric.util.ReflectionHelpers;
 public class ShortcutManagerThrottlingPreferenceControllerTest {
 
     @Mock
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     @Mock
     private PreferenceScreen mPreferenceScreen;
     @Mock

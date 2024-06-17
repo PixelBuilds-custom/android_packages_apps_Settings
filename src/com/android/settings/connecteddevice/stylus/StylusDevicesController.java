@@ -40,7 +40,7 @@ import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.R;
 import com.android.settings.dashboard.profileselector.ProfileSelectDialog;
@@ -157,8 +157,8 @@ public class StylusDevicesController extends AbstractPreferenceController implem
         return pref;
     }
 
-    private SwitchPreference createButtonPressPreference() {
-        SwitchPreference pref = new SwitchPreference(mContext);
+    private SwitchPreferenceCompat createButtonPressPreference() {
+        SwitchPreferenceCompat pref = new SwitchPreferenceCompat(mContext);
         pref.setKey(KEY_IGNORE_BUTTON);
         pref.setTitle(mContext.getString(R.string.stylus_ignore_button));
         pref.setIcon(R.drawable.ic_block);
@@ -198,7 +198,7 @@ public class StylusDevicesController extends AbstractPreferenceController implem
             case KEY_IGNORE_BUTTON:
                 Settings.Secure.putInt(mContext.getContentResolver(),
                         Secure.STYLUS_BUTTONS_ENABLED,
-                        ((SwitchPreference) preference).isChecked() ? 0 : 1);
+                        ((SwitchPreferenceCompat) preference).isChecked() ? 0 : 1);
                 break;
         }
         return true;

@@ -33,7 +33,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.preference.PreferenceCategory;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.R;
 import com.android.settings.accessibility.AccessibilityUtil.QuickSettingsTooltipType;
@@ -102,7 +102,7 @@ public class ToggleReduceBrightColorsPreferenceFragment extends ToggleFeaturePre
         getPreferenceScreen().removePreference(intensity);
         intensity.setOrder(mShortcutPreference.getOrder() - 2);
         generalCategory.addPreference(intensity);
-        final SwitchPreference persist = findPreference(KEY_PERSIST);
+        final SwitchPreferenceCompat persist = findPreference(KEY_PERSIST);
         getPreferenceScreen().removePreference(persist);
         persist.setOrder(mShortcutPreference.getOrder() - 1);
         generalCategory.addPreference(persist);
@@ -158,8 +158,8 @@ public class ToggleReduceBrightColorsPreferenceFragment extends ToggleFeaturePre
     }
 
     @Override
-    protected void updateToggleServiceTitle(SettingsMainSwitchPreference switchPreference) {
-        switchPreference.setTitle(R.string.reduce_bright_colors_preference_title);
+    protected void updateToggleServiceTitle(SettingsMainSwitchPreference switchPreferenceCompat) {
+        switchPreferenceCompat.setTitle(R.string.reduce_bright_colors_preference_title);
     }
 
     @Override

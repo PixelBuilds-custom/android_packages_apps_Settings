@@ -36,7 +36,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.LifecycleRegistry;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
@@ -83,7 +83,7 @@ public class MobileDataPreferenceControllerTest {
     private MobileNetworkInfoEntity mNetworkInfo2;
     private LifecycleRegistry mLifecycleRegistry;
     private MobileDataPreferenceController mController;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     private Context mContext;
 
     @Before
@@ -103,7 +103,7 @@ public class MobileDataPreferenceControllerTest {
                 SubscriptionManager.INVALID_SUBSCRIPTION_ID);
         doReturn(mFragmentTransaction).when(mFragmentManager).beginTransaction();
 
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mController = new MobileDataPreferenceController(mContext, "mobile_data", mLifecycle,
                 mLifecycleOwner, SUB_ID);
         mController.init(mFragmentManager, SUB_ID, mSubInfo1, mNetworkInfo1);

@@ -28,7 +28,7 @@ import android.telephony.TelephonyManager;
 
 import androidx.fragment.app.FragmentActivity;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -55,7 +55,7 @@ public class DialPadTonePreferenceControllerTest {
     private Context mContext;
 
     private DialPadTonePreferenceController mController;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
 
     @Before
     public void setUp() {
@@ -65,7 +65,7 @@ public class DialPadTonePreferenceControllerTest {
         when(mSetting.getActivity()).thenReturn(mActivity);
         when(mActivity.getSystemService(Context.TELEPHONY_SERVICE)).thenReturn(mTelephonyManager);
         when(mActivity.getContentResolver()).thenReturn(mContentResolver);
-        mPreference = new SwitchPreference(RuntimeEnvironment.application);
+        mPreference = new SwitchPreferenceCompat(RuntimeEnvironment.application);
         mController = new DialPadTonePreferenceController(mContext, mSetting, null);
         when(mScreen.findPreference(mController.getPreferenceKey())).thenReturn(mPreference);
         doReturn(mScreen).when(mSetting).getPreferenceScreen();

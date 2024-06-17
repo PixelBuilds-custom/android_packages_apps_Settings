@@ -30,7 +30,7 @@ import android.provider.Settings.Global;
 
 import androidx.fragment.app.FragmentActivity;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -55,7 +55,7 @@ public class DockingSoundPreferenceControllerTest {
     private Context mContext;
 
     private DockingSoundPreferenceController mController;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
 
     @Before
     public void setUp() {
@@ -64,7 +64,7 @@ public class DockingSoundPreferenceControllerTest {
                 .getSystemService(Context.DEVICE_POLICY_SERVICE);
         when(mSetting.getActivity()).thenReturn(mActivity);
         when(mActivity.getContentResolver()).thenReturn(mContentResolver);
-        mPreference = new SwitchPreference(RuntimeEnvironment.application);
+        mPreference = new SwitchPreferenceCompat(RuntimeEnvironment.application);
         when(mActivity.getResources().getBoolean(com.android.settings.R.bool.has_dock_settings))
             .thenReturn(true);
         mController = new DockingSoundPreferenceController(mContext, mSetting, null);

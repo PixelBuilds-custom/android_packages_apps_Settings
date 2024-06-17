@@ -33,7 +33,7 @@ import androidx.lifecycle.LifecycleObserver;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.R;
 import com.android.settings.applications.AppInfoBase;
@@ -81,7 +81,7 @@ public class AppChannelsBypassingDndPreferenceController extends NotificationPre
                 new Preference.OnPreferenceClickListener() {
                     @Override
                     public boolean onPreferenceClick(Preference pref) {
-                        SwitchPreference preference = (SwitchPreference) pref;
+                        SwitchPreferenceCompat preference = (SwitchPreferenceCompat) pref;
                         final boolean bypassDnd = preference.isChecked();
                         for (NotificationChannel channel : mChannels) {
                             if (showNotification(channel) && isChannelConfigurable(channel)) {

@@ -29,7 +29,7 @@ import android.provider.Settings;
 
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 
 import org.junit.Before;
@@ -44,7 +44,7 @@ public class MagnificationAlwaysOnPreferenceControllerTest {
             Settings.Secure.ACCESSIBILITY_MAGNIFICATION_ALWAYS_ON_ENABLED;
 
     private final Context mContext = ApplicationProvider.getApplicationContext();
-    private final SwitchPreference mSwitchPreference = spy(new SwitchPreference(mContext));
+    private final SwitchPreferenceCompat mSwitchPreference = spy(new SwitchPreferenceCompat(mContext));
     private final MagnificationAlwaysOnPreferenceController mController =
             new MagnificationAlwaysOnPreferenceController(mContext,
                     MagnificationAlwaysOnPreferenceController.PREF_KEY);

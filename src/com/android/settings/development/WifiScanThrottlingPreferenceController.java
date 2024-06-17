@@ -20,7 +20,7 @@ import android.content.Context;
 import android.net.wifi.WifiManager;
 
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.development.DeveloperOptionsPreferenceController;
@@ -50,13 +50,13 @@ public class WifiScanThrottlingPreferenceController extends DeveloperOptionsPref
 
     @Override
     public void updateState(Preference preference) {
-        ((SwitchPreference) mPreference).setChecked(mWifiManager.isScanThrottleEnabled());
+        (((SwitchPreferenceCompat) mPreference)).setChecked(mWifiManager.isScanThrottleEnabled());
     }
 
     @Override
     protected void onDeveloperOptionsSwitchDisabled() {
         super.onDeveloperOptionsSwitchDisabled();
         mWifiManager.setScanThrottleEnabled(true);
-        ((SwitchPreference) mPreference).setChecked(true);
+        (((SwitchPreferenceCompat) mPreference)).setChecked(true);
     }
 }

@@ -55,7 +55,7 @@ import android.widget.Toast;
 import androidx.annotation.VisibleForTesting;
 import androidx.fragment.app.FragmentActivity;
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.R;
 import com.android.settings.SettingsActivity;
@@ -378,8 +378,8 @@ public class DashboardFeatureProviderImpl implements DashboardFeatureProvider {
     private void setSwitchChecked(Preference pref, boolean checked) {
         if (pref instanceof PrimarySwitchPreference) {
             ((PrimarySwitchPreference) pref).setChecked(checked);
-        } else if (pref instanceof SwitchPreference) {
-            ((SwitchPreference) pref).setChecked(checked);
+        } else if (pref instanceof SwitchPreferenceCompat) {
+            ((SwitchPreferenceCompat) pref).setChecked(checked);
         }
     }
 

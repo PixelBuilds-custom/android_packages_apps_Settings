@@ -31,7 +31,7 @@ import android.content.Context;
 import android.net.TetheringManager;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 
 import com.android.settings.R;
@@ -83,7 +83,7 @@ public class WifiTetherDisablePreferenceControllerTest {
     @Mock
     private TetherEnabler mTetherEnabler;
 
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     private Context mContext;
     private WifiTetherDisablePreferenceController mController;
     private final int mTetherState;
@@ -99,7 +99,7 @@ public class WifiTetherDisablePreferenceControllerTest {
         MockitoAnnotations.initMocks(this);
 
         mContext = spy(ApplicationProvider.getApplicationContext());
-        mPreference = spy(SwitchPreference.class);
+        mPreference = spy(SwitchPreferenceCompat.class);
         when(mContext.getSystemService(Context.TETHERING_SERVICE)).thenReturn(mTetheringManager);
         when(mTetheringManager.getTetherableWifiRegexs()).thenReturn(new String[]{""});
         mController = new WifiTetherDisablePreferenceController(mContext, WIFI_TETHER_DISABLE_KEY);

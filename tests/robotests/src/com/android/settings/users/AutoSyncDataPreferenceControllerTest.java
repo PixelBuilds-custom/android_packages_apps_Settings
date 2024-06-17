@@ -29,7 +29,7 @@ import android.os.UserManager;
 
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.testutils.shadow.ShadowContentResolver;
 import com.android.settings.users.AutoSyncDataPreferenceController.ConfirmAutoSyncChangeFragment;
@@ -59,7 +59,7 @@ public class AutoSyncDataPreferenceControllerTest {
     @Mock
     private PreferenceFragmentCompat mFragment;
 
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     private Context mContext;
     private AutoSyncDataPreferenceController mController;
 
@@ -71,7 +71,7 @@ public class AutoSyncDataPreferenceControllerTest {
         mContext = RuntimeEnvironment.application;
         mController = new AutoSyncDataPreferenceController(mContext, mFragment);
         String preferenceKey = mController.getPreferenceKey();
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mPreference.setKey(preferenceKey);
         mPreference.setChecked(true);
         when(mScreen.findPreference(preferenceKey)).thenReturn(mPreference);

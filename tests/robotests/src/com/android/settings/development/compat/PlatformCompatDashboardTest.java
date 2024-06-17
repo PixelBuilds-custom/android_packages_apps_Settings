@@ -41,7 +41,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.internal.compat.CompatibilityChangeConfig;
 import com.android.internal.compat.CompatibilityChangeInfo;
@@ -150,10 +150,10 @@ public class PlatformCompatDashboardTest {
         Preference enabledPreference = mDashboard.createPreferenceForChange(mContext, enabledChange,
                 config);
 
-        SwitchPreference enabledSwitchPreference = (SwitchPreference) enabledPreference;
+        SwitchPreferenceCompat enabledSwitchPreference = (SwitchPreferenceCompat) enabledPreference;
 
         assertThat(enabledPreference.getSummary()).isEqualTo(mChanges[0].getName());
-        assertThat(enabledPreference instanceof SwitchPreference).isTrue();
+        assertThat(enabledPreference instanceof SwitchPreferenceCompat).isTrue();
         assertThat(enabledSwitchPreference.isChecked()).isTrue();
         assertThat(enabledSwitchPreference.isEnabled()).isTrue();
     }
@@ -169,7 +169,7 @@ public class PlatformCompatDashboardTest {
                 disabledChange, config);
 
         assertThat(disabledPreference.getSummary()).isEqualTo(mChanges[1].getName());
-        SwitchPreference disabledSwitchPreference = (SwitchPreference) disabledPreference;
+        SwitchPreferenceCompat disabledSwitchPreference = (SwitchPreferenceCompat) disabledPreference;
         assertThat(disabledSwitchPreference.isChecked()).isFalse();
         assertThat(disabledSwitchPreference.isEnabled()).isTrue();
     }
@@ -187,12 +187,12 @@ public class PlatformCompatDashboardTest {
         Preference preference = mDashboard.createPreferenceForChange(mContext, enabledChange,
                 config);
 
-        SwitchPreference switchPreference = (SwitchPreference) preference;
+        SwitchPreferenceCompat switchPreferenceCompat = (SwitchPreferenceCompat) preference;
 
         assertThat(preference.getSummary()).isEqualTo(mChanges[0].getName());
-        assertThat(preference instanceof SwitchPreference).isTrue();
-        assertThat(switchPreference.isChecked()).isTrue();
-        assertThat(switchPreference.isEnabled()).isFalse();
+        assertThat(preference instanceof SwitchPreferenceCompat).isTrue();
+        assertThat(switchPreferenceCompat.isChecked()).isTrue();
+        assertThat(switchPreferenceCompat.isEnabled()).isFalse();
     }
 
     @Test
@@ -221,7 +221,7 @@ public class PlatformCompatDashboardTest {
         assertThat(category.getPreferenceCount()).isEqualTo(mChanges.length);
         for (int i = 0; i < mChanges.length; ++i) {
             Preference childPreference = category.getPreference(i);
-            assertThat(childPreference instanceof SwitchPreference).isTrue();
+            assertThat(childPreference instanceof SwitchPreferenceCompat).isTrue();
         }
     }
 }

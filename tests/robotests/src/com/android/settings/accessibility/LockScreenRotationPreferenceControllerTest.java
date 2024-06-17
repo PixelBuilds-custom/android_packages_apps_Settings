@@ -22,7 +22,7 @@ import android.content.Context;
 import android.os.UserHandle;
 import android.provider.Settings;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.internal.view.RotationPolicy;
 import com.android.settings.core.BasePreferenceController;
@@ -40,13 +40,13 @@ import org.robolectric.annotation.Config;
 public class LockScreenRotationPreferenceControllerTest {
 
     private Context mContext;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     private LockScreenRotationPreferenceController mController;
 
     @Before
     public void setUp() {
         mContext = RuntimeEnvironment.application;
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mController = new LockScreenRotationPreferenceController(mContext, "lock_screen");
     }
 

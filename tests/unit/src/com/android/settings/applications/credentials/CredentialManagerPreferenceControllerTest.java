@@ -41,7 +41,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
@@ -158,13 +158,13 @@ public class CredentialManagerPreferenceControllerTest {
         assertThat(enabledProviders.contains("com.android.provider1")).isTrue();
 
         // Create the pref (checked).
-        SwitchPreference pref = controller.createPreference(mContext, providerInfo1);
+        SwitchPreferenceCompat pref = controller.createPreference(mContext, providerInfo1);
         assertThat(pref.getTitle().toString()).isEqualTo("Service Title");
         assertThat(pref.isChecked()).isTrue();
         assertThat(pref.getSummary()).isNull();
 
         // Create the pref (not checked).
-        SwitchPreference pref2 = controller.createPreference(mContext, providerInfo2);
+        SwitchPreferenceCompat pref2 = controller.createPreference(mContext, providerInfo2);
         assertThat(pref2.getTitle().toString()).isEqualTo("Service Title");
         assertThat(pref2.isChecked()).isFalse();
         assertThat(pref2.getSummary().toString()).isEqualTo("Summary Text");
@@ -311,7 +311,7 @@ public class CredentialManagerPreferenceControllerTest {
         assertThat(controller.isConnected()).isFalse();
         assertThat(mCredentialsPreferenceCategory.getPreferenceCount()).isEqualTo(3);
 
-        Map<String, SwitchPreference> prefs =
+        Map<String, SwitchPreferenceCompat> prefs =
                 controller.buildPreferenceList(mContext, mCredentialsPreferenceCategory);
         assertThat(prefs.keySet())
                 .containsExactly(TEST_PACKAGE_NAME_A, TEST_PACKAGE_NAME_B, TEST_PACKAGE_NAME_C);

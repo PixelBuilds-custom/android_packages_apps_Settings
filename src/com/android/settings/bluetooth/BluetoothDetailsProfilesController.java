@@ -29,7 +29,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.R;
 import com.android.settings.core.SettingsUIDeviceConfig;
@@ -107,14 +107,14 @@ public class BluetoothDetailsProfilesController extends BluetoothDetailsControll
     /**
      * Creates a switch preference for the particular profile.
      *
-     * @param context The context to use when creating the SwitchPreference
+     * @param context The context to use when creating the SwitchPreferenceCompat
      * @param profile The profile for which the preference controls.
      * @return A preference that allows the user to choose whether this profile
      * will be connected to.
      */
-    private SwitchPreference createProfilePreference(Context context,
+    private SwitchPreferenceCompat createProfilePreference(Context context,
             LocalBluetoothProfile profile) {
-        SwitchPreference pref = new SwitchPreference(context);
+        SwitchPreferenceCompat pref = new SwitchPreferenceCompat(context);
         pref.setKey(profile.toString());
         pref.setTitle(profile.getNameResource(mCachedDevice.getDevice()));
         pref.setOnPreferenceClickListener(this);
@@ -127,9 +127,9 @@ public class BluetoothDetailsProfilesController extends BluetoothDetailsControll
     }
 
     /**
-     * Refreshes the state for an existing SwitchPreference for a profile.
+     * Refreshes the state for an existing SwitchPreferenceCompat for a profile.
      */
-    private void refreshProfilePreference(SwitchPreference profilePref,
+    private void refreshProfilePreference(SwitchPreferenceCompat profilePref,
             LocalBluetoothProfile profile) {
         BluetoothDevice device = mCachedDevice.getDevice();
         boolean isLeAudioEnabled = isLeAudioEnabled();
@@ -167,7 +167,7 @@ public class BluetoothDetailsProfilesController extends BluetoothDetailsControll
 
         if (profile instanceof A2dpProfile) {
             A2dpProfile a2dp = (A2dpProfile) profile;
-            SwitchPreference highQualityPref = (SwitchPreference) mProfilesContainer.findPreference(
+            SwitchPreferenceCompat highQualityPref = (SwitchPreferenceCompat) mProfilesContainer.findPreference(
                     HIGH_QUALITY_AUDIO_PREF_TAG);
             if (highQualityPref != null) {
                 if (a2dp.isEnabled(device) && a2dp.supportsHighQualityAudio(device)) {
@@ -253,7 +253,7 @@ public class BluetoothDetailsProfilesController extends BluetoothDetailsControll
                 return false;
             }
         }
-        SwitchPreference profilePref = (SwitchPreference) preference;
+        SwitchPreferenceCompat profilePref = (SwitchPreferenceCompat) preference;
         if (profilePref.isChecked()) {
             enableProfile(profile);
         } else {
@@ -432,12 +432,12 @@ public class BluetoothDetailsProfilesController extends BluetoothDetailsControll
         BluetoothDevice device = mCachedDevice.getDevice();
         A2dpProfile a2dp = (A2dpProfile) profile;
         if (a2dp.isProfileReady() && a2dp.supportsHighQualityAudio(device)) {
-            SwitchPreference highQualityAudioPref = new SwitchPreference(
+            SwitchPreferenceCompat highQualityAudioPref = new SwitchPreferenceCompat(
                     mProfilesContainer.getContext());
             highQualityAudioPref.setKey(HIGH_QUALITY_AUDIO_PREF_TAG);
             highQualityAudioPref.setVisible(false);
             highQualityAudioPref.setOnPreferenceClickListener(clickedPref -> {
-                boolean enable = ((SwitchPreference) clickedPref).isChecked();
+                boolean enable = ((SwitchPreferenceCompat) clickedPref).isChecked();
                 a2dp.setHighQualityAudioEnabled(mCachedDevice.getDevice(), enable);
                 return true;
             });
@@ -509,7 +509,7 @@ public class BluetoothDetailsProfilesController extends BluetoothDetailsControll
             if (profile == null || !profile.isProfileReady()) {
                 continue;
             }
-            SwitchPreference pref = mProfilesContainer.findPreference(
+            SwitchPreferenceCompat pref = mProfilesContainer.findPreference(
                     profile.toString());
             if (pref == null) {
                 pref = createProfilePreference(mProfilesContainer.getContext(), profile);
@@ -519,7 +519,7 @@ public class BluetoothDetailsProfilesController extends BluetoothDetailsControll
             refreshProfilePreference(pref, profile);
         }
         for (LocalBluetoothProfile removedProfile : mCachedDevice.getRemovedProfiles()) {
-            final SwitchPreference pref = mProfilesContainer.findPreference(
+            final SwitchPreferenceCompat pref = mProfilesContainer.findPreference(
                     removedProfile.toString());
             if (pref != null) {
                 mProfilesContainer.removePreference(pref);

@@ -28,7 +28,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.provider.Settings;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.After;
 import org.junit.Before;
@@ -47,7 +47,7 @@ public class InstantAppWebActionPreferenceControllerTest {
     private ContentResolver mContentResolver;
     private int mEnableEphemeralFeature;
     private InstantAppWebActionPreferenceController mController;
-    private SwitchPreference mSwitchPreference;
+    private SwitchPreferenceCompat mSwitchPreference;
 
     @Before
     public void setUp() {
@@ -55,7 +55,7 @@ public class InstantAppWebActionPreferenceControllerTest {
         mContext = spy(RuntimeEnvironment.application);
         mContentResolver = mContext.getContentResolver();
         mController = new InstantAppWebActionPreferenceController(mContext, PREF_KEY);
-        mSwitchPreference = new SwitchPreference(mContext);
+        mSwitchPreference = new SwitchPreferenceCompat(mContext);
         mEnableEphemeralFeature = Settings.Global.getInt(mContentResolver,
                 ENABLE_EPHEMERAL_FEATURE, 1);
     }

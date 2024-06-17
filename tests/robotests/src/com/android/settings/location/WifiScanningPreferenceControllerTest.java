@@ -23,7 +23,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.net.wifi.WifiManager;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -37,7 +37,7 @@ import org.robolectric.RuntimeEnvironment;
 public class WifiScanningPreferenceControllerTest {
 
     @Mock
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     @Mock
     private WifiManager mWifiManager;
 

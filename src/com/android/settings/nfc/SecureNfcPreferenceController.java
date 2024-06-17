@@ -20,7 +20,7 @@ import android.nfc.NfcAdapter;
 import android.os.UserManager;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.R;
 import com.android.settings.core.TogglePreferenceController;
@@ -49,9 +49,9 @@ public class SecureNfcPreferenceController extends TogglePreferenceController
             return;
         }
 
-        final SwitchPreference switchPreference = screen.findPreference(getPreferenceKey());
+        final SwitchPreferenceCompat switchPreferenceCompat = screen.findPreference(getPreferenceKey());
 
-        mSecureNfcEnabler = new SecureNfcEnabler(mContext, switchPreference);
+        mSecureNfcEnabler = new SecureNfcEnabler(mContext, switchPreferenceCompat);
     }
 
     @Override

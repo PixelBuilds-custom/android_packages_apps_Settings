@@ -32,7 +32,7 @@ import android.util.Log;
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.internal.telephony.util.ArrayUtils;
 import com.android.settings.R;
@@ -153,12 +153,12 @@ public class Enhanced4gBasePreferenceController extends TelephonyTogglePreferenc
         if (preference == null) {
             return;
         }
-        final SwitchPreference switchPreference = (SwitchPreference) preference;
+        final SwitchPreferenceCompat switchPreferenceCompat = (SwitchPreferenceCompat) preference;
 
         final VolteQueryImsState queryState = queryImsState(mSubId);
-        switchPreference.setEnabled(isUserControlAllowed(getCarrierConfigForSubId(mSubId))
+        switchPreferenceCompat.setEnabled(isUserControlAllowed(getCarrierConfigForSubId(mSubId))
                 && queryState.isAllowUserControl());
-        switchPreference.setChecked(queryState.isEnabledByUser()
+        switchPreferenceCompat.setChecked(queryState.isEnabledByUser()
                 && queryState.isAllowUserControl());
     }
 

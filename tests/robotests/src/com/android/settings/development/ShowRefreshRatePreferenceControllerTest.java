@@ -34,7 +34,7 @@ import android.os.IBinder;
 import android.os.RemoteException;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.testutils.shadow.ShadowParcel;
 
@@ -55,7 +55,7 @@ public class ShowRefreshRatePreferenceControllerTest {
     @Mock
     private PreferenceScreen mScreen;
     @Mock
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     @Mock
     private IBinder mSurfaceFlinger;
 

@@ -207,8 +207,8 @@ public class ToggleDaltonizerPreferenceFragment extends ToggleFeaturePreferenceF
     }
 
     @Override
-    protected void updateToggleServiceTitle(SettingsMainSwitchPreference switchPreference) {
-        switchPreference.setTitle(R.string.accessibility_daltonizer_primary_switch_title);
+    protected void updateToggleServiceTitle(SettingsMainSwitchPreference switchPreferenceCompat) {
+        switchPreferenceCompat.setTitle(R.string.accessibility_daltonizer_primary_switch_title);
     }
 
     @Override

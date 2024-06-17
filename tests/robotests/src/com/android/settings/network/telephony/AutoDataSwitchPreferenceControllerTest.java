@@ -33,7 +33,7 @@ import android.content.Context;
 import android.telephony.TelephonyManager;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -58,7 +58,7 @@ public class AutoDataSwitchPreferenceControllerTest {
     private PreferenceScreen mPreferenceScreen;
 
     private Context mContext;
-    private SwitchPreference mSwitchPreference;
+    private SwitchPreferenceCompat mSwitchPreference;
     private AutoDataSwitchPreferenceController mController;
 
     @Before
@@ -67,7 +67,7 @@ public class AutoDataSwitchPreferenceControllerTest {
         mContext = spy(RuntimeEnvironment.application);
         doReturn(mTelephonyManager).when(mContext).getSystemService(eq(TelephonyManager.class));
         when(mTelephonyManager.createForSubscriptionId(anyInt())).thenReturn(mTelephonyManager);
-        mSwitchPreference = new SwitchPreference(mContext);
+        mSwitchPreference = new SwitchPreferenceCompat(mContext);
         when(mPreferenceScreen.findPreference(PREF_KEY)).thenReturn(mSwitchPreference);
         mController = new AutoDataSwitchPreferenceController(mContext, PREF_KEY) {
             @Override

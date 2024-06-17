@@ -340,10 +340,10 @@ public abstract class ToggleFeaturePreferenceFragment extends DashboardFragment
     /** Returns the accessibility tile tooltip content. */
     abstract CharSequence getTileTooltipContent(@QuickSettingsTooltipType int type);
 
-    protected void updateToggleServiceTitle(SettingsMainSwitchPreference switchPreference) {
+    protected void updateToggleServiceTitle(SettingsMainSwitchPreference switchPreferenceCompat) {
         final CharSequence title =
                 getString(R.string.accessibility_service_primary_switch_title, mPackageName);
-        switchPreference.setTitle(title);
+        switchPreferenceCompat.setTitle(title);
     }
 
     protected CharSequence getShortcutTitle() {

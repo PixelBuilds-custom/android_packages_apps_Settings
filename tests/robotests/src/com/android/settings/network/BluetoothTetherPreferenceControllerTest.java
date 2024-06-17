@@ -28,7 +28,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.net.TetheringManager;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 
 import org.junit.Before;
@@ -47,7 +47,7 @@ public class BluetoothTetherPreferenceControllerTest {
     @Mock
     private TetherEnabler mTetherEnabler;
 
-    private SwitchPreference mSwitchPreference;
+    private SwitchPreferenceCompat mSwitchPreference;
     private BluetoothTetherPreferenceController mController;
     private Context mContext;
 
@@ -56,7 +56,7 @@ public class BluetoothTetherPreferenceControllerTest {
         MockitoAnnotations.initMocks(this);
 
         mContext = spy(ApplicationProvider.getApplicationContext());
-        mSwitchPreference = spy(SwitchPreference.class);
+        mSwitchPreference = spy(SwitchPreferenceCompat.class);
         when(mContext.getSystemService(Context.TETHERING_SERVICE)).thenReturn(mTetheringManager);
         when(mTetheringManager.getTetherableBluetoothRegexs()).thenReturn(new String[] {""});
         mController = new BluetoothTetherPreferenceController(mContext, "BLUETOOTH");

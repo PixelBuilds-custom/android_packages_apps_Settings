@@ -22,7 +22,7 @@ import android.util.Log;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.development.DeveloperOptionsPreferenceController;
@@ -63,7 +63,7 @@ public class NfcStackDebugLogPreferenceController extends
         try {
             final boolean isEnabled = SystemProperties.getBoolean(
                     NFC_STACK_DEBUGLOG_ENABLED_PROPERTY, false /* default */);
-            ((SwitchPreference) mPreference).setChecked(isEnabled);
+            (((SwitchPreferenceCompat) mPreference)).setChecked(isEnabled);
         } catch (RuntimeException e) {
             Log.e(TAG, "Fail to get nfc system property: " + e.getMessage());
         }
@@ -74,7 +74,7 @@ public class NfcStackDebugLogPreferenceController extends
         super.onDeveloperOptionsSwitchDisabled();
         try {
             SystemProperties.set(NFC_STACK_DEBUGLOG_ENABLED_PROPERTY, "false");
-            ((SwitchPreference) mPreference).setChecked(false);
+            (((SwitchPreferenceCompat) mPreference)).setChecked(false);
         } catch (RuntimeException e) {
             Log.e(TAG, "Fail to set nfc system property: " + e.getMessage());
         }

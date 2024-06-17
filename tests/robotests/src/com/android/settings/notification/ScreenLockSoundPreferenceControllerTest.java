@@ -28,7 +28,7 @@ import android.provider.Settings.System;
 
 import androidx.fragment.app.FragmentActivity;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Ignore;
@@ -54,7 +54,7 @@ public class ScreenLockSoundPreferenceControllerTest {
 
     private Context mContext;
     private ScreenLockSoundPreferenceController mController;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
 
     @Before
     public void setUp() {
@@ -62,7 +62,7 @@ public class ScreenLockSoundPreferenceControllerTest {
         mContext = spy(RuntimeEnvironment.application);
         when(mSetting.getActivity()).thenReturn(mActivity);
         when(mActivity.getContentResolver()).thenReturn(mContentResolver);
-        mPreference = new SwitchPreference(RuntimeEnvironment.application);
+        mPreference = new SwitchPreferenceCompat(RuntimeEnvironment.application);
         mController = new ScreenLockSoundPreferenceController(mContext, mSetting, null);
         when(mScreen.findPreference(mController.getPreferenceKey())).thenReturn(mPreference);
         doReturn(mScreen).when(mSetting).getPreferenceScreen();

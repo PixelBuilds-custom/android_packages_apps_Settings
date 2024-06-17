@@ -31,7 +31,7 @@ import android.sysprop.AdbProperties;
 
 import androidx.fragment.app.Fragment;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.testutils.shadow.ShadowUtils;
 
@@ -55,7 +55,7 @@ public class ClearAdbKeysPreferenceControllerTest {
     @Mock
     private PreferenceScreen mScreen;
     @Mock
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     @Mock
     private IAdbManager mAdbManager;
     @Mock

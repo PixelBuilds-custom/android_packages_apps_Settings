@@ -26,7 +26,7 @@ import android.content.Context;
 import android.provider.Settings;
 import android.view.Display;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -40,13 +40,13 @@ public class PeakRefreshRatePreferenceControllerTest {
 
     private Context mContext;
     private PeakRefreshRatePreferenceController mController;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
 
     @Before
     public void setUp() {
         mContext = RuntimeEnvironment.application;
         mController = new PeakRefreshRatePreferenceController(mContext, "key");
-        mPreference = new SwitchPreference(RuntimeEnvironment.application);
+        mPreference = new SwitchPreferenceCompat(RuntimeEnvironment.application);
     }
 
     @Test

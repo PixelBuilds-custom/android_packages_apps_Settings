@@ -27,7 +27,7 @@ import static org.mockito.Mockito.when;
 
 import android.content.Context;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.internal.widget.LockPatternUtils;
 
@@ -49,7 +49,7 @@ public class PinPrivacyPreferenceControllerTest {
     private LockPatternUtils mLockPatternUtils;
     private Context mContext;
     private PinPrivacyPreferenceController mController;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
 
     @Before
     public void setUp() {
@@ -57,7 +57,7 @@ public class PinPrivacyPreferenceControllerTest {
         mContext = RuntimeEnvironment.application;
         mController =
                 new PinPrivacyPreferenceController(mContext, TEST_USER_ID, mLockPatternUtils);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
     }
 
     @Test

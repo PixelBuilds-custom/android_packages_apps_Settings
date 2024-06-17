@@ -24,7 +24,7 @@ import static org.mockito.Mockito.when;
 import android.app.admin.DevicePolicyManager;
 import android.content.Context;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.internal.widget.LockPatternUtils;
 import com.android.settings.R;
@@ -51,7 +51,7 @@ public class PowerButtonInstantLockPreferenceControllerTest {
 
     private Context mContext;
     private PowerButtonInstantLockPreferenceController mController;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     private FakeFeatureFactory mFeatureFactory;
 
     @Before
@@ -62,7 +62,7 @@ public class PowerButtonInstantLockPreferenceControllerTest {
         when(mFeatureFactory.securityFeatureProvider.getTrustAgentManager())
                 .thenReturn(mTrustAgentManager);
 
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mController = new PowerButtonInstantLockPreferenceController(
                 mContext, TEST_USER_ID, mLockPatternUtils);
     }

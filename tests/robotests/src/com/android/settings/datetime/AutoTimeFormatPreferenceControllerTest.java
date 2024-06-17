@@ -23,7 +23,7 @@ import android.content.Intent;
 import android.provider.Settings;
 import android.text.format.DateFormat;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -45,7 +45,7 @@ public class AutoTimeFormatPreferenceControllerTest {
 
     private ShadowApplication mApplication;
     private Context mContext;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     private TestAutoTimeFormatPreferenceController mController;
 
     @Before
@@ -58,7 +58,7 @@ public class AutoTimeFormatPreferenceControllerTest {
     @Test
     public void updateState_24HourSet_shouldCheckPreference() {
         mController = new TestAutoTimeFormatPreferenceController(mContext, mCallback);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mPreference.setKey(mController.getPreferenceKey());
         Settings.System.putString(mContext.getContentResolver(), Settings.System.TIME_12_24,
                 TimeFormatPreferenceController.HOURS_24);
@@ -71,7 +71,7 @@ public class AutoTimeFormatPreferenceControllerTest {
     @Test
     public void updateState_12HourSet_shouldCheckPreference() {
         mController = new TestAutoTimeFormatPreferenceController(mContext, mCallback);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mPreference.setKey(mController.getPreferenceKey());
         Settings.System.putString(mContext.getContentResolver(), Settings.System.TIME_12_24,
                 TimeFormatPreferenceController.HOURS_12);
@@ -84,7 +84,7 @@ public class AutoTimeFormatPreferenceControllerTest {
     @Test
     public void updateState_autoSet_shouldNotCheckPreference() {
         mController = new TestAutoTimeFormatPreferenceController(mContext, mCallback);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mPreference.setKey(mController.getPreferenceKey());
         Settings.System.putString(mContext.getContentResolver(), Settings.System.TIME_12_24, null);
 
@@ -96,7 +96,7 @@ public class AutoTimeFormatPreferenceControllerTest {
     @Test
     public void updatePreference_autoSet_shouldSendIntent_12HourLocale() {
         mController = new TestAutoTimeFormatPreferenceController(mContext, mCallback);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mPreference.setKey(mController.getPreferenceKey());
         mPreference.setChecked(false);
 
@@ -115,7 +115,7 @@ public class AutoTimeFormatPreferenceControllerTest {
     @Test
     public void updatePreference_autoSet_shouldSendIntent_24HourLocale() {
         mController = new TestAutoTimeFormatPreferenceController(mContext, mCallback);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mPreference.setKey(mController.getPreferenceKey());
         mPreference.setChecked(false);
 
@@ -135,7 +135,7 @@ public class AutoTimeFormatPreferenceControllerTest {
     @Test
     public void updatePreference_24HourSet_shouldSendIntent() {
         mController = new TestAutoTimeFormatPreferenceController(mContext, mCallback);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mPreference.setKey(mController.getPreferenceKey());
         mPreference.setChecked(true);
 

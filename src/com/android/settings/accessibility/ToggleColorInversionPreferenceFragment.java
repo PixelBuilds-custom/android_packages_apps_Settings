@@ -121,8 +121,8 @@ public class ToggleColorInversionPreferenceFragment extends ToggleFeaturePrefere
     }
 
     @Override
-    protected void updateToggleServiceTitle(SettingsMainSwitchPreference switchPreference) {
-        switchPreference.setTitle(R.string.accessibility_display_inversion_switch_title);
+    protected void updateToggleServiceTitle(SettingsMainSwitchPreference switchPreferenceCompat) {
+        switchPreferenceCompat.setTitle(R.string.accessibility_display_inversion_switch_title);
     }
 
     @Override

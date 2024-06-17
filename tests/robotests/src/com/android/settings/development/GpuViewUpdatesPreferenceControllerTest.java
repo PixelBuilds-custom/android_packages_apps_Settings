@@ -26,7 +26,7 @@ import android.os.SystemProperties;
 import android.view.ThreadedRenderer;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -40,7 +40,7 @@ import org.robolectric.RuntimeEnvironment;
 public class GpuViewUpdatesPreferenceControllerTest {
 
     @Mock
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     @Mock
     private PreferenceScreen mPreferenceScreen;
 

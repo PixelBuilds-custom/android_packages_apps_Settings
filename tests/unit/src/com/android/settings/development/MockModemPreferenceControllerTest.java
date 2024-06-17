@@ -27,7 +27,7 @@ import android.os.SystemProperties;
 
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
@@ -40,7 +40,7 @@ public class MockModemPreferenceControllerTest {
 
     private Context mContext;
     private MockModemPreferenceController mController;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
 
     @Before
     public void setUp() {
@@ -52,7 +52,7 @@ public class MockModemPreferenceControllerTest {
 
         final PreferenceManager preferenceManager = new PreferenceManager(mContext);
         final PreferenceScreen screen = preferenceManager.createPreferenceScreen(mContext);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mPreference.setKey(mController.getPreferenceKey());
         screen.addPreference(mPreference);
         mController.displayPreference(screen);

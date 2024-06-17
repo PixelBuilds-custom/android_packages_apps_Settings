@@ -25,7 +25,7 @@ import android.content.Context;
 import android.service.notification.ZenPolicy;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settingslib.core.lifecycle.Lifecycle;
 
@@ -48,7 +48,7 @@ public class ZenRuleCustomSwitchPreferenceControllerTest extends ZenRuleCustomPr
     @Mock
     private NotificationManager mNotificationManager;
     @Mock
-    private SwitchPreference mockPref;
+    private SwitchPreferenceCompat mockPref;
     @Mock
     private NotificationManager.Policy mPolicy;
     @Mock

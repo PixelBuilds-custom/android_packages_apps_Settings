@@ -26,12 +26,12 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.preference.PreferenceViewHolder;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.R;
 import com.android.settingslib.widget.AnimatedImageView;
 
-public class SyncStateSwitchPreference extends SwitchPreference {
+public class SyncStateSwitchPreference extends SwitchPreferenceCompat {
 
     private boolean mIsActive = false;
     private boolean mIsPending = false;

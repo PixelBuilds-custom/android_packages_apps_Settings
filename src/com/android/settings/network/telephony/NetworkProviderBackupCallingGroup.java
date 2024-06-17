@@ -35,7 +35,7 @@ import androidx.lifecycle.OnLifecycleEvent;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.R;
 import com.android.settings.network.SubscriptionUtil;
@@ -60,7 +60,7 @@ public class NetworkProviderBackupCallingGroup extends
 
     private String mPreferenceGroupKey;
     private PreferenceGroup mPreferenceGroup;
-    private Map<Integer, SwitchPreference> mBackupCallingForSubPreferences;
+    private Map<Integer, SwitchPreferenceCompat> mBackupCallingForSubPreferences;
     private List<SubscriptionInfo> mSubInfoListForBackupCall;
     private Map<Integer, TelephonyManager> mTelephonyManagerList = new HashMap<>();
     private SubscriptionsChangeListener mSubscriptionsChangeListener;
@@ -163,27 +163,27 @@ public class NetworkProviderBackupCallingGroup extends
 
         setSubscriptionInfoList(mContext);
         if (mSubInfoListForBackupCall == null || mSubInfoListForBackupCall.size() < 2) {
-            for (SwitchPreference pref : mBackupCallingForSubPreferences.values()) {
+            for (SwitchPreferenceCompat pref : mBackupCallingForSubPreferences.values()) {
                 mPreferenceGroup.removePreference(pref);
             }
             mBackupCallingForSubPreferences.clear();
             return;
         }
 
-        Map<Integer, SwitchPreference> toRemovePreferences = mBackupCallingForSubPreferences;
+        Map<Integer, SwitchPreferenceCompat> toRemovePreferences = mBackupCallingForSubPreferences;
         mBackupCallingForSubPreferences = new ArrayMap<>();
         setSubscriptionInfoForPreference(toRemovePreferences);
     }
 
     private void setSubscriptionInfoForPreference(
-            Map<Integer, SwitchPreference> toRemovePreferences) {
+            Map<Integer, SwitchPreferenceCompat> toRemovePreferences) {
         int order = PREF_START_ORDER;
         for (SubscriptionInfo subInfo : mSubInfoListForBackupCall) {
             final int subId = subInfo.getSubscriptionId();
 
-            SwitchPreference pref = toRemovePreferences.remove(subId);
+            SwitchPreferenceCompat pref = toRemovePreferences.remove(subId);
             if (pref == null) {
-                pref = new SwitchPreference(mPreferenceGroup.getContext());
+                pref = new SwitchPreferenceCompat(mPreferenceGroup.getContext());
                 mPreferenceGroup.addPreference(pref);
             }
 

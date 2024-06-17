@@ -20,7 +20,7 @@ import android.content.Context;
 import android.provider.Settings;
 
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.development.DeveloperOptionsPreferenceController;
@@ -59,7 +59,7 @@ public class EnableGnssRawMeasFullTrackingPreferenceController extends
         final int enableGnssRawMeasFullTrackingMode =
                 Settings.Global.getInt(mContext.getContentResolver(),
                 Settings.Global.ENABLE_GNSS_RAW_MEAS_FULL_TRACKING, SETTING_VALUE_OFF);
-        ((SwitchPreference) mPreference).setChecked(enableGnssRawMeasFullTrackingMode != SETTING_VALUE_OFF);
+        (((SwitchPreferenceCompat) mPreference)).setChecked(enableGnssRawMeasFullTrackingMode != SETTING_VALUE_OFF);
     }
 
     @Override
@@ -67,6 +67,6 @@ public class EnableGnssRawMeasFullTrackingPreferenceController extends
         super.onDeveloperOptionsSwitchDisabled();
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.ENABLE_GNSS_RAW_MEAS_FULL_TRACKING, SETTING_VALUE_OFF);
-        ((SwitchPreference) mPreference).setChecked(false);
+        (((SwitchPreferenceCompat) mPreference)).setChecked(false);
     }
 }

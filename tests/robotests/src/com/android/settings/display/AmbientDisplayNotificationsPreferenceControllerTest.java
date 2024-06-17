@@ -33,7 +33,7 @@ import android.hardware.display.AmbientDisplayConfiguration;
 import android.os.UserHandle;
 import android.provider.Settings;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.testutils.shadow.ShadowSecureSettings;
 import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
@@ -55,7 +55,7 @@ public class AmbientDisplayNotificationsPreferenceControllerTest {
     @Mock
     private AmbientDisplayConfiguration mConfig;
     @Mock
-    private SwitchPreference mSwitchPreference;
+    private SwitchPreferenceCompat mSwitchPreference;
     @Mock
     private MetricsFeatureProvider mMetricsFeatureProvider;
 

@@ -211,10 +211,10 @@ public class ToggleColorInversionPreferenceFragmentTest {
         TestToggleColorInversionPreferenceFragment(Context context) {
             super();
             mComponentName = PLACEHOLDER_COMPONENT_NAME;
-            final SettingsMainSwitchPreference switchPreference =
+            final SettingsMainSwitchPreference switchPreferenceCompat =
                     new SettingsMainSwitchPreference(context);
-            switchPreference.setKey(KEY_USE_SERVICE_PREFERENCE);
-            mToggleServiceSwitchPreference = switchPreference;
+            switchPreferenceCompat.setKey(KEY_USE_SERVICE_PREFERENCE);
+            mToggleServiceSwitchPreference = switchPreferenceCompat;
             setArguments(new Bundle());
         }
 

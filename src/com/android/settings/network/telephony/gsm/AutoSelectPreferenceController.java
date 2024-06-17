@@ -44,7 +44,7 @@ import androidx.lifecycle.LifecycleEventObserver;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.R;
 import com.android.settings.network.AllowedNetworkTypesListener;
@@ -80,7 +80,7 @@ public class AutoSelectPreferenceController extends TelephonyTogglePreferenceCon
     @VisibleForTesting
     ProgressDialog mProgressDialog;
     @VisibleForTesting
-    SwitchPreference mSwitchPreference;
+    SwitchPreferenceCompat mSwitchPreference;
     private AtomicBoolean mUpdatingConfig;
     private int mCacheOfModeStatus;
     private AtomicLong mRecursiveUpdate;

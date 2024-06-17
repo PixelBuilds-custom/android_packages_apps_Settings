@@ -21,7 +21,7 @@ import static com.google.common.truth.Truth.assertThat;
 import android.content.Context;
 import android.provider.Settings;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
@@ -38,7 +38,7 @@ public class ReduceBrightColorsPersistencePreferenceControllerTest {
     private static final int UNKNOWN = -1;
 
     private final Context mContext = ApplicationProvider.getApplicationContext();
-    private final SwitchPreference mPreference = new SwitchPreference(mContext);
+    private final SwitchPreferenceCompat mPreference = new SwitchPreferenceCompat(mContext);
     private final ReduceBrightColorsPersistencePreferenceController mController =
             new ReduceBrightColorsPersistencePreferenceController(mContext, PREF_KEY);
 

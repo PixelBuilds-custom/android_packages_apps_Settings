@@ -29,7 +29,7 @@ import android.app.AppOpsManager;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.applications.AppStateAppOpsBridge.PermissionState;
 import com.android.settings.applications.AppStateManageExternalStorageBridge;
@@ -57,7 +57,7 @@ public class ManageExternalStorageDetailsTest {
     @Mock
     private AppOpsManager mAppOpsManager;
     @Mock
-    private SwitchPreference mSwitchPref;
+    private SwitchPreferenceCompat mSwitchPref;
     @Mock
     private MetricsFeatureProvider mMetricsFeatureProvider;
     @Mock

@@ -31,7 +31,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.testutils.shadow.ShadowUtils;
 
@@ -172,7 +172,7 @@ public class UsbDetailsTranscodeMtpControllerTest {
         assertThat(mUnderTest.isAvailable()).isFalse();
     }
 
-    private SwitchPreference getSwitchPreference() {
-        return (SwitchPreference) mPreference.getPreference(0);
+    private SwitchPreferenceCompat getSwitchPreference() {
+        return ((SwitchPreferenceCompat) mPreference).getPreference(0);
     }
 }

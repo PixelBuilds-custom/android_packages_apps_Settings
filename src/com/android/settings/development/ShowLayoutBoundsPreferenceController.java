@@ -20,7 +20,7 @@ import android.content.Context;
 import android.sysprop.DisplayProperties;
 
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.development.DeveloperOptionsPreferenceController;
@@ -51,13 +51,13 @@ public class ShowLayoutBoundsPreferenceController extends DeveloperOptionsPrefer
     @Override
     public void updateState(Preference preference) {
         final boolean isEnabled = DisplayProperties.debug_layout().orElse(false);
-        ((SwitchPreference) mPreference).setChecked(isEnabled);
+        (((SwitchPreferenceCompat) mPreference)).setChecked(isEnabled);
     }
 
     @Override
     protected void onDeveloperOptionsSwitchDisabled() {
         super.onDeveloperOptionsSwitchDisabled();
         DisplayProperties.debug_layout(false);
-        ((SwitchPreference) mPreference).setChecked(false);
+        (((SwitchPreferenceCompat) mPreference)).setChecked(false);
     }
 }

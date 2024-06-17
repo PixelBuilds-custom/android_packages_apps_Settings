@@ -31,7 +31,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.provider.Settings;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 
 import org.junit.Before;
@@ -58,7 +58,7 @@ public class FloatingMenuFadePreferenceControllerTest {
     private final Context mContext = ApplicationProvider.getApplicationContext();
     @Mock
     private ContentResolver mContentResolver;
-    private final SwitchPreference mSwitchPreference = new SwitchPreference(mContext);
+    private final SwitchPreferenceCompat mSwitchPreference = new SwitchPreferenceCompat(mContext);
     private FloatingMenuFadePreferenceController mController;
 
     @Before
