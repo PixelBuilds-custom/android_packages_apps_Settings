@@ -23,7 +23,7 @@ import com.android.settings.core.TogglePreferenceController;
 import com.android.settingslib.dream.DreamBackend;
 
 /**
- * Controller for the {@link androidx.preference.SwitchPreference} which controls if dream
+ * Controller for the {@link androidx.preference.SwitchPreferenceCompat} which controls if dream
  * overlays should be enabled.
  */
 public class DreamComplicationPreferenceController extends TogglePreferenceController {

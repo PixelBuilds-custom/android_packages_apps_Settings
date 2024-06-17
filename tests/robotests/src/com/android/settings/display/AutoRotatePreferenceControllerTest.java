@@ -31,7 +31,7 @@ import android.content.pm.PackageManager;
 import android.os.UserHandle;
 import android.provider.Settings;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.internal.R;
 import com.android.internal.view.RotationPolicy;
@@ -56,7 +56,7 @@ public class AutoRotatePreferenceControllerTest {
     private Context mContext;
     @Mock
     private PackageManager mPackageManager;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     private ContentResolver mContentResolver;
     private AutoRotatePreferenceController mController;
 
@@ -67,7 +67,7 @@ public class AutoRotatePreferenceControllerTest {
                 .getSystemService(Context.DEVICE_POLICY_SERVICE);
         FakeFeatureFactory.setupForTest();
         mContentResolver = RuntimeEnvironment.application.getContentResolver();
-        mPreference = new SwitchPreference(RuntimeEnvironment.application);
+        mPreference = new SwitchPreferenceCompat(RuntimeEnvironment.application);
         when(mContext.getPackageManager()).thenReturn(mPackageManager);
         when(mContext.getContentResolver()).thenReturn(mContentResolver);
         disableDeviceStateRotation();

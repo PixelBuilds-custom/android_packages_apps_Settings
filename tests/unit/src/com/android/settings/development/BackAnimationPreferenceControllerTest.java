@@ -33,7 +33,7 @@ import android.provider.Settings;
 
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
 
@@ -52,7 +52,7 @@ public class BackAnimationPreferenceControllerTest {
     private static final int SETTING_VALUE_OFF = 0;
     private static final int SETTING_VALUE_ON = 1;
 
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
 
     private Context mContext;
     private BackAnimationPreferenceController mController;
@@ -64,7 +64,7 @@ public class BackAnimationPreferenceControllerTest {
         Instrumentation instrumentation = InstrumentationRegistry.getInstrumentation();
         mContext = instrumentation.getTargetContext();
         mController = new BackAnimationPreferenceController(mContext);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         if (Looper.myLooper() == null) {
             Looper.prepare();
         }

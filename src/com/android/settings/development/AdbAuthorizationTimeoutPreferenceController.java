@@ -20,7 +20,7 @@ import android.content.Context;
 import android.provider.Settings;
 
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settingslib.development.DeveloperOptionsPreferenceController;
 
@@ -51,7 +51,7 @@ public class AdbAuthorizationTimeoutPreferenceController extends
                 Settings.Global.DEFAULT_ADB_ALLOWED_CONNECTION_TIME);
         // An authTimeout of 0 indicates this preference is enabled and adb authorizations will not
         // be automatically revoked.
-        ((SwitchPreference) mPreference).setChecked(authTimeout == 0);
+        (((SwitchPreferenceCompat) mPreference)).setChecked(authTimeout == 0);
     }
 
     @Override
@@ -64,7 +64,7 @@ public class AdbAuthorizationTimeoutPreferenceController extends
     public void onDeveloperOptionsSwitchDisabled() {
         super.onDeveloperOptionsSwitchDisabled();
         writeSetting(false);
-        ((SwitchPreference) mPreference).setChecked(false);
+        (((SwitchPreferenceCompat) mPreference)).setChecked(false);
     }
 
     private void writeSetting(boolean isEnabled) {

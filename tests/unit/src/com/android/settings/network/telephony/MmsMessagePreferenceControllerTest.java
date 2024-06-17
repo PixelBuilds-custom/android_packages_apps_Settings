@@ -35,7 +35,7 @@ import android.telephony.data.ApnSetting;
 
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
@@ -55,7 +55,7 @@ public class MmsMessagePreferenceControllerTest {
     private SubscriptionManager mSubscriptionManager;
 
     private MmsMessagePreferenceController mController;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     private Context mContext;
 
     @Before
@@ -68,7 +68,7 @@ public class MmsMessagePreferenceControllerTest {
         when(mContext.getSystemService(SubscriptionManager.class)).thenReturn(mSubscriptionManager);
         when(mTelephonyManager.createForSubscriptionId(SUB_ID)).thenReturn(mTelephonyManager);
 
-        mPreference = spy(new SwitchPreference(mContext));
+        mPreference = spy(new SwitchPreferenceCompat(mContext));
         mController = new MmsMessagePreferenceController(mContext, "mms_message");
         mController.init(SUB_ID);
         mPreference.setKey(mController.getPreferenceKey());

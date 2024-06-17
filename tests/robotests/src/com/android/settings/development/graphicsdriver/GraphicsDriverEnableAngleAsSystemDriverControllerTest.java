@@ -36,7 +36,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.development.DevelopmentSettingsDashboardFragment;
 import com.android.settings.development.RebootConfirmationDialogFragment;
@@ -54,7 +54,7 @@ import org.robolectric.shadows.ShadowSystemProperties;
 public class GraphicsDriverEnableAngleAsSystemDriverControllerTest {
     private static final String TAG = "GraphicsDriverEnableAngleAsSystemDriverControllerTest";
     @Mock private PreferenceScreen mScreen;
-    @Mock private SwitchPreference mPreference;
+    @Mock private SwitchPreferenceCompat mPreference;
     @Mock private DevelopmentSettingsDashboardFragment mFragment;
     @Mock private FragmentActivity mActivity;
     @Mock private FragmentManager mFragmentManager;

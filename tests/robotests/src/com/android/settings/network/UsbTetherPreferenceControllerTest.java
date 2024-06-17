@@ -27,7 +27,7 @@ import static org.mockito.Mockito.when;
 import android.content.Context;
 import android.net.TetheringManager;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 
 import org.junit.Before;
@@ -48,7 +48,7 @@ public class UsbTetherPreferenceControllerTest {
 
     private Context mContext;
     private UsbTetherPreferenceController mController;
-    private SwitchPreference mSwitchPreference;
+    private SwitchPreferenceCompat mSwitchPreference;
 
     @Before
     public void setUp() {
@@ -59,7 +59,7 @@ public class UsbTetherPreferenceControllerTest {
         when(mTetheringManager.getTetherableUsbRegexs()).thenReturn(new String[]{""});
         mController = new UsbTetherPreferenceController(mContext, "USB");
         mController.setTetherEnabler(mTetherEnabler);
-        mSwitchPreference = spy(SwitchPreference.class);
+        mSwitchPreference = spy(SwitchPreferenceCompat.class);
         ReflectionHelpers.setField(mController, "mPreference", mSwitchPreference);
     }
 

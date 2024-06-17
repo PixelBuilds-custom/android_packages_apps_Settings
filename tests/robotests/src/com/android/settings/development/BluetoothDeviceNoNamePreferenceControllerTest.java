@@ -28,7 +28,7 @@ import android.content.Context;
 import android.os.SystemProperties;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -42,7 +42,7 @@ import org.robolectric.RuntimeEnvironment;
 public class BluetoothDeviceNoNamePreferenceControllerTest {
 
     @Mock
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     @Mock
     private PreferenceScreen mPreferenceScreen;
 

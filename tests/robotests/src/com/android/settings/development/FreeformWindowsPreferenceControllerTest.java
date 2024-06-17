@@ -35,7 +35,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -52,7 +52,7 @@ public class FreeformWindowsPreferenceControllerTest {
     private static final String USER_BUILD_TYPE = "user";
 
     @Mock
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     @Mock
     private PreferenceScreen mScreen;
     @Mock

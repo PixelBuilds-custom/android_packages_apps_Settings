@@ -27,7 +27,7 @@ import android.os.SystemProperties;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.development.DeveloperOptionsPreferenceController;
@@ -87,10 +87,10 @@ public class BluetoothLeAudioHwOffloadPreferenceController
         if (leAudioEnabled && leAudioOffloadSupported && !a2dpOffloadDisabled) {
             final boolean offloadDisabled =
                     SystemProperties.getBoolean(LE_AUDIO_OFFLOAD_DISABLED_PROPERTY, true);
-            ((SwitchPreference) mPreference).setChecked(offloadDisabled);
+            (((SwitchPreferenceCompat) mPreference)).setChecked(offloadDisabled);
         } else {
             mPreference.setEnabled(false);
-            ((SwitchPreference) mPreference).setChecked(true);
+            (((SwitchPreferenceCompat) mPreference)).setChecked(true);
         }
     }
 
@@ -108,7 +108,7 @@ public class BluetoothLeAudioHwOffloadPreferenceController
         final boolean a2dpOffloadDisabled =
                 SystemProperties.getBoolean(A2DP_OFFLOAD_DISABLED_PROPERTY, false);
         if (leAudioEnabled && leAudioOffloadSupported && !a2dpOffloadDisabled) {
-            ((SwitchPreference) mPreference).setChecked(true);
+            (((SwitchPreferenceCompat) mPreference)).setChecked(true);
             SystemProperties.set(LE_AUDIO_OFFLOAD_DISABLED_PROPERTY, "true");
         } else {
             mPreference.setEnabled(false);

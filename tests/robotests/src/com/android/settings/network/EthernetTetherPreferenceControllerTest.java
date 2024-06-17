@@ -28,7 +28,7 @@ import android.content.Context;
 import android.net.EthernetManager;
 import android.net.TetheringManager;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 
 import org.junit.Before;
@@ -57,13 +57,13 @@ public class EthernetTetherPreferenceControllerTest {
 
     private Context mContext;
     private EthernetTetherPreferenceController mController;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     private static final String ETHERNET_REGEX = "ethernet";
 
     @Before
     public void setUp() {
         mContext = spy(ApplicationProvider.getApplicationContext());
-        mPreference = spy(SwitchPreference.class);
+        mPreference = spy(SwitchPreferenceCompat.class);
         when(mContext.getSystemService(Context.TETHERING_SERVICE)).thenReturn(mTetheringManager);
         when(mTetheringManager.getTetherableIfaces()).thenReturn(new String[]{ETHERNET_REGEX});
         when(mContext.getSystemService(EthernetManager.class)).thenReturn(mEthernetManager);

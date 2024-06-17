@@ -25,7 +25,7 @@ import android.os.SystemProperties;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.R;
 import com.android.settings.Utils;
@@ -41,7 +41,7 @@ public class UsbDetailsTranscodeMtpController extends UsbDetailsController
     private static final String KEY_USB_TRANSCODE_FILES = "usb_transcode_files";
 
     private PreferenceCategory mPreferenceCategory;
-    private SwitchPreference mSwitchPreference;
+    private SwitchPreferenceCompat mSwitchPreference;
 
     public UsbDetailsTranscodeMtpController(Context context, UsbDetailsFragment fragment,
             UsbBackend backend) {
@@ -53,7 +53,7 @@ public class UsbDetailsTranscodeMtpController extends UsbDetailsController
     public void displayPreference(PreferenceScreen screen) {
         super.displayPreference(screen);
         mPreferenceCategory = screen.findPreference(getPreferenceKey());
-        mSwitchPreference = new SwitchPreference(mPreferenceCategory.getContext());
+        mSwitchPreference = new SwitchPreferenceCompat(mPreferenceCategory.getContext());
         mSwitchPreference.setTitle(R.string.usb_transcode_files);
         mSwitchPreference.setKey(KEY_USB_TRANSCODE_FILES);
         mSwitchPreference.setOnPreferenceClickListener(this);

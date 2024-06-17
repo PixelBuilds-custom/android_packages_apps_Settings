@@ -25,7 +25,7 @@ import android.content.Context;
 import android.provider.Settings;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -40,7 +40,7 @@ public class WifiNonPersistentMacRandomizationPreferenceControllerTest {
     private static final String NON_PERSISTENT_MAC_RANDOMIZATION_FEATURE_FLAG =
             "non_persistent_mac_randomization_force_enabled";
     @Mock
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     @Mock
     private PreferenceScreen mPreferenceScreen;
     private Context mContext;

@@ -30,7 +30,7 @@ import android.os.Looper;
 
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
@@ -56,7 +56,7 @@ public class WifiTetherMaximizeCompatibilityPreferenceControllerTest {
 
     private Context mContext;
     private WifiTetherMaximizeCompatibilityPreferenceController mController;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     private SoftApConfiguration mConfig;
 
     @Before
@@ -77,7 +77,7 @@ public class WifiTetherMaximizeCompatibilityPreferenceControllerTest {
         }
         final PreferenceManager preferenceManager = new PreferenceManager(mContext);
         final PreferenceScreen screen = preferenceManager.createPreferenceScreen(mContext);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mPreference.setKey(WifiTetherMaximizeCompatibilityPreferenceController.PREF_KEY);
         screen.addPreference(mPreference);
         mController.displayPreference(screen);

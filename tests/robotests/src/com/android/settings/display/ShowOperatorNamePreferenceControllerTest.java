@@ -30,7 +30,7 @@ import android.os.PersistableBundle;
 import android.provider.Settings;
 import android.telephony.CarrierConfigManager;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -46,7 +46,7 @@ public class ShowOperatorNamePreferenceControllerTest {
     private static final String KEY_SHOW_OPERATOR_NAME = "show_operator_name";
 
     @Mock
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     @Mock
     private CarrierConfigManager mConfigManager;
 

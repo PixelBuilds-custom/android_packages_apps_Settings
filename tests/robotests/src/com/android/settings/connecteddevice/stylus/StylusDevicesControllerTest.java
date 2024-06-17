@@ -52,7 +52,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 
 import com.android.settings.R;
@@ -492,7 +492,7 @@ public class StylusDevicesControllerTest {
                 Settings.Secure.STYLUS_BUTTONS_ENABLED, 0);
 
         showScreen(mController);
-        SwitchPreference buttonsPref = (SwitchPreference) mPreferenceContainer.getPreference(2);
+        SwitchPreferenceCompat buttonsPref = ((SwitchPreferenceCompat) mPreference)Container.getPreference(2);
 
         assertThat(buttonsPref.isChecked()).isEqualTo(true);
     }
@@ -503,7 +503,7 @@ public class StylusDevicesControllerTest {
                 Settings.Secure.STYLUS_BUTTONS_ENABLED, 1);
 
         showScreen(mController);
-        SwitchPreference buttonsPref = (SwitchPreference) mPreferenceContainer.getPreference(2);
+        SwitchPreferenceCompat buttonsPref = ((SwitchPreferenceCompat) mPreference)Container.getPreference(2);
 
         assertThat(buttonsPref.isChecked()).isEqualTo(false);
     }
@@ -513,7 +513,7 @@ public class StylusDevicesControllerTest {
         Settings.Secure.putInt(mContext.getContentResolver(),
                 Settings.Secure.STYLUS_BUTTONS_ENABLED, 0);
         showScreen(mController);
-        SwitchPreference buttonsPref = (SwitchPreference) mPreferenceContainer.getPreference(2);
+        SwitchPreferenceCompat buttonsPref = ((SwitchPreferenceCompat) mPreference)Container.getPreference(2);
 
         buttonsPref.performClick();
 

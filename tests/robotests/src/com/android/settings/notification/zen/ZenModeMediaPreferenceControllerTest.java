@@ -31,7 +31,7 @@ import android.content.Context;
 import android.provider.Settings;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.notification.zen.ZenModeBackend;
 import com.android.settings.notification.zen.ZenModeMediaPreferenceController;
@@ -59,7 +59,7 @@ public class ZenModeMediaPreferenceControllerTest {
     @Mock
     private NotificationManager mNotificationManager;
     @Mock
-    private SwitchPreference mockPref;
+    private SwitchPreferenceCompat mockPref;
     @Mock
     private NotificationManager.Policy mPolicy;
     @Mock
@@ -89,7 +89,7 @@ public class ZenModeMediaPreferenceControllerTest {
     public void updateState_TotalSilence() {
         Settings.Global.putInt(mContentResolver, ZEN_MODE, ZEN_MODE_NO_INTERRUPTIONS);
 
-        final SwitchPreference mockPref = mock(SwitchPreference.class);
+        final SwitchPreferenceCompat mockPref = mock(SwitchPreferenceCompat.class);
         mController.updateState(mockPref);
 
         verify(mockPref).setEnabled(false);
@@ -100,7 +100,7 @@ public class ZenModeMediaPreferenceControllerTest {
     public void updateState_AlarmsOnly() {
         Settings.Global.putInt(mContentResolver, ZEN_MODE, ZEN_MODE_ALARMS);
 
-        final SwitchPreference mockPref = mock(SwitchPreference.class);
+        final SwitchPreferenceCompat mockPref = mock(SwitchPreferenceCompat.class);
         mController.updateState(mockPref);
 
         verify(mockPref).setEnabled(false);

@@ -33,7 +33,7 @@ import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 
 import androidx.lifecycle.Lifecycle;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
@@ -70,7 +70,7 @@ public class AutoSelectPreferenceControllerTest {
 
     private PersistableBundle mCarrierConfig;
     private AutoSelectPreferenceController mController;
-    private SwitchPreference mSwitchPreference;
+    private SwitchPreferenceCompat mSwitchPreference;
     private Context mContext;
 
 
@@ -90,7 +90,7 @@ public class AutoSelectPreferenceControllerTest {
             true);
         when(mCarrierConfigCache.getConfigForSubId(SUB_ID)).thenReturn(mCarrierConfig);
 
-        mSwitchPreference = new SwitchPreference(mContext);
+        mSwitchPreference = new SwitchPreferenceCompat(mContext);
         mController = new AutoSelectPreferenceController(mContext, "auto_select");
         mController.mProgressDialog = mProgressDialog;
         mController.mSwitchPreference = mSwitchPreference;

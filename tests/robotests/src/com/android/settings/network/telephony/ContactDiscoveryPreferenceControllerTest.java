@@ -46,7 +46,7 @@ import android.telephony.ims.RcsUceAdapter;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.LifecycleOwner;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.network.CarrierConfigCache;
 import com.android.settings.network.SubscriptionUtil;
@@ -82,7 +82,7 @@ public class ContactDiscoveryPreferenceControllerTest {
     private LifecycleOwner mLifecycleOwner;
     private Lifecycle mLifecycle;
     private ContactDiscoveryPreferenceController mPreferenceControllerUT;
-    private SwitchPreference mSwitchPreferenceUT;
+    private SwitchPreferenceCompat mSwitchPreferenceUT;
     private PersistableBundle mCarrierConfig = new PersistableBundle();
 
     @Before
@@ -107,7 +107,7 @@ public class ContactDiscoveryPreferenceControllerTest {
         SubscriptionUtil.setAvailableSubscriptionsForTesting(Collections.emptyList());
         mPreferenceControllerUT.init(mFragmentManager, TEST_SUB_ID);
         mLifecycle.addObserver(mPreferenceControllerUT);
-        mSwitchPreferenceUT = spy(new SwitchPreference(mContext));
+        mSwitchPreferenceUT = spy(new SwitchPreferenceCompat(mContext));
         mSwitchPreferenceUT.setKey(mPreferenceControllerUT.getPreferenceKey());
         mPreferenceControllerUT.preference = mSwitchPreferenceUT;
     }

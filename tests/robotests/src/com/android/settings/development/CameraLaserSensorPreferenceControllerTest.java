@@ -29,7 +29,7 @@ import static org.mockito.Mockito.when;
 import android.os.SystemProperties;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Ignore;
@@ -47,7 +47,7 @@ public class CameraLaserSensorPreferenceControllerTest {
     @Mock
     private PreferenceScreen mScreen;
     @Mock
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
 
     private CameraLaserSensorPreferenceController mController;
 

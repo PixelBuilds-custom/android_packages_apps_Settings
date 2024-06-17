@@ -31,7 +31,7 @@ import android.content.Context;
 
 import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.development.BluetoothA2dpConfigStore;
 import com.android.settingslib.core.lifecycle.Lifecycle;
@@ -65,7 +65,7 @@ public class BluetoothHDAudioPreferenceControllerTest {
     private AbstractBluetoothPreferenceController.Callback mCallback;
 
     private BluetoothHDAudioPreferenceController mController;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     private BluetoothA2dpConfigStore mBluetoothA2dpConfigStore;
     private BluetoothDevice mActiveDevice;
     private Context mContext;
@@ -82,7 +82,7 @@ public class BluetoothHDAudioPreferenceControllerTest {
         mController = new BluetoothHDAudioPreferenceController(mContext, mLifecycle,
                 mBluetoothA2dpConfigStore, mCallback);
         mController.mBluetoothAdapter = mBluetoothAdapter;
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         when(mScreen.findPreference(mController.getPreferenceKey())).thenReturn(mPreference);
         mController.displayPreference(mScreen);
         mActiveDevice = ShadowBluetoothDevice.newInstance(TEST_DEVICE_ADDRESS);

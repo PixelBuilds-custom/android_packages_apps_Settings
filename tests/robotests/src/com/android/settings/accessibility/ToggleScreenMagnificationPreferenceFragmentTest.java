@@ -52,7 +52,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 
 import com.android.settings.DialogCreatable;
@@ -128,7 +128,7 @@ public class ToggleScreenMagnificationPreferenceFragmentTest {
         mFragment.onCreate(new Bundle());
         mFragment.onCreateView(LayoutInflater.from(mContext), mock(ViewGroup.class), Bundle.EMPTY);
         mFragment.onAttach(mContext);
-        final SwitchPreference switchPreference =
+        final SwitchPreferenceCompat switchPreference =
                 mFragment.findPreference(MagnificationFollowTypingPreferenceController.PREF_KEY);
 
         mFragment.onResume();
@@ -145,7 +145,7 @@ public class ToggleScreenMagnificationPreferenceFragmentTest {
         mFragment.onCreate(new Bundle());
         mFragment.onCreateView(LayoutInflater.from(mContext), mock(ViewGroup.class), Bundle.EMPTY);
         mFragment.onAttach(mContext);
-        SwitchPreference switchPreference =
+        SwitchPreferenceCompat switchPreference =
                 mFragment.findPreference(MagnificationFollowTypingPreferenceController.PREF_KEY);
 
         mFragment.onResume();

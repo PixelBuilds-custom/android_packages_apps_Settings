@@ -27,7 +27,7 @@ import android.telephony.ims.ImsMmTelManager;
 import android.util.Log;
 
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.R;
 import com.android.settings.network.SubscriptionUtil;
@@ -116,14 +116,14 @@ public class BackupCallingPreferenceController extends TelephonyTogglePreference
     @Override
     public void updateState(Preference preference) {
         super.updateState(preference);
-        if ((preference == null) || (!(preference instanceof SwitchPreference))) {
+        if ((preference == null) || (!(preference instanceof SwitchPreferenceCompat))) {
             return;
         }
         SubscriptionInfo subInfo = getSubscriptionInfoFromActiveList(mSubId);
 
         mPreference = preference;
 
-        final SwitchPreference switchPreference = (SwitchPreference) preference;
+        final SwitchPreferenceCompat switchPreferenceCompat = (SwitchPreferenceCompat) preference;
         switchPreference.setChecked((subInfo != null) ? isChecked() : false);
 
         updateSummary(getLatestSummary(subInfo));

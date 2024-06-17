@@ -25,7 +25,7 @@ import android.view.Display;
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.R;
 import com.android.settings.core.PreferenceControllerMixin;
@@ -84,7 +84,7 @@ public class ForcePeakRefreshRatePreferenceController extends DeveloperOptionsPr
 
     @Override
     public void updateState(Preference preference) {
-        ((SwitchPreference) mPreference).setChecked(isForcePeakRefreshRateEnabled());
+        (((SwitchPreferenceCompat) mPreference)).setChecked(isForcePeakRefreshRateEnabled());
     }
 
     @Override
@@ -102,7 +102,7 @@ public class ForcePeakRefreshRatePreferenceController extends DeveloperOptionsPr
         Settings.System.putFloat(mContext.getContentResolver(),
             Settings.System.MIN_REFRESH_RATE, NO_CONFIG);
 
-        ((SwitchPreference) mPreference).setChecked(false);
+        (((SwitchPreferenceCompat) mPreference)).setChecked(false);
     }
 
     @VisibleForTesting

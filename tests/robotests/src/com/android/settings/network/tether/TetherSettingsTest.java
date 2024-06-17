@@ -52,7 +52,7 @@ import android.util.FeatureFlagUtils;
 
 import androidx.fragment.app.FragmentActivity;
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.R;
 import com.android.settings.RestrictedSettingsFragment;
@@ -91,9 +91,9 @@ public class TetherSettingsTest {
     @Mock
     private RestrictedSwitchPreference mUsbTether;
     @Mock
-    private SwitchPreference mBluetoothTether;
+    private SwitchPreferenceCompat mBluetoothTether;
     @Mock
-    private SwitchPreference mEthernetTether;
+    private SwitchPreferenceCompat mEthernetTether;
     @Mock
     private Preference mDataSaverFooter;
 
@@ -238,7 +238,7 @@ public class TetherSettingsTest {
     @Test
     public void testBluetoothState_updateBluetoothState_bluetoothTetheringStateOn() {
         mTetherSettings.mTm = mTetheringManager;
-        final SwitchPreference mockSwitchPreference = mock(SwitchPreference.class);
+        final SwitchPreferenceCompat mockSwitchPreference = mock(SwitchPreferenceCompat.class);
         when(mTetherSettings.findPreference(TetherSettings.KEY_ENABLE_BLUETOOTH_TETHERING))
             .thenReturn(mockSwitchPreference);
         final FragmentActivity mockActivity = mock(FragmentActivity.class);
@@ -269,7 +269,7 @@ public class TetherSettingsTest {
     @Test
     public void testBluetoothState_updateBluetoothState_bluetoothTetheringStateOff() {
         mTetherSettings.mTm = mTetheringManager;
-        final SwitchPreference mockSwitchPreference = mock(SwitchPreference.class);
+        final SwitchPreferenceCompat mockSwitchPreference = mock(SwitchPreferenceCompat.class);
         when(mTetherSettings.findPreference(TetherSettings.KEY_ENABLE_BLUETOOTH_TETHERING))
             .thenReturn(mockSwitchPreference);
         final FragmentActivity mockActivity = mock(FragmentActivity.class);
@@ -433,7 +433,7 @@ public class TetherSettingsTest {
 
     private void setupUsbStateComponents(RestrictedSwitchPreference preference,
             ArgumentCaptor<BroadcastReceiver> captor, FragmentActivity activity) {
-        SwitchPreference mockSwitchPreference = mock(SwitchPreference.class);
+        SwitchPreferenceCompat mockSwitchPreference = mock(SwitchPreferenceCompat.class);
 
         when(mTetherSettings.findPreference(TetherSettings.KEY_USB_TETHER_SETTINGS))
                 .thenReturn(preference);

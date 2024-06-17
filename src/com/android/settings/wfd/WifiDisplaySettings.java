@@ -59,7 +59,7 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.PreferenceViewHolder;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.internal.app.MediaRouteDialogPresenter;
 import com.android.settings.R;
@@ -370,7 +370,7 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment implem
         }
 
         // switch for Listen Mode
-        SwitchPreference pref = new SwitchPreference(getPrefContext()) {
+        SwitchPreferenceCompat pref = new SwitchPreferenceCompat(getPrefContext()) {
             @Override
             protected void onClick() {
                 mListen = !mListen;
@@ -383,7 +383,7 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment implem
         mCertCategory.addPreference(pref);
 
         // switch for Autonomous GO
-        pref = new SwitchPreference(getPrefContext()) {
+        pref = new SwitchPreferenceCompat(getPrefContext()) {
             @Override
             protected void onClick() {
                 mAutoGO = !mAutoGO;

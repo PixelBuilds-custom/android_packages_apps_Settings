@@ -30,7 +30,7 @@ import android.os.RemoteException;
 import android.os.UserManager;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -51,7 +51,7 @@ public class ForceEnableNotesRolePreferenceControllerTest {
     @Mock
     private PreferenceScreen mScreen;
     @Mock
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     @Mock
     private UserManager mUserManager;
     @Mock

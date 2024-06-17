@@ -29,7 +29,7 @@ import android.content.Context;
 
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.internal.annotations.VisibleForTesting;
 import com.android.settings.R;
@@ -92,11 +92,11 @@ public class AutoTimeZonePreferenceController extends AbstractPreferenceControll
 
     @Override
     public void updateState(Preference preference) {
-        if (!(preference instanceof SwitchPreference)) {
+        if (!(preference instanceof SwitchPreferenceCompat)) {
             return;
         }
 
-        ((SwitchPreference) preference).setChecked(isEnabled());
+        ((SwitchPreferenceCompat) preference).setChecked(isEnabled());
     }
 
     @Override

@@ -22,7 +22,7 @@ import static org.mockito.Mockito.when;
 
 import android.content.Context;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 
 import com.android.internal.widget.LockPatternUtils;
@@ -43,7 +43,7 @@ public class AutoPinConfirmPreferenceControllerTest {
     @Mock
     private ObservablePreferenceFragment mParentFragment;
     private AutoPinConfirmPreferenceController mController;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
 
     @Before
     public void setUp() {
@@ -52,7 +52,7 @@ public class AutoPinConfirmPreferenceControllerTest {
         mController =
                 new AutoPinConfirmPreferenceController(context, TEST_USER_ID, mLockPatternUtils,
                         mParentFragment);
-        mPreference = new SwitchPreference(context);
+        mPreference = new SwitchPreferenceCompat(context);
     }
 
     @Test

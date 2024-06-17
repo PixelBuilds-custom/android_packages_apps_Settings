@@ -41,7 +41,7 @@ import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.internal.util.Preconditions;
 import com.android.settings.R;
@@ -80,7 +80,7 @@ public final class PhysicalKeyboardFragment extends SettingsPreferenceFragment
     @NonNull
     private PreferenceCategory mKeyboardAssistanceCategory;
     @NonNull
-    private SwitchPreference mShowVirtualKeyboardSwitch;
+    private SwitchPreferenceCompat mShowVirtualKeyboardSwitch;
 
     private Intent mIntentWaitingForResult;
     private boolean mIsNewKeyboardSettings;
@@ -104,7 +104,7 @@ public final class PhysicalKeyboardFragment extends SettingsPreferenceFragment
         mKeyboardAssistanceCategory = Preconditions.checkNotNull(
                 (PreferenceCategory) findPreference(KEYBOARD_OPTIONS_CATEGORY));
         mShowVirtualKeyboardSwitch = Preconditions.checkNotNull(
-                (SwitchPreference) mKeyboardAssistanceCategory.findPreference(
+                (SwitchPreferenceCompat) mKeyboardAssistanceCategory.findPreference(
                         SHOW_VIRTUAL_KEYBOARD_SWITCH));
 
         FeatureFactory featureFactory = FeatureFactory.getFactory(getContext());

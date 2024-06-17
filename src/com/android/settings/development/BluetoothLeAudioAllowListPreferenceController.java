@@ -24,7 +24,7 @@ import android.os.SystemProperties;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.development.DeveloperOptionsPreferenceController;
@@ -86,10 +86,10 @@ public class BluetoothLeAudioAllowListPreferenceController
         if (leAudioEnabled && leAudioAllowListSupport) {
             final boolean leAudioAllowListEnabled =
                     SystemProperties.getBoolean(LE_AUDIO_ALLOW_LIST_ENABLED_PROPERTY, false);
-            ((SwitchPreference) mPreference).setChecked(leAudioAllowListEnabled);
+            (((SwitchPreferenceCompat) mPreference)).setChecked(leAudioAllowListEnabled);
         } else {
             mPreference.setEnabled(false);
-            ((SwitchPreference) mPreference).setChecked(false);
+            (((SwitchPreferenceCompat) mPreference)).setChecked(false);
         }
     }
 

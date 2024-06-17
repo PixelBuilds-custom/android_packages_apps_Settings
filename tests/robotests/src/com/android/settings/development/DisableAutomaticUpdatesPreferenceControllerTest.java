@@ -25,7 +25,7 @@ import android.content.Context;
 import android.provider.Settings;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -41,7 +41,7 @@ public class DisableAutomaticUpdatesPreferenceControllerTest {
     @Mock
     private PreferenceScreen mPreferenceScreen;
     @Mock
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
 
     private Context mContext;
     private DisableAutomaticUpdatesPreferenceController mController;

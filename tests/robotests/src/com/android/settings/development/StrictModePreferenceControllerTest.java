@@ -27,7 +27,7 @@ import android.os.SystemProperties;
 import android.view.IWindowManager;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -46,7 +46,7 @@ public class StrictModePreferenceControllerTest {
     @Mock
     private PreferenceScreen mScreen;
     @Mock
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
 
     private StrictModePreferenceController mController;
 

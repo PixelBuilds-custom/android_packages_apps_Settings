@@ -29,7 +29,7 @@ import android.os.RemoteException;
 import android.provider.Settings;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -45,7 +45,7 @@ public class KeepActivitiesPreferenceControllerTest {
     private static final int SETTING_VALUE_ON = 1;
 
     @Mock
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     @Mock
     private PreferenceScreen mPreferenceScreen;
     @Mock

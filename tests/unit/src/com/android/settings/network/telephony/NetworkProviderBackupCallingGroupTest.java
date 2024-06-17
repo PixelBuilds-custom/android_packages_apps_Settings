@@ -32,7 +32,7 @@ import android.telephony.TelephonyManager;
 import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
@@ -83,8 +83,8 @@ public class NetworkProviderBackupCallingGroupTest {
     private PersistableBundle mCarrierConfig;
     private PreferenceManager mPreferenceManager;
     private PreferenceScreen mPreferenceScreen;
-    private SwitchPreference mSwitchPreference1;
-    private SwitchPreference mSwitchPreference2;
+    private SwitchPreferenceCompat mSwitchPreference1;
+    private SwitchPreferenceCompat mSwitchPreference2;
 
     @Before
     public void setUp() throws Exception {

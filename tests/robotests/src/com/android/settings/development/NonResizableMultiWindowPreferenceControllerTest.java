@@ -30,7 +30,7 @@ import android.content.Context;
 import android.provider.Settings;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -44,7 +44,7 @@ import org.robolectric.RuntimeEnvironment;
 public class NonResizableMultiWindowPreferenceControllerTest {
 
     @Mock
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     @Mock
     private PreferenceScreen mScreen;
 

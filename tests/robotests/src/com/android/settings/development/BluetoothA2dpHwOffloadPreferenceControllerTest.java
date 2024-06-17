@@ -30,7 +30,7 @@ import android.content.Context;
 import android.os.SystemProperties;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -49,14 +49,14 @@ public class BluetoothA2dpHwOffloadPreferenceControllerTest {
     private DevelopmentSettingsDashboardFragment mFragment;
 
     private Context mContext;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     private BluetoothA2dpHwOffloadPreferenceController mController;
 
     @Before
     public void setup() {
         MockitoAnnotations.initMocks(this);
         mContext = RuntimeEnvironment.application;
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mController = spy(new BluetoothA2dpHwOffloadPreferenceController(mContext, mFragment));
         when(mPreferenceScreen.findPreference(mController.getPreferenceKey()))
             .thenReturn(mPreference);

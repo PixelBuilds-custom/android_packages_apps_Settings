@@ -28,7 +28,7 @@ import android.os.Vibrator;
 import android.provider.Settings;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 
 import com.android.settings.core.BasePreferenceController;
@@ -53,7 +53,7 @@ public class AlarmVibrationTogglePreferenceControllerTest {
     private Context mContext;
     private Vibrator mVibrator;
     private AlarmVibrationTogglePreferenceController mController;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
 
     @Before
     public void setUp() {
@@ -65,7 +65,7 @@ public class AlarmVibrationTogglePreferenceControllerTest {
         mVibrator = mContext.getSystemService(Vibrator.class);
         mController = new AlarmVibrationTogglePreferenceController(mContext, PREFERENCE_KEY);
         mLifecycle.addObserver(mController);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mPreference.setSummary("Test summary");
         when(mScreen.findPreference(mController.getPreferenceKey())).thenReturn(mPreference);
         mController.displayPreference(mScreen);

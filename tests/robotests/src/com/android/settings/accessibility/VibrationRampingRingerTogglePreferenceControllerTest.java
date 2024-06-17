@@ -34,7 +34,7 @@ import android.provider.Settings;
 import android.telephony.TelephonyManager;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 
 import com.android.settingslib.core.lifecycle.Lifecycle;
@@ -61,7 +61,7 @@ public class VibrationRampingRingerTogglePreferenceControllerTest {
     private Lifecycle mLifecycle;
     private Context mContext;
     private VibrationRampingRingerTogglePreferenceController mController;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
 
     @Before
     public void setUp() {
@@ -74,7 +74,7 @@ public class VibrationRampingRingerTogglePreferenceControllerTest {
         mController = new VibrationRampingRingerTogglePreferenceController(mContext,
                 PREFERENCE_KEY, mDeviceConfigProvider);
         mLifecycle.addObserver(mController);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mPreference.setSummary("Test summary");
         when(mScreen.findPreference(mController.getPreferenceKey())).thenReturn(mPreference);
         mController.displayPreference(mScreen);

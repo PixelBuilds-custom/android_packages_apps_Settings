@@ -27,7 +27,7 @@ import android.content.Context;
 import android.net.wifi.SoftApConfiguration;
 import android.net.wifi.WifiManager;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.testutils.FakeFeatureFactory;
 import com.android.settings.wifi.factory.WifiFeatureProvider;
@@ -48,7 +48,7 @@ public class WifiTetherAutoOffPreferenceControllerTest {
     private static final String KEY_PREF = "wifi_tether_auto_off";
     private Context mContext;
     private WifiTetherAutoOffPreferenceController mController;
-    private SwitchPreference mSwitchPreference;
+    private SwitchPreferenceCompat mSwitchPreference;
     @Mock
     private WifiManager mWifiManager;
     private SoftApConfiguration mSoftApConfiguration;
@@ -66,7 +66,7 @@ public class WifiTetherAutoOffPreferenceControllerTest {
         when(mWifiManager.getSoftApConfiguration()).thenReturn(mSoftApConfiguration);
 
         mController = new WifiTetherAutoOffPreferenceController(mContext, KEY_PREF);
-        mSwitchPreference = new SwitchPreference(mContext);
+        mSwitchPreference = new SwitchPreferenceCompat(mContext);
     }
 
     @Test

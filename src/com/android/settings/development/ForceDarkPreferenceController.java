@@ -21,7 +21,7 @@ import android.os.SystemProperties;
 import android.view.ThreadedRenderer;
 
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.development.DeveloperOptionsPreferenceController;
@@ -54,13 +54,13 @@ public class ForceDarkPreferenceController extends DeveloperOptionsPreferenceCon
     public void updateState(Preference preference) {
         final boolean isEnabled = SystemProperties.getBoolean(
                 ThreadedRenderer.DEBUG_FORCE_DARK, false /* default */);
-        ((SwitchPreference) mPreference).setChecked(isEnabled);
+        (((SwitchPreferenceCompat) mPreference)).setChecked(isEnabled);
     }
 
     @Override
     protected void onDeveloperOptionsSwitchDisabled() {
         super.onDeveloperOptionsSwitchDisabled();
         SystemProperties.set(ThreadedRenderer.DEBUG_FORCE_DARK, null);
-        ((SwitchPreference) mPreference).setChecked(false);
+        (((SwitchPreferenceCompat) mPreference)).setChecked(false);
     }
 }

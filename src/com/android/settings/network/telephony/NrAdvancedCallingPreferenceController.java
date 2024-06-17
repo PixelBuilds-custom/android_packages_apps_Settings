@@ -29,7 +29,7 @@ import android.util.Log;
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.internal.telephony.util.ArrayUtils;
 import com.android.settingslib.core.lifecycle.LifecycleObserver;
@@ -150,8 +150,8 @@ public class NrAdvancedCallingPreferenceController extends TelephonyTogglePrefer
         if (preference == null) {
             return;
         }
-        final SwitchPreference switchPreference = (SwitchPreference) preference;
-        switchPreference.setEnabled(isUserControlAllowed());
+        final SwitchPreferenceCompat switchPreferenceCompat = (SwitchPreferenceCompat) preference;
+        switchPreferenceCompat.setEnabled(isUserControlAllowed());
     }
 
     @Override

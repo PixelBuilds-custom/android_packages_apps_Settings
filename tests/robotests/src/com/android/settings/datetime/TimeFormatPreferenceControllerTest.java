@@ -23,7 +23,7 @@ import android.content.Intent;
 import android.provider.Settings;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -44,7 +44,7 @@ public class TimeFormatPreferenceControllerTest {
 
     private ShadowApplication mApplication;
     private Context mContext;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     private TimeFormatPreferenceController mController;
 
     @Before
@@ -71,7 +71,7 @@ public class TimeFormatPreferenceControllerTest {
     @Test
     public void updateState_24HourSet_shouldCheckPreference() {
         mController = new TimeFormatPreferenceController(mContext, mCallback, false);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mPreference.setKey(mController.getPreferenceKey());
         Settings.System.putString(mContext.getContentResolver(), Settings.System.TIME_12_24,
                 TimeFormatPreferenceController.HOURS_24);
@@ -84,7 +84,7 @@ public class TimeFormatPreferenceControllerTest {
     @Test
     public void updateState_12HourSet_shouldNotCheckPreference() {
         mController = new TimeFormatPreferenceController(mContext, mCallback, false);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mPreference.setKey(mController.getPreferenceKey());
         Settings.System.putString(mContext.getContentResolver(), Settings.System.TIME_12_24,
                 TimeFormatPreferenceController.HOURS_12);
@@ -98,7 +98,7 @@ public class TimeFormatPreferenceControllerTest {
     public void updateState_autoSet_shouldNotEnablePreference() {
         mController = new TimeFormatPreferenceController(mContext, mCallback, false);
         Settings.System.putString(mContext.getContentResolver(), Settings.System.TIME_12_24, null);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mPreference.setKey(mController.getPreferenceKey());
 
         mController.updateState(mPreference);
@@ -109,7 +109,7 @@ public class TimeFormatPreferenceControllerTest {
     @Test
     public void updatePreference_12HourSet_shouldSendIntent() {
         mController = new TimeFormatPreferenceController(mContext, mCallback, false);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mPreference.setKey(mController.getPreferenceKey());
         mPreference.setChecked(false);
 
@@ -128,7 +128,7 @@ public class TimeFormatPreferenceControllerTest {
     @Test
     public void updatePreference_24HourSet_shouldSendIntent() {
         mController = new TimeFormatPreferenceController(mContext, mCallback, false);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mPreference.setKey(mController.getPreferenceKey());
         mPreference.setChecked(true);
 

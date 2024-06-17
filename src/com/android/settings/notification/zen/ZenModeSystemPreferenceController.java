@@ -23,7 +23,7 @@ import android.provider.Settings;
 import android.util.Log;
 
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settingslib.core.lifecycle.Lifecycle;
 
@@ -50,7 +50,7 @@ public class ZenModeSystemPreferenceController extends
     public void updateState(Preference preference) {
         super.updateState(preference);
 
-        SwitchPreference pref = (SwitchPreference) preference;
+        SwitchPreferenceCompat pref = (SwitchPreferenceCompat) preference;
         switch (getZenMode()) {
             case Settings.Global.ZEN_MODE_NO_INTERRUPTIONS:
                 pref.setEnabled(false);

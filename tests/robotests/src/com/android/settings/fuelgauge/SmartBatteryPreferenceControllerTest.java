@@ -27,7 +27,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.provider.Settings;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.core.BasePreferenceController;
 import com.android.settings.testutils.FakeFeatureFactory;
@@ -47,7 +47,7 @@ public class SmartBatteryPreferenceControllerTest {
 
     private Context mContext = spy(RuntimeEnvironment.application);
     private SmartBatteryPreferenceController mController;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     private ContentResolver mContentResolver;
     private FakeFeatureFactory mFeatureFactory;
 
@@ -60,7 +60,7 @@ public class SmartBatteryPreferenceControllerTest {
         mFeatureFactory = FakeFeatureFactory.setupForTest();
         mContentResolver = mContext.getContentResolver();
         mController = new SmartBatteryPreferenceController(mContext);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
     }
 
     @Test

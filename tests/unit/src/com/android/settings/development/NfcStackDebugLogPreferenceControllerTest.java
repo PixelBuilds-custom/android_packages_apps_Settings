@@ -25,7 +25,7 @@ import android.content.Context;
 import android.os.Looper;
 import android.os.SystemProperties;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
 import androidx.test.core.app.ApplicationProvider;
@@ -41,7 +41,7 @@ public class NfcStackDebugLogPreferenceControllerTest {
 
     private Context mContext;
     private NfcStackDebugLogPreferenceController mController;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
 
     @Before
     public void setUp() {
@@ -53,7 +53,7 @@ public class NfcStackDebugLogPreferenceControllerTest {
 
         final PreferenceManager preferenceManager = new PreferenceManager(mContext);
         final PreferenceScreen screen = preferenceManager.createPreferenceScreen(mContext);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mPreference.setKey(mController.getPreferenceKey());
         screen.addPreference(mPreference);
         mController.displayPreference(screen);

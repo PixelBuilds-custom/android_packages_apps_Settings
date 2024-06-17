@@ -28,7 +28,7 @@ import android.provider.Settings;
 
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
@@ -45,7 +45,7 @@ public class DisableAnimationsPreferenceControllerTest {
     private final Context mContext = ApplicationProvider.getApplicationContext();
 
     private PreferenceScreen mScreen;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     private DisableAnimationsPreferenceController mController;
 
     @Before
@@ -55,7 +55,7 @@ public class DisableAnimationsPreferenceControllerTest {
         }
         PreferenceManager preferenceManager = new PreferenceManager(mContext);
         mScreen = preferenceManager.createPreferenceScreen(mContext);
-        final SwitchPreference preference = new SwitchPreference(mContext);
+        final SwitchPreferenceCompat preference = new SwitchPreferenceCompat(mContext);
         preference.setKey(TEST_PREFERENCE_KEY);
         mScreen.addPreference(preference);
 

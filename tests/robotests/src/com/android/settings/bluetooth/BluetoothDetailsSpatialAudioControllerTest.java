@@ -32,7 +32,7 @@ import android.media.AudioManager;
 import android.media.Spatializer;
 
 import androidx.preference.PreferenceCategory;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settingslib.core.lifecycle.Lifecycle;
 
@@ -68,8 +68,8 @@ public class BluetoothDetailsSpatialAudioControllerTest extends BluetoothDetails
     private AudioDeviceAttributes mAvailableDevice;
 
     private BluetoothDetailsSpatialAudioController mController;
-    private SwitchPreference mSpatialAudioPref;
-    private SwitchPreference mHeadTrackingPref;
+    private SwitchPreferenceCompat mSpatialAudioPref;
+    private SwitchPreferenceCompat mHeadTrackingPref;
 
     @Before
     public void setUp() {

@@ -30,7 +30,7 @@ import android.location.LocationManager;
 import android.net.wifi.WifiManager;
 import android.text.TextUtils;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.R;
 import com.android.settings.dashboard.DashboardFragment;
@@ -55,7 +55,7 @@ public class WifiWakeupPreferenceControllerTest {
     @Mock
     private WifiManager mWifiManager;
     @Mock
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
 
     @Before
     public void setUp() {
@@ -119,7 +119,7 @@ public class WifiWakeupPreferenceControllerTest {
 
     @Test
     public void updateState_wifiWakeupEnableScanningDisable_wifiWakeupDisabled() {
-        final SwitchPreference preference = new SwitchPreference(mContext);
+        final SwitchPreferenceCompat preference = new SwitchPreferenceCompat(mContext);
         when(mWifiManager.isAutoWakeupEnabled()).thenReturn(true);
         when(mWifiManager.isScanAlwaysAvailable()).thenReturn(false);
         doReturn(true).when(mLocationManager).isLocationEnabled();
@@ -133,7 +133,7 @@ public class WifiWakeupPreferenceControllerTest {
 
     @Test
     public void updateState_preferenceSetCheckedWhenWakeupSettingEnabled() {
-        final SwitchPreference preference = new SwitchPreference(mContext);
+        final SwitchPreferenceCompat preference = new SwitchPreferenceCompat(mContext);
         when(mWifiManager.isAutoWakeupEnabled()).thenReturn(true);
         when(mWifiManager.isScanAlwaysAvailable()).thenReturn(true);
         doReturn(true).when(mLocationManager).isLocationEnabled();
@@ -147,7 +147,7 @@ public class WifiWakeupPreferenceControllerTest {
 
     @Test
     public void updateState_preferenceSetUncheckedWhenWakeupSettingDisabled() {
-        final SwitchPreference preference = new SwitchPreference(mContext);
+        final SwitchPreferenceCompat preference = new SwitchPreferenceCompat(mContext);
         when(mWifiManager.isAutoWakeupEnabled()).thenReturn(false);
 
         mController.updateState(preference);
@@ -159,7 +159,7 @@ public class WifiWakeupPreferenceControllerTest {
 
     @Test
     public void updateState_preferenceSetUncheckedWhenWifiScanningDisabled() {
-        final SwitchPreference preference = new SwitchPreference(mContext);
+        final SwitchPreferenceCompat preference = new SwitchPreferenceCompat(mContext);
         when(mWifiManager.isAutoWakeupEnabled()).thenReturn(true);
         when(mWifiManager.isScanAlwaysAvailable()).thenReturn(false);
 
@@ -170,7 +170,7 @@ public class WifiWakeupPreferenceControllerTest {
 
     @Test
     public void updateState_preferenceSetUncheckedWhenWakeupSettingEnabledNoLocation() {
-        final SwitchPreference preference = new SwitchPreference(mContext);
+        final SwitchPreferenceCompat preference = new SwitchPreferenceCompat(mContext);
         when(mWifiManager.isAutoWakeupEnabled()).thenReturn(true);
         doReturn(false).when(mLocationManager).isLocationEnabled();
 
@@ -183,7 +183,7 @@ public class WifiWakeupPreferenceControllerTest {
 
     @Test
     public void updateState_preferenceSetUncheckedWhenWakeupSettingDisabledLocationEnabled() {
-        final SwitchPreference preference = new SwitchPreference(mContext);
+        final SwitchPreferenceCompat preference = new SwitchPreferenceCompat(mContext);
         when(mWifiManager.isAutoWakeupEnabled()).thenReturn(false);
         doReturn(false).when(mLocationManager).isLocationEnabled();
 
@@ -196,7 +196,7 @@ public class WifiWakeupPreferenceControllerTest {
 
     @Test
     public void updateState_preferenceSetUncheckedWhenWifiScanningDisabledLocationEnabled() {
-        final SwitchPreference preference = new SwitchPreference(mContext);
+        final SwitchPreferenceCompat preference = new SwitchPreferenceCompat(mContext);
         when(mWifiManager.isAutoWakeupEnabled()).thenReturn(true);
         when(mWifiManager.isScanAlwaysAvailable()).thenReturn(false);
         doReturn(false).when(mLocationManager).isLocationEnabled();

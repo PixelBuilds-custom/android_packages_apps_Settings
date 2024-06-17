@@ -23,7 +23,7 @@ import android.content.Context;
 import android.net.wifi.WifiManager;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -36,7 +36,7 @@ import org.robolectric.RobolectricTestRunner;
 public class WifiScanThrottlingPreferenceControllerTest {
 
     @Mock
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     @Mock
     private PreferenceScreen mPreferenceScreen;
     @Mock

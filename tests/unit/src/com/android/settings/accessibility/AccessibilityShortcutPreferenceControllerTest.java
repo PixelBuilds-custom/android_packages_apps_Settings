@@ -28,7 +28,7 @@ import android.content.Context;
 import android.os.UserHandle;
 import android.provider.Settings;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -38,13 +38,13 @@ import org.junit.runner.RunWith;
 public class AccessibilityShortcutPreferenceControllerTest {
 
     private Context mContext;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     private AccessibilityShortcutPreferenceController mController;
 
     @Before
     public void setUp() {
         mContext = ApplicationProvider.getApplicationContext();
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mController = new AccessibilityShortcutPreferenceController(mContext,
                 "accessibility_shortcut_preference");
     }

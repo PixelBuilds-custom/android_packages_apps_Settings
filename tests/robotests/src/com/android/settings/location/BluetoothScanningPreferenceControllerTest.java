@@ -24,7 +24,7 @@ import android.content.ContentResolver;
 import android.provider.Settings;
 import android.provider.Settings.Global;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -38,7 +38,7 @@ import org.robolectric.RuntimeEnvironment;
 public class BluetoothScanningPreferenceControllerTest {
 
     @Mock
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
 
     private ContentResolver mContentResolver;
     private BluetoothScanningPreferenceController mController;

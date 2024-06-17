@@ -29,7 +29,7 @@ import android.provider.Settings;
 
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 
 import org.junit.Before;
@@ -44,7 +44,7 @@ public class MagnificationFollowTypingPreferenceControllerTest {
             Settings.Secure.ACCESSIBILITY_MAGNIFICATION_FOLLOW_TYPING_ENABLED;
 
     private final Context mContext = ApplicationProvider.getApplicationContext();
-    private final SwitchPreference mSwitchPreference = spy(new SwitchPreference(mContext));
+    private final SwitchPreferenceCompat mSwitchPreference = spy(new SwitchPreferenceCompat(mContext));
     private final MagnificationFollowTypingPreferenceController mController =
             new MagnificationFollowTypingPreferenceController(mContext,
                     MagnificationFollowTypingPreferenceController.PREF_KEY);

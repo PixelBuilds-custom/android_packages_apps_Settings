@@ -23,7 +23,7 @@ import android.text.TextUtils;
 import android.text.format.DateFormat;
 
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.preference.TwoStatePreference;
 
 import com.android.settings.core.PreferenceControllerMixin;
@@ -52,10 +52,10 @@ public class AutoTimeFormatPreferenceController extends AbstractPreferenceContro
 
     @Override
     public void updateState(Preference preference) {
-        if (!(preference instanceof SwitchPreference)) {
+        if (!(preference instanceof SwitchPreferenceCompat)) {
             return;
         }
-        ((SwitchPreference) preference).setChecked(isAutoTimeFormatSelection(mContext));
+        ((SwitchPreferenceCompat) preference).setChecked(isAutoTimeFormatSelection(mContext));
     }
 
     @Override
@@ -64,7 +64,7 @@ public class AutoTimeFormatPreferenceController extends AbstractPreferenceContro
             || !TextUtils.equals(KEY_AUTO_24_HOUR, preference.getKey())) {
             return false;
         }
-        boolean auto24HourEnabled = ((SwitchPreference) preference).isChecked();
+        boolean auto24HourEnabled = ((SwitchPreferenceCompat) preference).isChecked();
         Boolean is24Hour;
         if (auto24HourEnabled) {
             is24Hour = null;

@@ -25,7 +25,7 @@ import android.provider.DeviceConfig;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.development.DeveloperOptionsPreferenceController;
@@ -92,7 +92,7 @@ public class BluetoothLeAudioDeviceDetailsPreferenceController
                 DeviceConfig.NAMESPACE_BLUETOOTH, CONFIG_LE_AUDIO_ENABLED_BY_DEFAULT, false);
 
         mPreference.setEnabled(!leAudioEnabledByDefault);
-        ((SwitchPreference) mPreference).setChecked(isLeAudioToggleVisible
+        (((SwitchPreferenceCompat) mPreference)).setChecked(isLeAudioToggleVisible
                 || leAudioEnabledByDefault);
     }
 }

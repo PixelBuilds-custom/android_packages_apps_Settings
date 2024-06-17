@@ -23,7 +23,7 @@ import android.provider.Settings;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.development.DeveloperOptionsPreferenceController;
@@ -69,7 +69,7 @@ public final class EnableBlursPreferenceController extends DeveloperOptionsPrefe
     public void updateState(Preference preference) {
         boolean isEnabled = Settings.Global.getInt(mContext.getContentResolver(),
                     Settings.Global.DISABLE_WINDOW_BLURS, 0) == 0;
-        ((SwitchPreference) mPreference).setChecked(isEnabled);
+        (((SwitchPreferenceCompat) mPreference)).setChecked(isEnabled);
     }
 
     @Override

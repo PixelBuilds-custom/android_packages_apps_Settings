@@ -36,7 +36,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceClickListener;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.R;
 import com.android.settings.core.instrumentation.InstrumentedDialogFragment;
@@ -60,7 +60,7 @@ public class ZenModeScheduleRuleSettings extends ZenModeRuleSettingsBase {
     private Preference mDays;
     private TimePickerPreference mStart;
     private TimePickerPreference mEnd;
-    private SwitchPreference mExitAtAlarm;
+    private SwitchPreferenceCompat mExitAtAlarm;
     private AlertDialog mDayDialog;
     private ScheduleInfo mSchedule;
 
@@ -135,7 +135,7 @@ public class ZenModeScheduleRuleSettings extends ZenModeRuleSettingsBase {
         root.addPreference(mEnd);
         mEnd.setDependency(mDays.getKey());
 
-        mExitAtAlarm = (SwitchPreference) root.findPreference(KEY_EXIT_AT_ALARM);
+        mExitAtAlarm = (SwitchPreferenceCompat) root.findPreference(KEY_EXIT_AT_ALARM);
         mExitAtAlarm.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
             public boolean onPreferenceChange(Preference preference, Object o) {

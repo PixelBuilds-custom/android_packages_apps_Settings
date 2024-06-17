@@ -19,7 +19,7 @@ package com.android.settings.development;
 import static com.google.common.truth.Truth.assertThat;
 
 import androidx.fragment.app.FragmentActivity;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -34,7 +34,7 @@ import org.robolectric.Shadows;
 public class SelectDSUPreferenceControllerTest {
 
     @Mock
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
 
     private FragmentActivity mActivity;
     private SelectDSUPreferenceController mController;
@@ -44,7 +44,7 @@ public class SelectDSUPreferenceControllerTest {
         MockitoAnnotations.initMocks(this);
         mActivity = Robolectric.buildActivity(FragmentActivity.class).get();
         mController = new SelectDSUPreferenceController(mActivity);
-        mPreference = new SwitchPreference(mActivity);
+        mPreference = new SwitchPreferenceCompat(mActivity);
         mPreference.setKey("dsu_loader");
     }
 

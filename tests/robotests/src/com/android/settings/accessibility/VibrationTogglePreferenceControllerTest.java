@@ -26,7 +26,7 @@ import android.os.Vibrator;
 import android.provider.Settings;
 
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 
 import com.android.settingslib.core.lifecycle.Lifecycle;
@@ -66,7 +66,7 @@ public class VibrationTogglePreferenceControllerTest {
     private Lifecycle mLifecycle;
     private Context mContext;
     private Vibrator mVibrator;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
     private VibrationTogglePreferenceController mController;
 
     @Before
@@ -77,7 +77,7 @@ public class VibrationTogglePreferenceControllerTest {
         mVibrator = mContext.getSystemService(Vibrator.class);
         mController = new TestPreferenceController(mContext);
         mLifecycle.addObserver(mController);
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mPreference.setTitle("Test title");
         when(mScreen.findPreference(mController.getPreferenceKey())).thenReturn(mPreference);
         mController.displayPreference(mScreen);

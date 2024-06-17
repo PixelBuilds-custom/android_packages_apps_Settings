@@ -58,7 +58,7 @@ import androidx.lifecycle.OnLifecycleEvent;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.internal.annotations.VisibleForTesting;
 import com.android.internal.content.PackageMonitor;
@@ -100,7 +100,7 @@ public class CredentialManagerPreferenceController extends BasePreferenceControl
     private final Set<String> mEnabledPackageNames;
     private final @Nullable CredentialManager mCredentialManager;
     private final Executor mExecutor;
-    private final Map<String, SwitchPreference> mPrefs = new HashMap<>(); // key is package name
+    private final Map<String, SwitchPreferenceCompat> mPrefs = new HashMap<>(); // key is package name
     private final List<ServiceInfo> mPendingServiceInfos = new ArrayList<>();
     private final Handler mHandler = new Handler();
     private final SettingContentObserver mSettingsContentObserver;
@@ -389,7 +389,7 @@ public class CredentialManagerPreferenceController extends BasePreferenceControl
 
     /** Aggregates the list of services and builds a list of UI prefs to show. */
     @VisibleForTesting
-    public Map<String, SwitchPreference> buildPreferenceList(
+    public Map<String, SwitchPreferenceCompat> buildPreferenceList(
             Context context, PreferenceGroup group) {
         // Get the selected autofill provider. If it is the placeholder then replace it with an
         // empty string.
@@ -415,7 +415,7 @@ public class CredentialManagerPreferenceController extends BasePreferenceControl
             return new HashMap<>();
         }
 
-        Map<String, SwitchPreference> output = new HashMap<>();
+        Map<String, SwitchPreferenceCompat> output = new HashMap<>();
         for (CombinedProviderInfo combinedInfo : providers) {
             final String packageName = combinedInfo.getApplicationInfo().packageName;
 
@@ -434,7 +434,7 @@ public class CredentialManagerPreferenceController extends BasePreferenceControl
             CharSequence title = combinedInfo.getAppName(context);
 
             // Build the pref and add it to the output & group.
-            SwitchPreference pref =
+            SwitchPreferenceCompat pref =
                     addProviderPreference(
                             context, title, icon, packageName, combinedInfo.getSettingsSubtitle());
             output.put(packageName, pref);
@@ -449,7 +449,7 @@ public class CredentialManagerPreferenceController extends BasePreferenceControl
 
     /** Creates a preference object based on the provider info. */
     @VisibleForTesting
-    public SwitchPreference createPreference(Context context, CredentialProviderInfo service) {
+    public SwitchPreferenceCompat createPreference(Context context, CredentialProviderInfo service) {
         CharSequence label = service.getLabel(context);
         return addProviderPreference(
                 context,
@@ -510,13 +510,13 @@ public class CredentialManagerPreferenceController extends BasePreferenceControl
         return enabledServices;
     }
 
-    private SwitchPreference addProviderPreference(
+    private SwitchPreferenceCompat addProviderPreference(
             @NonNull Context prefContext,
             @NonNull CharSequence title,
             @Nullable Drawable icon,
             @NonNull String packageName,
             @Nullable CharSequence subtitle) {
-        final SwitchPreference pref = new SwitchPreference(prefContext);
+        final SwitchPreferenceCompat pref = new SwitchPreferenceCompat(prefContext);
         pref.setTitle(title);
         pref.setChecked(mEnabledPackageNames.contains(packageName));
 

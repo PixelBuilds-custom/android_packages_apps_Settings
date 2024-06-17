@@ -28,7 +28,7 @@ import android.provider.Settings.Secure;
 
 import androidx.fragment.app.FragmentActivity;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.junit.Before;
 import org.junit.Ignore;
@@ -54,7 +54,7 @@ public class ChargingSoundPreferenceControllerTest {
 
     private Context mContext;
     private ChargingSoundPreferenceController mController;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
 
     @Before
     public void setUp() {
@@ -62,7 +62,7 @@ public class ChargingSoundPreferenceControllerTest {
         mContext = spy(RuntimeEnvironment.application);
         when(mSetting.getActivity()).thenReturn(mActivity);
         when(mActivity.getContentResolver()).thenReturn(mContentResolver);
-        mPreference = new SwitchPreference(RuntimeEnvironment.application);
+        mPreference = new SwitchPreferenceCompat(RuntimeEnvironment.application);
         mController = new ChargingSoundPreferenceController(mContext, mSetting, null);
         when(mScreen.findPreference(mController.getPreferenceKey())).thenReturn(mPreference);
         doReturn(mScreen).when(mSetting).getPreferenceScreen();

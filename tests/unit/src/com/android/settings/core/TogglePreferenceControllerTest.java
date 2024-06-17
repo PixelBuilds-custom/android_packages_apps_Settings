@@ -19,7 +19,7 @@ import static com.google.common.truth.Truth.assertThat;
 
 import android.content.Context;
 
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
@@ -35,12 +35,12 @@ public class TogglePreferenceControllerTest {
     private FakeToggle mToggleController;
 
     private Context mContext;
-    private SwitchPreference mPreference;
+    private SwitchPreferenceCompat mPreference;
 
     @Before
     public void setUp() {
         mContext = ApplicationProvider.getApplicationContext();
-        mPreference = new SwitchPreference(mContext);
+        mPreference = new SwitchPreferenceCompat(mContext);
         mToggleController = new FakeToggle(mContext, "key");
     }
 
