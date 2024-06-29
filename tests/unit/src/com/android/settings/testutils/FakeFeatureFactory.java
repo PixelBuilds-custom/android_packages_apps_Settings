@@ -257,6 +257,11 @@ public class FakeFeatureFactory extends FeatureFactory {
     }
 
     @Override
+    public FaceFeatureProvider getFaceFeatureProvider() {
+        return mFaceFeatureProvider;
+    }
+
+    @Override
     public BiometricsRepositoryProvider getBiometricsRepositoryProvider() {
         return mBiometricsRepositoryProvider;
     }
