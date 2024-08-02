@@ -68,3 +68,6 @@
 
 # Keep SettingsGoogle classes
 -keep class com.google.** { *; }
+
+# Keep PixelBuilds classes
+-keep class com.pb.** { *; }
