@@ -135,4 +135,11 @@
     <string name="charging_control_target_time_summary">Battery will be fully charged by %s</string>
     <string name="charging_control_limit_title">Limit</string>
     <string name="reset">Reset</string>
+    
+    <!-- Play Integrity -->
+    <string name="play_integrity_dashboard_title">Play integrity Spoofs</string>
+    <string name="play_integrity_summary">Methods to pass CTS/Play integrity</string>
+    <string name="play_integrity_update_title">Update Play Integrity Patch</string>
+    <string name="play_integrity_update_summary">Download and apply latest fingerprint to spoof</string>
+    <string name="play_update_title">Update fingerprint</string>
 </resources>
