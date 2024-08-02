@@ -101,6 +101,13 @@
     </Preference>
 
     <Preference
+        android:key="pintegrity_category"
+        android:title="@string/play_integrity_dashboard_title"
+        android:summary="@string/play_integrity_summary"
+        android:fragment="com.pb.settings.fragments.integrity.PropsDownloader"
+        android:enabled="false" />
+
+    <Preference
         android:key="reset_dashboard"
         android:title="@string/reset_dashboard_title"
         android:icon="@drawable/ic_restore"
